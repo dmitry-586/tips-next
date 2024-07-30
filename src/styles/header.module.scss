@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 32px;
+  &_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    & a {
+      line-height: 16px;
+      font-size: 40px;
+    }
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    font-size: 20px;
+    & nav {
+      display: flex;
+      gap: 26px;
+    }
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  &_menu {
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+  }
+}

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import "./globals.scss";
+import Header from "@/components/header/header";
 
-const HelveticaNeueCyr = localFont({ src: '../../public/fonts/HelveticaNeueCyr-Roman.woff' })
-const Akony = localFont({ src: '../../public/fonts/AKONY.woff2'})
+const HelveticaNeueCyr = localFont({
+  src: "../../public/fonts/HelveticaNeueCyr-Roman.woff",
+});
 
 export const metadata: Metadata = {
   title: "TIPS",
@@ -17,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={HelveticaNeueCyr.className}>{children}</body>
+      <body className={HelveticaNeueCyr.className}>
+        <div className="px-10 w-full">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
