@@ -1,0 +1,26 @@
+.button {
+  background-color: #fff;
+  color: black;
+  font-size: 32px;
+  padding: 29px 82px;
+  &:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+  }
+
+  &_lending {
+    padding: 15px 84px;
+  }
+  &_multipage, &_shop {
+    padding: 15px 60px;
+  }
+  &_card {
+    padding: 15px 107px;
+  }
+  &_lending:hover, &_multipage:hover, &_shop:hover, &_card:hover {
+    background: linear-gradient(180deg, #990000 0%, #ffb800 100%);
+    border-color: black;
+  }
+}
+

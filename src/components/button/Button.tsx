@@ -1,13 +1,28 @@
-interface IButtonItem {
-  title: string;
+import styles from "../../styles/button.module.scss";
+
+interface ButtonProps {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+  disabled?: boolean;
 }
 
-const Button: React.FC<IButtonItem> = ({ title }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  onClick,
+  disabled,
+}) => {
+  
   return (
-    <div className="border rounded-[40px] px-10 py-[14.5px] text-xl transition-all duration-300 hover:bg-my-gradient hover:border-black cursor-pointer">
-      {title}
-    </div>
+    <button
+      className={`${styles.btn} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 };
-// background: linear-gradient(180deg, #990000 0%, #FFB800 100%)
+
 export default Button;

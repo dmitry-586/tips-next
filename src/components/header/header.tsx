@@ -30,7 +30,7 @@ export default function Header() {
             height="0"
             alt="tips"
             loading="lazy"
-            style={{ width: '185px', height: 'auto' }}
+            style={{ width: "185px", height: "auto" }}
           />
           <p className="text-base w-1/2 leading-4">
             веб-студия разработки продающих сайтов
@@ -43,8 +43,10 @@ export default function Header() {
                 href={item.link}
                 key={item.id}
                 className={cn(
-                  "py-1 px-3 rounded-xl hover:cursor-pointer hover:bg-my-gradient",
-                  pathname === item.link ? "bg-my-gradient" : "bg-transparent"
+                  "cursor-pointer hover:bg-my-gradient bg-clip-text text-transparent",
+                  pathname === item.link
+                    ? "bg-my-gradient bg-clip-text text-transparent"
+                    : "bg-white"
                 )}
                 onClick={() => {
                   setMenuActive(!menuActive);
@@ -54,7 +56,7 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <Button title={"Связаться с нами"} />
+          <Button children="Связаться с нами" className={styles.header_button}/>
         </div>
         <BurgerMenu />
       </header>
