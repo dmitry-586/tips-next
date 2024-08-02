@@ -9,22 +9,39 @@
     border-color: black;
   }
 
-  &_lending {
-    padding: 15px 84px;
-  }
+  &_lending,
   &_multipage,
-  &_shop {
-    padding: 15px 60px;
-  }
+  &_shop,
   &_card {
-    padding: 15px 107px;
-  }
-  &_lending:hover,
-  &_multipage:hover,
-  &_shop:hover,
-  &_card:hover {
-    background: linear-gradient(180deg, #990000 0%, #ffb800 100%);
-    border-color: black;
-    
+    width: 290px;
+
+    &:hover {
+      background: linear-gradient(180deg, #990000 0%, #ffb800 100%);
+      border-color: black;
+    }
   }
 }
+
+.ellipse {
+  position: absolute;
+  z-index: 0;
+  right: -40px;
+  top: 425px;
+}
+.ellipse2 {
+  position: absolute;
+  z-index: 0;
+  left: -40px;
+  bottom: 0;
+}
+
+.h3 {
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1;
+  font-size: 87px;
+  line-height: 87px;
+}
+
+

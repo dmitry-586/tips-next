@@ -4,8 +4,8 @@
     height: 596px;
     border-radius: 20px;
     padding: 20px;
-    margin-bottom: 20px;
     transition: 0.3s;
+    z-index: 1;
     &:hover {
         scale: 1.02;
     }

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={HelveticaNeueCyr.className}>
-        <div className="px-10 w-full">
+        <div className="px-10 w-full overflow-hidden">
           <Header />
           {children}
         </div>
