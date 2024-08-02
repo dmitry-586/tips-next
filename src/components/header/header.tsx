@@ -43,10 +43,10 @@ export default function Header() {
                 href={item.link}
                 key={item.id}
                 className={cn(
-                  "cursor-pointer hover:bg-my-gradient bg-clip-text text-transparent",
+                  "cursor-pointer bg-black text-[#AFAFAF] hover:border-orange-700 hover:text-white",
                   pathname === item.link
-                    ? "bg-my-gradient bg-clip-text text-transparent"
-                    : "bg-white"
+                    ? "text-white border-b-2 border-orange-700"
+                    : "text-[#AFAFAF]"
                 )}
                 onClick={() => {
                   setMenuActive(!menuActive);
