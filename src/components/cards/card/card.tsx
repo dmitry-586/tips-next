@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/card.module.scss";
+import styles from "../../../styles/cards.module.scss";
 import cn from "clsx";
 
 interface CardProps {

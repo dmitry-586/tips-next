@@ -1,0 +1,31 @@
+import localFont from "next/font/local";
+import styles from "../../styles/price.module.scss"
+
+const ActayWide = localFont({
+  src: "../../../public/fonts/ActayWide-Bold.otf",
+});
+
+interface PriceProps {
+  title: string;
+  description: string;
+  price: string;
+}
+
+const PriceList: React.FC<PriceProps> = ({
+  title,
+  description,
+  price,
+}) => {
+  return (
+    <div className="flex flex-col gap-8 mb-[108px] mt-[64px]">
+      <div className={styles.priceList_header}>
+        <h3 className={ActayWide.className}>{title}</h3>
+        <div className={styles.priceList_header_price}>от {price}₽</div>
+      </div>
+      <span className={styles.priceList_span}/>
+      <p className="text-2xl text-[#969696] w-4/5">{description}</p>
+    </div>
+  );
+};
+
+export default PriceList;

@@ -1,10 +1,13 @@
 import MainPage from "@/components/main/main";
-import styles from "../styles/main.module.scss";
+import Cards from "@/components/cards/cards";
+import Price from "@/components/price/price";
 
 export default function Home() {
   return (
     <>
       <MainPage />
+      <Cards />
+      <Price />
     </>
   );
 }
