@@ -17,7 +17,7 @@ const PriceList: React.FC<PriceProps> = ({
   price,
 }) => {
   return (
-    <div className="flex flex-col gap-8 mb-[108px] mt-[64px]">
+    <div className={styles.priceList}>
       <div className={styles.priceList_header}>
         <h3 className={ActayWide.className}>{title}</h3>
         <div className={styles.priceList_header_price}>от {price}₽</div>

@@ -1,17 +1,12 @@
 .price {
-  display: flex;
-  justify-content: space-between;
   position: relative;
   background-color: transparent;
-  width: 50%;
   & h3 {
-    position: absolute;
-    left: 0;
-    top: 0;
     font-size: 208px;
     color: rgba(255, 255, 255, 0.1);
     background-color: transparent;
     line-height: 125%;
+    width: 755px;
   }
 }
 
@@ -60,23 +55,40 @@
 }
 
 .priceList {
+  margin-left: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 108px;
+  background-color: transparent;
+
+  & > * {
+    background-color: transparent;
+  }
+
   &_header {
     display: flex;
     justify-content: space-between;
     font-size: 30px;
-    &_price {
-      color: #E9AD0B;
+    width: 100%;
+    & > * {
+      background-color: transparent;
     }
-  &_description {
-    font-size: 24px;
-    color: #969696;
-  }
+    &_price {
+      color: #e9ad0b;
+    }
+    &_description {
+      font-size: 24px;
+      color: #969696;
+    }
   }
 
   &_span {
     display: block;
     height: 1px;
     width: 100%;
+    margin-top: 32px;
+    margin-bottom: 24px;
     background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
   }
 }

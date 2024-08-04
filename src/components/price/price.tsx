@@ -3,6 +3,7 @@ import styles from "../../styles/price.module.scss";
 import { price, price2, price3, priceList } from "./price.data";
 import Button from "../button/Button";
 import PriceList from "./priceList";
+import Circle from "../circle/circle";
 
 const ActayWide = localFont({
   src: "../../../public/fonts/ActayWide-Bold.otf",
@@ -45,7 +46,7 @@ export default function Price() {
           />
         </div>
       </div>
-      <div>
+      <div className="relative bg-transparent pt-16">
         {priceList.map((item) => (
           <PriceList
             title={item.title}
@@ -54,6 +55,14 @@ export default function Price() {
             key={item.id}
           />
         ))}
+        <Circle
+          width="264px"
+          height="300px"
+          color="rgba(248, 137, 12, 0.5)"
+          blur={75}
+          right="-67px"
+          bottom="-107px"
+        />
       </div>
     </div>
   );
