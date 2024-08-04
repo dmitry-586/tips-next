@@ -11,9 +11,12 @@ const ActayWide = localFont({
 
 export default function Price() {
   return (
-    <div className="flex justify-between gap-8">
+    <div className="flex justify-between gap-10">
+      {/* левый блок */}
       <div className={styles.price}>
+        {/* буквы на фоне, ОТ НИХ ЗАВИСИТ ШИРИНА БЛОКА, Т.К. ВСЕ ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ pos:absolute */}
         <h3 className={ActayWide.className}>PRICE</h3>
+        {/* описание */}
         <div className={styles.info}>
           <p>В зависимости от целей и сложности проекта</p>
           <p className={styles.p}>HTML/CSS + JS, NextJS или АСПРО:</p>
@@ -46,6 +49,7 @@ export default function Price() {
           />
         </div>
       </div>
+      {/* правый блок */}
       <div className="relative bg-transparent pt-16">
         {priceList.map((item) => (
           <PriceList

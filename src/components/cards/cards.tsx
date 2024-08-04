@@ -5,6 +5,7 @@ import styles from "../../styles/cards.module.scss";
 export default function Cards() {
   return (
     <div className="relative pb-[215px]">
+      {/* карточки */}
       <div className="flex flex-row flex-wrap gap-5">
         <Card
           title="Интернет-магазин"
@@ -20,7 +21,7 @@ export default function Cards() {
           info="Сайт для компании хоррор-квестов"
           imageSrc="/images/cards/card2.webp"
           width={553}
-          height={341}
+          height={335}
           padding="px-[40px]"
         />
         <Card
@@ -42,6 +43,7 @@ export default function Cards() {
           padding="px-[40px]"
         />
       </div>
+      {/* кругляши */}
       <Circle
         width="585px"
         height="585px"
@@ -59,6 +61,7 @@ export default function Cards() {
         blur={75}
         zIndex={0}
       />
+      {/* следующий блок */}
       <h3 className={styles.h3}>Стоимость</h3>
     </div>
   );

@@ -36,6 +36,7 @@ const Card: React.FC<CardProps> = ({
         alt="cardImage"
         width={width}
         height={height}
+        priority
       />
     </div>
   );
