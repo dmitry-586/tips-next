@@ -50,7 +50,7 @@ export default function Price() {
         </div>
       </div>
       {/* правый блок */}
-      <div className="relative bg-transparent pt-16">
+      <div className="relative bg-transparent">
         {priceList.map((item) => (
           <PriceList
             title={item.title}

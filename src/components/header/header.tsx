@@ -32,8 +32,8 @@ export default function Header() {
             loading="lazy"
             style={{ width: "185px", height: "auto" }}
           />
-          <p className="text-base w-1/2 leading-4">
-            веб-студия разработки продающих сайтов
+          <p className="text-base w-2/5 leading-4">
+            студия разработки продающих сайтов
           </p>
         </div>
         <div className={styles.header_right}>
