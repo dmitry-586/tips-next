@@ -119,7 +119,6 @@ export default function Info() {
             Поддерживаем вас в аналитике и отвечаем на вопросы.
           </p>
         </div>
-        <span></span>
       </div>
     </div>
   );

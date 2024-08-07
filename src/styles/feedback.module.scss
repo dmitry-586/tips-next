@@ -1,4 +1,6 @@
 .feedback {
+  display: flex;
+  margin: 64px 0;
   &_left {
     display: flex;
     flex-direction: column;
@@ -23,9 +25,9 @@
       }
     }
     &_buttons {
-        display: flex;
-        gap: 20px;
-        margin-top: 32px;
+      display: flex;
+      gap: 20px;
+      margin-top: 32px;
       & button {
         display: flex;
         justify-content: center;
@@ -33,13 +35,93 @@
         gap: 10px;
         width: 290px;
         height: 65px;
-        background: #24a0dd;
         border-radius: 20px;
         font-size: 32px;
+        transition: 0.3s;
+        &:hover {
+          scale: 1.02;
+        }
         & > * {
           background-color: transparent;
         }
       }
+    }
+  }
+  &_right {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 128px 72px;
+    border: 1px solid white;
+    border-right: 0px;
+    border-radius: 20px 0 0 20px;
+    right: -40px;
+    & input {
+      border-bottom: 1px solid white;
+      width: 100%;
+      margin-top: 32px;
+      padding-bottom: 10px;
+      font-size: 24px;
+      &::placeholder {
+        padding-left: 20px;
+        font-size: 24px;
+        color: #595959;
+      }
+      &:focus {
+        outline: 0;
+        border-color: orange;
+      }
+    }
+    & p {
+      font-size: 24px;
+    }
+  }
+  .example {
+    margin-bottom: 64px;
+  }
+  .button {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    & p {
+      font-size: 16px;
+      width: 283px;
+    }
+    .btn {
+      padding: 23px 121px;
+      background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
+      border-color: black;
+    }
+  }
+}
+
+.tg {
+  background-color: #24a0dd;
+}
+
+.vk {
+  background-color: #2787f5;
+}
+
+.whatsApp {
+  background-color: #2ac41d;
+}
+
+.buttons_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 88px;
+  & > * {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    &:hover {
+      background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
+      border-color: black;
+      scale: 1.06;
     }
   }
 }

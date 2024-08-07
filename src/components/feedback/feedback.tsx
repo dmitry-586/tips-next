@@ -14,29 +14,78 @@ export default function Feedback() {
           направлении нам двигаться
         </p>
         <div className={styles.feedback_left_bottom}>
-            <p>Или свяжитесь с нами другим способом:</p>
-            <div className={styles.feedback_left_bottom_info}>
-                <Image width={40} height={40} src="/images/feedback/feedback1.svg" alt="icon"/>
-                <p>+7 996 808 58 18</p>
-                <p>info@webstudio-tips.ru</p>
-            </div>
+          <p>Или свяжитесь с нами другим способом:</p>
+          <div className={styles.feedback_left_bottom_info}>
+            <Image
+              width={40}
+              height={40}
+              src="/images/feedback/feedback1.svg"
+              alt="icon"
+            />
+            <p>+7 996 808 58 18</p>
+            <p>info@webstudio-tips.ru</p>
+          </div>
         </div>
         <div className={styles.feedback_left_buttons}>
-            <button>
-                <Image src="/images/feedback/tg.svg" width={28} height={23} alt="tg"/>
-                <p>Telegram</p>
-            </button>
-            <button>
-                <Image src="/images/feedback/tg.svg" width={28} height={23} alt="tg"/>
-                <p>Telegram</p>
-            </button>
-            <button>
-                <Image src="/images/feedback/tg.svg" width={28} height={23} alt="tg"/>
-                <p>Telegram</p>
-            </button>
+          <button className={styles.tg}>
+            <Image
+              src="/images/feedback/tg.svg"
+              width={28}
+              height={23}
+              alt="tg"
+            />
+            <p>Telegram</p>
+          </button>
+          <button className={styles.vk}>
+            <Image
+              src="/images/feedback/vk.svg"
+              width={30}
+              height={18}
+              alt="vk"
+            />
+            <p>Вконтакте</p>
+          </button>
+          <button className={styles.whatsApp}>
+            <Image
+              src="/images/feedback/whatsApp.svg"
+              width={35}
+              height={35}
+              alt="whatsApp"
+            />
+            <p>WhatsApp</p>
+          </button>
         </div>
       </div>
-      <div className={styles.feedback_right}></div>
+      <div className={styles.feedback_right}>
+        <div className="flex gap-8 mb-16">
+          <div className="flex flex-col w-1/2">
+            <p>Как Вас зовут</p>
+            <input type="text" placeholder="Имя"/>
+          </div>
+          <div className="flex flex-col w-1/2">
+            <p>Телефон/WhatsApp/Telegram</p>
+            <input type="number" placeholder="+7 999 999 9999"/>
+          </div>
+        </div>
+        <div className={styles.feedback_right_buttons}>
+          <p className="mb-4">Меня интересует</p>
+          <div className={styles.buttons_wrapper}>
+            <Button children="Сайт" className="w-[136px]"/>
+            <Button children="Лендинг" className="w-[193px]"/>
+            <Button children="Интернет-магазин" className="w-[237px]" />
+            <Button children="Веб-приложение" className="w-[237px]"/>
+            <Button children="Другое" className="w-[237px]"/>
+          </div>
+        </div>
+        <div className={styles.example}>
+          <p>Уже есть проект, на который ориентируетесь/ нравится?</p>
+          <input type="text" placeholder="Укажите ссылку (необязательно)"/>
+        </div>
+        <div className={styles.button}>
+          <Button children="Оставить заявку" className={styles.btn}/>
+          <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
+        </div>
+      </div>
     </div>
   );
 }
