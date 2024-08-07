@@ -1,0 +1,47 @@
+.footer {
+    padding-bottom: 64px;
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    &_right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 65px;
+        border: 1px solid white;
+        border-radius: 20px;
+        transition: 0.3s;
+        & > * {
+            background-color: transparent;
+        }
+        &:hover {
+            scale: 1.06;
+            background: linear-gradient(270.02deg, #FF9900 0.02%, #EE5600 99.98%);
+            border-color: black;
+        }
+      }
+    }
+  }
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    & p {
+      color: #bfbfbf;
+      font-size: 20px;
+      line-height: 100%;
+    }
+  }
+}
