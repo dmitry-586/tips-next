@@ -2,7 +2,7 @@ import IWhyItem from "./why.interface";
 
 export const why: IWhyItem[] = [
   {
-    description: "У нас оплата за работу, а не за часы",
+    description: "У нас оплата за работу, а\u00A0не за часы",
     imageSrc: "/images/why/whyImage1.webp"
   },
   {

@@ -1,0 +1,118 @@
+.left {
+  position: relative;
+  background: #262626;
+  padding: 64px 32px;
+  border-radius: 20px;
+  width: 748px;
+  height: 682px;
+  z-index: 1;
+  & > * {
+    background: inherit;
+  }
+
+  & p {
+    margin: 64px 0;
+    font-size: 32px;
+    line-height: 32px;
+    & b {
+      background: inherit;
+    }
+  }
+
+  &_header {
+    font-size: 87px;
+    line-height: 87px;
+    & > * {
+      background: inherit;
+    }
+  }
+}
+
+.right {
+  position: relative;
+  background-color: transparent;
+  & h3 {
+    background-color: inherit;
+    font-size: 48px;
+    margin-bottom: 72px;
+  }
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+    font-size: 24px;
+    line-height: 100%;
+    & > * {
+      background-color: inherit;
+    }
+    &_header {
+      display: flex;
+      gap: 32px;
+      font-size: 36px;
+      width: 380px;
+      line-height: 100%;
+      & > * {
+        background-color: inherit;
+      }
+    }
+    & p {
+      background-color: inherit;
+      width: 653px;
+    }
+  }
+
+  & span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 64px 0;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  top: 64px;
+  background-color: transparent;
+  font-size: 24px;
+
+  & > * {
+    background-color: transparent;
+    & > * {
+      background-color: transparent;
+    }
+  }
+}
+
+.li {
+  list-style: disc;
+  margin-left: 30px;
+  line-height: normal;
+}
+
+.p {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 87px;
+  background: linear-gradient(90deg, #faff00 0%, #ff0000 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.button {
+  width: 675px;
+  height: 69px;
+  background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+  border-color: transparent;
+  font-size: 24px;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
