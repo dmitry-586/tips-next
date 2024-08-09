@@ -20,8 +20,8 @@ export default function Footer() {
         </div>
         <div className={styles.footer_top_right}>
           <Image src="/images/tel.svg" alt="tel" width={40} height={40} />
-          <p className="text-[32px]">+7 996 808 58 18</p>
-          <button>
+          <a className="text-[32px]" href="tel:+79968085818">+7 996 808 58 18</a>
+          <button className={styles.btnTg}>
             <Image
               src="/images/feedback/tg.svg"
               alt="tg"
@@ -29,7 +29,7 @@ export default function Footer() {
               height={23}
             />
           </button>
-          <button>
+          <button className={styles.btnWhatsApp}>
             <Image
               src="/images/feedback/whatsApp.svg"
               alt="whatsApp"

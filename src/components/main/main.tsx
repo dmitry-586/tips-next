@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function MainPage() {
   return (
     <>
-      <div className="flex flex-col text-center items-center bg-my-gradient rounded-[20px] py-[205px]">
+      <div className="flex flex-col text-center items-center bg-my-gradient rounded-[20px] py-[205px] overflow-hidden">
         <h1 className="text-[87px] w-[1642px] leading-[102px] bg-transparent">
           Найдем выгодное и продающее решение для каждого
         </h1>

@@ -8,6 +8,7 @@ interface CircleProps {
   zIndex?: number;
   blur?: number;
   color: string;
+  className?: string;
 }
 
 const Circle: React.FC<CircleProps> = ({
@@ -20,6 +21,7 @@ const Circle: React.FC<CircleProps> = ({
   blur,
   color,
   top,
+  className,
 }) => {
   return (
     <div
@@ -34,8 +36,9 @@ const Circle: React.FC<CircleProps> = ({
         right: `${right}`,
         left: `${left}`,
         bottom: `${bottom}`,
-        top: `${top}`
+        top: `${top}`,
       }}
+      className={className}
     ></div>
   );
 };

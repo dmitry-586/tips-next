@@ -97,6 +97,7 @@
     & p {
       font-size: 16px;
       width: 283px;
+      line-height: 100%;
     }
     .btn {
       padding: 23px 121px;
@@ -129,10 +130,25 @@
     align-items: center;
     justify-content: center;
     height: 39px;
-    &:hover {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: 0.3s;
+    &:hover, &:active {
       background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
       border-color: black;
       scale: 1.06;
     }
   }
+}
+
+.active {
+  border-color: black;
+  background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
+  scale: 1.02;
+}
+
+.selected {
+  background-color: #337ab7;
+  color: #fff;
 }

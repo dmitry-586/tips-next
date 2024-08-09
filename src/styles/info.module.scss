@@ -1,5 +1,6 @@
 .left {
-  position: relative;
+  position: sticky;
+  top: 52px;
   background: #262626;
   padding: 64px 32px;
   border-radius: 20px;
@@ -9,7 +10,6 @@
   & > * {
     background: inherit;
   }
-
   & p {
     margin: 64px 0;
     font-size: 32px;
@@ -115,4 +115,12 @@
     background: white;
     color: black;
   }
+}
+
+.mainInfo {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  gap: 32px;
+  height: 100%;
 }

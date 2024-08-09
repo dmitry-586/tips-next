@@ -64,7 +64,7 @@ export default function Price() {
           height="300px"
           color="rgba(248, 137, 12, 0.5)"
           blur={75}
-          right="-67px"
+          right="-40px"
           bottom="-107px"
         />
       </div>

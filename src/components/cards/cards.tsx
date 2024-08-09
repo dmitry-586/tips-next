@@ -44,14 +44,17 @@ export default function Cards() {
         />
       </div>
       {/* кругляши */}
-      <Circle
-        width="585px"
-        height="585px"
-        color="linear-gradient(90deg, #FAFF00 0%, #FF0000 100%)"
-        right="-233px"
-        bottom="266px"
-        blur={250}
-      />
+      <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0">
+        <Circle
+          width="585px"
+          height="585px"
+          color="linear-gradient(90deg, #FAFF00 0%, #FF0000 100%)"
+          right="-273px"
+          bottom="500px"
+          blur={250}
+          
+        />
+      </div>
       <Circle
         width="300px"
         height="264px"

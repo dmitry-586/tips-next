@@ -1,5 +1,5 @@
 .footer {
-    padding-bottom: 64px;
+  padding-bottom: 64px;
   &_top {
     display: flex;
     justify-content: space-between;
@@ -24,12 +24,11 @@
         border-radius: 20px;
         transition: 0.3s;
         & > * {
-            background-color: transparent;
+          background-color: transparent;
         }
         &:hover {
-            scale: 1.06;
-            background: linear-gradient(270.02deg, #FF9900 0.02%, #EE5600 99.98%);
-            border-color: black;
+          scale: 1.06;
+          border-color: transparent;
         }
       }
     }
@@ -44,4 +43,12 @@
       line-height: 100%;
     }
   }
+}
+
+.btnTg:hover {
+  background-color: #24a0dd;
+}
+
+.btnWhatsApp:hover {
+  background-color: #2ac41d;
 }

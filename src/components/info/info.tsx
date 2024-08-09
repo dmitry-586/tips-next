@@ -5,7 +5,7 @@ import { price, price2, price3 } from "../price/price.data";
 
 export default function Info() {
   return (
-    <div className="relative flex gap-8">
+    <div className={styles.mainInfo}>
       <div className={styles.left}>
         <div className={styles.left_header}>
           <h2>Найдем решение</h2>
