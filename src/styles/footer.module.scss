@@ -30,6 +30,9 @@
           scale: 1.06;
           border-color: transparent;
         }
+        &:active {
+          scale: 1.1;
+        }
       }
     }
   }

@@ -41,6 +41,9 @@
         &:hover {
           scale: 1.02;
         }
+        &:active {
+          scale: 1.07;
+        }
         & > * {
           background-color: transparent;
         }
@@ -103,6 +106,10 @@
       padding: 23px 121px;
       background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
       border-color: black;
+      &:hover {
+        background: white;
+        color: black;
+      }
     }
   }
 }
@@ -134,10 +141,13 @@
     background-color: transparent;
     border: 1px solid white;
     transition: 0.3s;
-    &:hover, &:active {
+    &:hover {
       background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
       border-color: black;
-      scale: 1.06;
+      scale: 1.05;
+    }
+    &:active {
+      scale: 1.1;
     }
   }
 }
