@@ -13,7 +13,7 @@ export default function AboutHeader() {
             alt="AboutLine"
             style={{
               height: "auto",
-              width: "auto"
+              width: "936px"
             }}
           />
           <h2 className="text-[87px]">О&nbsp;студии</h2>

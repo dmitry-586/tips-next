@@ -22,6 +22,10 @@ export default function Feedback() {
               height={40}
               src="/images/feedback/feedback1.svg"
               alt="icon"
+              style={{
+                width: "40px",
+                height: "40px",
+              }}
             />
             <a href="tel:+79968085818">+7 996 808 58 18</a>
             <a href="mailto:info@webstudio-tips.ru">info@webstudio-tips.ru</a>
@@ -31,18 +35,26 @@ export default function Feedback() {
           <button className={styles.tg}>
             <Image
               src="/images/feedback/tg.svg"
-              width={28}
-              height={23}
+              width={0}
+              height={0}
               alt="tg"
+              style={{
+                width: "auto",
+                height: "auto",
+              }}
             />
             <p>Telegram</p>
           </button>
           <button className={styles.vk}>
             <Image
               src="/images/feedback/vk.svg"
-              width={30}
-              height={18}
+              width={28}
+              height={23}
               alt="vk"
+              style={{
+                width: "28px",
+                height: "23px",
+              }}
             />
             <p>Вконтакте</p>
           </button>
@@ -52,6 +64,10 @@ export default function Feedback() {
               width={35}
               height={35}
               alt="whatsApp"
+              style={{
+                width: "35px",
+                height: "35px",
+              }}
             />
             <p>WhatsApp</p>
           </button>
