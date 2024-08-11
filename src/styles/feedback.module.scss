@@ -1,6 +1,6 @@
 .feedback {
   display: flex;
-  margin: 64px 0;
+  padding: 64px 0;
   &_left {
     display: flex;
     flex-direction: column;
@@ -106,6 +106,7 @@
       padding: 23px 121px;
       background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
       border-color: black;
+      font-size: 24px;
       &:hover {
         background: white;
         color: black;
@@ -141,6 +142,7 @@
     background-color: transparent;
     border: 1px solid white;
     transition: 0.3s;
+    font-size: 20px;
     &:hover {
       background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
       border-color: black;

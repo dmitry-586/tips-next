@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 const HelveticaNeueCyr = localFont({
   src: "../../public/fonts/HelveticaNeueCyr-Roman.woff",
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={HelveticaNeueCyr.className}>
-        <div className="px-10 w-full">
+        <div className="w-full">
           <Header />
           {children}
         </div>

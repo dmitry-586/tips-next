@@ -1,11 +1,16 @@
+import exp from "constants";
 import styles from "../../styles/info.module.scss";
 import Button from "../button/Button";
 import Circle from "../circle/circle";
 import { price, price2, price3 } from "../price/price.data";
 
-export default function Info() {
+interface InfoProps {
+  className?: string;
+}
+
+const Info: React.FC<InfoProps> = ({ className }) => {
   return (
-    <div className={styles.mainInfo}>
+    <div className={`${styles.mainInfo} ${className}`}>
       <div className={styles.left}>
         <div className={styles.left_header}>
           <h2>Найдем решение</h2>
@@ -99,10 +104,12 @@ export default function Info() {
           <p>
             Перед запуском мы проводим окончательную отладку сайта, настраиваем
             метрики и аналитику для отслеживания действий пользователей.
-            <br /><br />
+            <br />
+            <br />
             Подготовим видео-инструкцию по использованию сайта или обучим Вашего
             специалиста.
-            <br /><br />
+            <br />
+            <br />
             После запуска – поддерживаем с Вами связь и обсуждаем дальнейшие
             планы развития проекта.
           </p>
@@ -122,4 +129,6 @@ export default function Info() {
       </div>
     </div>
   );
-}
+};
+
+export default Info;
