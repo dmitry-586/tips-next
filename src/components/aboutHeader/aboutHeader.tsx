@@ -8,9 +8,13 @@ export default function AboutHeader() {
         <div className="flex gap-16">
           <Image
             width={936}
-            height={4}
+            height={0}
             src="/images/about/AboutLine.svg"
             alt="AboutLine"
+            style={{
+              height: "auto",
+              width: "auto"
+            }}
           />
           <h2 className="text-[87px]">О&nbsp;студии</h2>
         </div>
