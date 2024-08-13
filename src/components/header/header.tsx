@@ -11,14 +11,12 @@ import { menu } from "./menu.data";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+
 const Akony = localFont({ src: "../../../public/fonts/AKONY.woff2" });
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
   const pathname = usePathname();
-
-  const burgerTrue: string = [styles.burger_menu, styles.open].join(" ");
-  const burgerFalse: string = [styles.burger_menu].join(" ");
 
   return (
     <>
@@ -56,7 +54,10 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <Button children="Связаться с нами" className={styles.header_button}/>
+          <Button
+            children="Связаться с нами"
+            className={styles.header_button}
+          />
         </div>
         <BurgerMenu />
       </header>

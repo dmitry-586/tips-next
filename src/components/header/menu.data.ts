@@ -8,7 +8,7 @@ export const menu: IMenuItem[] = [
   },
   {
     name: "Портфолио",
-    link: "",
+    link: "/#portfolio",
     id: 2,
   },
   {
@@ -18,7 +18,7 @@ export const menu: IMenuItem[] = [
   },
   {
     name: "Контакты",
-    link: "",
+    link: "#feedback",
     id: 4,
   },
 ];

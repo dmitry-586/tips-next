@@ -20,7 +20,15 @@ const config: Config = {
         "gradient-card4": "linear-gradient(180deg, #009246 0%, #003017 100%)",
       },
     },
+    screens: {
+      sm: { max: "639px" },
+      md: { max: "767px" },
+      lg: { max: "1023px" },
+      xl: { max: "1279px" },
+      xxl: { max: "1880px" },
+    },
   },
   plugins: [],
 };
+
 export default config;

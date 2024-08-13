@@ -34,6 +34,11 @@
   }
 }
 
+.buttons_wrapper {
+  @apply flex gap-8 justify-center;
+  margin-bottom: clamp(2rem, -4rem + 6.67vw, 4rem);
+}
+
 .ellipse {
   position: absolute;
   z-index: 0;
@@ -54,4 +59,20 @@
   z-index: 1;
   font-size: 87px;
   line-height: 87px;
+}
+
+.button {
+  &_lending,
+  &_multipage,
+  &_shop,
+  &_card {
+    z-index: 1;
+    font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
+    width: clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem);
+
+    &:hover {
+      background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+      border-color: black;
+    }
+  }
 }

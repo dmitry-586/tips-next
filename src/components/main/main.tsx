@@ -2,12 +2,11 @@ import Button from "../button/Button";
 import styles from "../../styles/main.module.scss";
 import Image from "next/image";
 
-
 export default function MainPage() {
   return (
     <>
-      <div className="flex flex-col text-center items-center bg-my-gradient rounded-[20px] py-[205px] overflow-hidden">
-        <h1 className="text-[87px] w-[1642px] leading-[102px] bg-transparent">
+      <div className={styles.main_wrapper}>
+        <h1 className={styles.h1}>
           Найдем выгодное и продающее решение для каждого
         </h1>
         <p className="text-[32px] w-[643px] pb-16 bg-transparent">
@@ -19,13 +18,13 @@ export default function MainPage() {
         />
       </div>
       {/* логотипы */}
-      <div className="flex gap-[62px] justify-center mt-7 mb-[18px]">
+      <div className="flex gap-[62px] justify-center mt-7 mb-16 overflow-x-auto w-full xxl:justify-start">
         <Image
           src="/images/logos/logo1.svg"
           alt="logo1"
           width="0"
           height="0"
-          style={{ width: "86px", height: "auto" }}
+          style={{ width: "83px", height: "auto" }}
         />
         <Image
           src="/images/logos/logo2.svg"
@@ -84,16 +83,7 @@ export default function MainPage() {
           style={{ width: "193px", height: "auto" }}
         />
       </div>
-      {/* кнопочки */}
-      <div className="flex gap-8 justify-center my-16">
-        <Button children="Лендинг" className={styles.button_lending} />
-        <Button
-          children="Многостраничный"
-          className={styles.button_multipage}
-        />
-        <Button children="Интернет-магазин" className={styles.button_shop} />
-        <Button children="Визитка" className={styles.button_card} />
-      </div>
+      
     </>
   );
 }

@@ -5,7 +5,7 @@ import RadioButtons from "./radioButtons";
 
 export default function Feedback() {
   return (
-    <div className={styles.feedback}>
+    <div className={styles.feedback} id="feedback">
       <div className={styles.feedback_left}>
         <h2 className={styles.feedback_left_top}>
           Бесплатная структура для&nbsp;Вашего сайта

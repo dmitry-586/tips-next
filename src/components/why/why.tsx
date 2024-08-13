@@ -16,7 +16,7 @@ export default function Why() {
         <h2 className="text-[87px]">мы?</h2>
       </div>
       <h3 className={ActayWide.className}>WHY</h3>
-      <div className="flex gap-[20px] bg-transparent">
+      <div className="flex gap-[20px] bg-transparent justify-center">
         {why.map((item) => (
           <WhyCard description={item.description} imageSrc={item.imageSrc} />
         ))}

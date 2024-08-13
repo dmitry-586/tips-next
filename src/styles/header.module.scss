@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     gap: 38px;
-    font-size: 20px;
+    font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
     & nav {
       display: flex;
       gap: 26px;
@@ -37,4 +37,9 @@
     border-color: black;
     cursor: pointer;
   }
+}
+
+
+@media (max-width: 1440px) {
+  
 }
