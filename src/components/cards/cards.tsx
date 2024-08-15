@@ -2,11 +2,13 @@ import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
 import Button from "../button/Button";
+import CardsSlider from "./cards.button";
 
 export default function Cards() {
   return (
     <div className="relative pb-[215px]" id="portfolio">
       {/* кнопочки */}
+      <CardsSlider />
       <div className={styles.buttons_wrapper}>
         <Button children="Лендинг" className={styles.button_lending} />
         <Button

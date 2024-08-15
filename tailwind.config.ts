@@ -23,8 +23,8 @@ const config: Config = {
     screens: {
       sm: { max: "639px" },
       md: { max: "767px" },
-      lg: { max: "1023px" },
-      xl: { max: "1279px" },
+      lg: { max: "960px" },
+      xl: { max: "1440px" },
       xxl: { max: "1880px" },
     },
   },

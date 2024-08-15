@@ -19,7 +19,7 @@
     align-items: center;
     gap: 38px;
     font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
-    & nav {
+    .nav {
       display: flex;
       gap: 26px;
     }
@@ -33,13 +33,47 @@
     margin-right: 50px;
   }
   &_button:hover {
-    background: linear-gradient(270.02deg, #FF9900 0.02%, #EE5600 99.98%);
+    background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;
     cursor: pointer;
   }
 }
 
+.ru {
+  display: none;
+}
 
 @media (max-width: 1440px) {
-  
+}
+
+@media (max-width: 1250px) {
+  .header {
+    justify-content: start;
+
+    &_right {
+      margin-left: auto;
+      margin-right: 40px;
+      .nav {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .header {
+    justify-content: space-between;
+    padding: 20px 10px 0 10px;
+    &_left {
+      & p {
+        display: none;
+      }
+    }
+  }
+  .ru {
+    display: block;
+  }
+  .tips {
+    width: 111px;
+  }
 }

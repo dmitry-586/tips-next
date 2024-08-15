@@ -1,10 +1,10 @@
 .button {
   background-color: #fff;
   color: black;
-  font-size: 32px;
+  font-size: clamp(1rem, 0.654rem + 1.5vw, 2rem);
   padding: 0;
-  width: 650px;
-  height: 89px;
+  width: clamp(20.938rem, 14.13rem + 29.44vw, 40.625rem);
+  height: clamp(2.625rem, 1.609rem + 4.39vw, 5.563rem);
   &:hover {
     background-color: black;
     color: white;
@@ -12,10 +12,13 @@
   }
 }
 
-
 .h1 {
   @apply w-4/5 leading-none bg-transparent mb-4;
   font-size: clamp(4rem, -0.313rem + 4.79vw, 5.438rem);
+}
+.p {
+  @apply max-w-[643px] pb-16 bg-transparent;
+  font-size: clamp(1rem, 0.654rem + 1.5vw, 2rem);
 }
 
 .main_wrapper {
@@ -26,4 +29,14 @@
 //адаптив
 
 @media (max-width: 1440px) {
+  .main_wrapper {
+    padding: 125px 0;
+  }
+  .h1 {
+    font-size: clamp(1.875rem, 1.14rem + 3.18vw, 4rem);
+    width: 90%;
+  }
+  .p {
+    max-width: clamp(19.5rem, 12.346rem + 30.93vw, 40.188rem);
+  }
 }

@@ -9,7 +9,7 @@ export default function MainPage() {
         <h1 className={styles.h1}>
           Найдем выгодное и продающее решение для каждого
         </h1>
-        <p className="text-[32px] w-[643px] pb-16 bg-transparent">
+        <p className={styles.p}>
           Обсуждаем задачи, адаптируем бюджет, предлагаем наилучшее решение
         </p>
         <Button

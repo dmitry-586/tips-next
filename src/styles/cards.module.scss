@@ -36,6 +36,7 @@
 
 .buttons_wrapper {
   @apply flex gap-8 justify-center;
+  overflow: hidden;
   margin-bottom: clamp(2rem, -4rem + 6.67vw, 4rem);
 }
 
@@ -67,12 +68,60 @@
   &_shop,
   &_card {
     z-index: 1;
-    font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
-    width: clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem);
+    font-size: 20px;
+    width: 290px;
 
     &:hover {
       background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
       border-color: black;
     }
   }
+}
+
+//slider
+
+.slider {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 310px;
+  height: 60px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  &_container {
+    display: flex;
+  width: 100%;
+  }
+  &_wrapper {
+    padding: 5px 10px;
+    flex: 0 0 100%;
+  }  
+}
+
+.button_slider {
+  font-size: 20px;
+  width: 100%;
+  &:hover {
+    background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+    border-color: black;
+  }
+}
+
+.slider_controls {
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  z-index: 10;
+  width: 35%;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.button_prev {
+  color: white;
 }

@@ -11,7 +11,6 @@ import { menu } from "./menu.data";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-
 const Akony = localFont({ src: "../../../public/fonts/AKONY.woff2" });
 
 export default function Header() {
@@ -21,6 +20,17 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
+        <Image
+          src="/images/ru.svg"
+          width={0}
+          height={0}
+          alt="ru"
+          style={{
+            width: "17px",
+            height: "27px",
+          }}
+          className={styles.ru}
+        />
         <div className={styles.header_left}>
           <Image
             src="/images/tips.svg"
@@ -29,13 +39,14 @@ export default function Header() {
             alt="tips"
             loading="lazy"
             style={{ width: "185px", height: "auto" }}
+            className={styles.tips}
           />
           <p className="text-base w-2/5 leading-4">
             студия разработки продающих сайтов
           </p>
         </div>
         <div className={styles.header_right}>
-          <nav>
+          <nav className={styles.nav}>
             {menu.map((item) => (
               <Link
                 href={item.link}
