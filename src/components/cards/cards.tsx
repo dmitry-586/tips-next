@@ -2,13 +2,15 @@ import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
 import Button from "../button/Button";
-import CardsSlider from "./cards.button";
+import CardsButtons from "./cards.buttons";
+import CardsSlider from "./cards.slider";
 
 export default function Cards() {
   return (
     <div className="relative pb-[215px]" id="portfolio">
       {/* кнопочки */}
-      <CardsSlider />
+      <CardsButtons />
+  
       <div className={styles.buttons_wrapper}>
         <Button children="Лендинг" className={styles.button_lending} />
         <Button
@@ -19,7 +21,8 @@ export default function Cards() {
         <Button children="Визитка" className={styles.button_card} />
       </div>
       {/* карточки */}
-      <div className="flex flex-row flex-wrap gap-5">
+      <CardsSlider />
+      <div className={styles.cards_wrapper}>
         <Card
           title="Интернет-магазин"
           info="Cайт для магазина брендовой одежды"
@@ -57,7 +60,7 @@ export default function Cards() {
         />
       </div>
       {/* кругляши */}
-      <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0">
+      <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0 md:hidden">
         <Circle
           width="585px"
           height="585px"
@@ -65,7 +68,6 @@ export default function Cards() {
           right="-273px"
           bottom="500px"
           blur={250}
-          
         />
       </div>
       <Circle

@@ -1,7 +1,24 @@
+.cards_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(27.5rem, -2.5rem + 33.33vw, 37.5rem));
+  justify-content: center;
+  gap: 20px;
+  @media (max-width: 1439px) {
+    grid-template-columns: repeat(2, clamp(27.5rem, 7.5rem + 33.33vw, 37.5rem));
+  }
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 355px);
+    gap: 15px;
+  }
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
+
 .card {
   position: relative;
-  width: 600px;
-  height: 596px;
+  width: clamp(27.5rem, -2.5rem + 33.33vw, 37.5rem);
+  height: clamp(27.813rem, -0.5rem + 31.46vw, 37.25rem);
   border-radius: 20px;
   padding: 20px;
   transition: 0.3s;
@@ -10,34 +27,84 @@
   &:hover {
     scale: 1.02;
   }
+  @media (max-width: 1439px) {
+    height: clamp(27.813rem, 8.938rem + 31.46vw, 37.25rem);
+    width: clamp(27.5rem, 7.5rem + 33.33vw, 37.5rem);
+  }
+  @media (max-width: 960px) {
+    width: 355px;
+    height: 368px;
+    padding: 20px 10px;
+  }
+  @media (max-width: 750px) {
+    width: 440px;
+    height: 445px;
+  }
+  @media (max-width: 630px) {
+    width: 355px;
+    height: 368px;
+  }
 
   &_title {
     display: inline-flex;
     height: 42px;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: clamp(1.25rem, 0.5rem + 0.83vw, 1.5rem);
     border-radius: 20px;
     background-color: white;
     color: black;
+    @media (max-width: 1440px) {
+      font-size: clamp(1.25rem, 0.75rem + 0.83vw, 1.5rem);
+    }
+    @media (max-width: 960px) {
+      font-size: 16px;
+      height: 26px;
+    }
   }
   &_info {
     background-color: transparent;
-    font-size: 58px;
-    line-height: 58px;
-    margin-top: 40px;
+    font-size: clamp(2.5rem, -0.875rem + 3.75vw, 3.625rem);
+    line-height: 100%;
+    margin-top: clamp(1.875rem, 2.08vw, 2.5rem);
+    @media (max-width: 1440px) {
+      font-size: clamp(2.5rem, 0.25rem + 3.75vw, 3.625rem);
+    }
+    @media (max-width: 960px) {
+      font-size: 36px;
+      margin-top: 16px;
+    }
   }
   &_image {
     position: absolute;
     bottom: 0;
     border-radius: 20px 20px 0 0;
+    width: 90%;
+    @media (max-width: 630px) {
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
 .buttons_wrapper {
-  @apply flex gap-8 justify-center;
+  @apply flex justify-center;
+  gap: clamp(1rem, -0.341rem + 1.95vw, 2rem);
   overflow: hidden;
   margin-bottom: clamp(2rem, -4rem + 6.67vw, 4rem);
+  @media (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem)
+    );
+    column-gap: clamp(1rem, -2.6rem + 9.6vw, 4rem);
+    row-gap: clamp(1rem, -0.2rem + 3.2vw, 2rem);
+  }
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .ellipse {
@@ -68,8 +135,8 @@
   &_shop,
   &_card {
     z-index: 1;
-    font-size: 20px;
-    width: 290px;
+    font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
+    width: clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem);
 
     &:hover {
       background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
@@ -78,10 +145,22 @@
   }
 }
 
-//slider
+//slider for buttons
 
-.slider {
+.buttons_slider {
+  display: none;
+  margin-bottom: 32px;
   position: relative;
+  background: transparent;
+  @media (max-width: 600px) {
+    display: block;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 70px;
+  }
+}
+
+.btns_slider {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -90,22 +169,30 @@
   display: flex;
   gap: 10px;
   z-index: 10;
+  background: transparent;
+  & > * {
+    background-color: inherit;
+  }
   &_container {
     display: flex;
-  width: 100%;
+    width: 100%;
   }
   &_wrapper {
     padding: 5px 10px;
     flex: 0 0 100%;
-  }  
+    background-color: inherit;
+  }
 }
 
 .button_slider {
+  position: relative;
   font-size: 20px;
   width: 100%;
+  border: 2px solid white;
   &:hover {
     background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;
+    scale: 1.06;
   }
 }
 
@@ -116,12 +203,92 @@
   left: 50%;
   transform: translate(-50%, 0);
   top: 0;
-  z-index: 10;
-  width: 35%;
+  z-index: 1;
+  width: 450px;
   justify-content: space-between;
   margin-top: 5px;
+  & > * {
+    transition: 0.3s;
+    &:hover {
+      scale: 1.07;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 200px;
+    top: auto;
+    bottom: -70px;
+  }
 }
 
 .button_prev {
   color: white;
+}
+
+//slider for cards
+
+.cards_slider {
+  position: relative;
+  display: none;
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
+
+.slider {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 480px;
+  height: 480px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  background: transparent;
+  padding: 10px 0;
+  @media (max-width: 630px) {
+    width: 370px;
+    height: 388px;
+  }
+  & > * {
+    background-color: inherit;
+  }
+  &_container {
+    display: flex;
+    width: 100%;
+  }
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    background-color: inherit;
+  }
+}
+
+.slider_cards_controls {
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 1;
+  width: 600px;
+  justify-content: space-between;
+  margin-top: 5px;
+  @media (max-width: 630px) {
+    width: 500px;
+  }
+  @media (max-width: 520px) {
+    top: auto;
+    width: 200px;
+    bottom: -100px;
+  }
+  & > * {
+    background-color: transparent;
+    transition: 0.3s;
+    &:hover {
+      scale: 1.07;
+    }
+  }
 }
