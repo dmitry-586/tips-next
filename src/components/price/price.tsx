@@ -11,9 +11,10 @@ const ActayWide = localFont({
 
 export default function Price() {
   return (
-    <div className="flex justify-between gap-10">
+    <div className={styles.price_wrapper}>
       {/* левый блок */}
       <div className={styles.price}>
+        <h3 className={styles.h3}>Стоимость</h3>
         {/* буквы на фоне, ОТ НИХ ЗАВИСИТ ШИРИНА БЛОКА, Т.К. ВСЕ ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ pos:absolute */}
         <h3 className={ActayWide.className}>PRICE</h3>
         {/* описание */}
@@ -50,7 +51,7 @@ export default function Price() {
         </div>
       </div>
       {/* правый блок */}
-      <div className="relative bg-transparent">
+      <div className={styles.price_right}>
         {priceList.map((item) => (
           <PriceList
             title={item.title}
@@ -60,11 +61,11 @@ export default function Price() {
           />
         ))}
         <Circle
-          width="264px"
-          height="300px"
+          width="clamp(10.25rem, 8.089rem + 9.35vw, 16.5rem)"
+          height="clamp(12.5rem, 10.339rem + 9.35vw, 18.75rem)"
           color="rgba(248, 137, 12, 0.5)"
           blur={75}
-          right="-40px"
+          right="clamp(-10rem, -12.593rem + 11.21vw, -2.5rem)"
           bottom="-107px"
         />
       </div>

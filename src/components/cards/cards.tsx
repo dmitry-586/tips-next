@@ -7,10 +7,10 @@ import CardsSlider from "./cards.slider";
 
 export default function Cards() {
   return (
-    <div className="relative pb-[215px]" id="portfolio">
+    <div className="relative pb-16" id="portfolio">
       {/* кнопочки */}
       <CardsButtons />
-  
+
       <div className={styles.buttons_wrapper}>
         <Button children="Лендинг" className={styles.button_lending} />
         <Button
@@ -60,7 +60,7 @@ export default function Cards() {
         />
       </div>
       {/* кругляши */}
-      <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0 md:hidden">
+      <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0 lg:hidden">
         <Circle
           width="585px"
           height="585px"
@@ -75,12 +75,10 @@ export default function Cards() {
         height="264px"
         color="rgba(248, 137, 12, 0.5)"
         left="-181px"
-        bottom="0"
+        bottom="-215PX"
         blur={75}
         zIndex={0}
       />
-      {/* следующий блок */}
-      <h3 className={styles.h3}>Стоимость</h3>
     </div>
   );
 }

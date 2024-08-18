@@ -1,12 +1,39 @@
+.price_wrapper {
+  @apply flex justify-between gap-10;
+  height: clamp(66.5rem, 43.25rem + 25.83vw, 74.25rem);
+  @media (max-width: 1380px) { 
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: clamp(46.438rem, 39.088rem + 31.78vw, 66.5rem);
+  }
+}
+
 .price {
   position: relative;
   background-color: transparent;
+  width: clamp(34.688rem, -2.813rem + 41.67vw, 47.188rem);
+  margin-top: 64px;
+  height: 100%;
+
   & h3 {
-    font-size: 208px;
+    font-size: clamp(6.75rem, 0.5rem + 16.67vw, 13rem);
     color: rgba(255, 255, 255, 0.1);
     background-color: transparent;
     line-height: 125%;
     width: 755px;
+    @media (max-width: 560px) {
+      opacity: 0;
+    }
+  }
+  .h3 {
+    background-color: transparent;
+    font-size: clamp(2.5rem, 1.484rem + 4.39vw, 5.438rem);
+    line-height: 100%;
+    color: white;
+    @media (max-width: 560px) {
+      opacity: 1;
+    }
   }
 }
 
@@ -14,12 +41,15 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  top: 64px;
+  top: 150px;
   position: absolute;
   background-color: transparent;
   z-index: 0;
-  font-size: 24px;
-  width: 653px;
+  font-size: clamp(1.25rem, 0.5rem + 0.83vw, 1.5rem);
+  max-width: 653px;
+  @media (max-width: 1380px) {
+    display: none;
+  }
 
   & > * {
     background-color: transparent;
@@ -42,9 +72,9 @@
 
 .button {
   background-color: white;
-  font-size: 32px;
-  width: 755px;
-  height: 89px;
+  font-size: clamp(1.5rem, 1.67vw, 2rem);
+  width: 100%;
+  height: clamp(3.5rem, -2.875rem + 7.08vw, 5.625rem);
   color: black;
   margin-top: 64px;
   &:hover {
@@ -54,12 +84,20 @@
   }
 }
 
+.price_right {
+  @apply relative bg-transparent pt-[100px] mt-16;
+  @media (max-width: 1380px) {
+    bottom: clamp(10.625rem, 6.25rem + 11.67vw, 15rem);
+    padding: 0;
+  }
+}
+
 .priceList {
+  margin-bottom: clamp(2rem, 0.855rem + 4.95vw, 5.313rem);
   margin-left: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 108px;
   background-color: transparent;
   transition: 0.3s;
   cursor: default;
@@ -75,7 +113,7 @@
   &_header {
     display: flex;
     justify-content: space-between;
-    font-size: 30px;
+    font-size: clamp(1rem, 0.697rem + 1.31vw, 1.875rem);
     width: 100%;
     & > * {
       background-color: transparent;
@@ -84,7 +122,7 @@
       color: #e9ad0b;
     }
     &_description {
-      font-size: 24px;
+      font-size: clamp(0.938rem, 0.743rem + 0.84vw, 1.5rem);
       color: #969696;
     }
   }
@@ -93,8 +131,7 @@
     display: block;
     height: 1px;
     width: 100%;
-    margin-top: 32px;
-    margin-bottom: 30px;
+    margin: clamp(0.5rem, -0.019rem + 2.24vw, 2rem) 0;
     background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
   }
 }

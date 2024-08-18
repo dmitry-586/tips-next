@@ -23,7 +23,7 @@ const PriceList: React.FC<PriceProps> = ({
         <div className={styles.priceList_header_price}>от {price}₽</div>
       </div>
       <span className={styles.priceList_span}/>
-      <p className="text-2xl text-[#969696] w-4/5">{description}</p>
+      <p className={styles.priceList_header_description}>{description}</p>
     </div>
   );
 };
