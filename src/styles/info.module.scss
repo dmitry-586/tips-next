@@ -2,17 +2,18 @@
   position: sticky;
   top: 52px;
   background: #262626;
-  padding: 64px 32px;
+  padding: clamp(2rem, -4rem + 6.67vw, 4rem) 32px;
   border-radius: 20px;
-  width: 748px;
-  height: 682px;
+  width: clamp(34.688rem, -1.5rem + 40.21vw, 46.75rem);
+  height: clamp(35.688rem, 14.875rem + 23.13vw, 42.625rem);
   z-index: 1;
   & > * {
     background: inherit;
   }
   & p {
     margin: 64px 0;
-    font-size: 32px;
+    margin-top: clamp(2rem, -4rem + 6.67vw, 4rem);
+    font-size: clamp(1.438rem, -0.25rem + 1.88vw, 2rem);
     line-height: 32px;
     & b {
       background: inherit;
@@ -20,8 +21,8 @@
   }
 
   &_header {
-    font-size: 87px;
-    line-height: 87px;
+    font-size: clamp(5.125rem, 4.188rem + 1.04vw, 5.438rem);
+    line-height: 100%;
     & > * {
       background: inherit;
     }
@@ -30,7 +31,11 @@
 
 .right {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: transparent;
+  width: clamp(49.063rem, -3.438rem + 58.33vw, 66.563rem);
+  padding-left: 32px;
   & h3 {
     background-color: inherit;
     font-size: 48px;
@@ -43,22 +48,23 @@
     background-color: inherit;
     font-size: 24px;
     line-height: 100%;
+
     & > * {
       background-color: inherit;
     }
     &_header {
       display: flex;
       gap: 32px;
-      font-size: 36px;
-      width: 380px;
+      font-size: clamp(1.438rem, -0.25rem + 1.88vw, 2rem);
+      width: clamp(18.75rem, 2.813rem + 17.71vw, 24.063rem);
       line-height: 100%;
       & > * {
         background-color: inherit;
       }
     }
-    & p {
+    &_description {
       background-color: inherit;
-      width: 653px;
+      width: clamp(28.75rem, -7.438rem + 40.21vw, 40.813rem);
     }
   }
 
@@ -78,6 +84,7 @@
   top: 64px;
   background-color: transparent;
   font-size: 24px;
+  width: clamp(28.75rem, -7.438rem + 40.21vw, 40.813rem);
 
   & > * {
     background-color: transparent;
@@ -99,14 +106,14 @@
 }
 
 .h2 {
-  font-size: 87px;
+  font-size: clamp(5.125rem, 4.188rem + 1.04vw, 5.438rem);
   background: linear-gradient(90deg, #faff00 0%, #ff0000 100%);
   color: transparent;
   background-clip: text;
 }
 
 .button {
-  width: 675px;
+  width: 100%;
   height: 69px;
   background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
   border-color: transparent;
@@ -121,7 +128,5 @@
   position: relative;
   overflow: visible;
   display: flex;
-  gap: 32px;
   height: 100%;
-  width: 100vw;
 }

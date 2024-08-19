@@ -13,10 +13,10 @@ export default function Why() {
     <div className={styles.why}>
       <div className="flex bg-transparent">
         <h2 className={styles.h2}>Почему&nbsp;</h2>
-        <h2 className="text-[87px] bg-transparent">мы?</h2>
+        <h2 className={styles.h2_we}>мы?</h2>
       </div>
       <h3 className={ActayWide.className}>WHY</h3>
-      <div className="flex gap-[20px] bg-transparent justify-center">
+      <div className={styles.cards_wrapper}>
         {why.map((item) => (
           <WhyCard description={item.description} imageSrc={item.imageSrc} />
         ))}

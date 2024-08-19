@@ -60,6 +60,10 @@ export default function Price() {
             key={item.id}
           />
         ))}
+        <Button
+          children="Получить бесплатную структуру"
+          className={styles.button_right}
+        />
         <Circle
           width="clamp(10.25rem, 8.089rem + 9.35vw, 16.5rem)"
           height="clamp(12.5rem, 10.339rem + 9.35vw, 18.75rem)"

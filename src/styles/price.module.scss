@@ -1,11 +1,14 @@
 .price_wrapper {
   @apply flex justify-between gap-10;
-  height: clamp(66.5rem, 43.25rem + 25.83vw, 74.25rem);
-  @media (max-width: 1380px) { 
+  height: 1188px;
+  @media (max-width: 1300px) {
     display: flex;
     flex-direction: column;
     gap: 0;
-    height: clamp(46.438rem, 39.088rem + 31.78vw, 66.5rem);
+    height: clamp(56.25rem, 31.705rem + 52.36vw, 74.25rem);
+  }
+  @media (max-width: 750px) {
+    height: clamp(46.438rem, 36.883rem + 41.32vw, 56.25rem);
   }
 }
 
@@ -14,7 +17,6 @@
   background-color: transparent;
   width: clamp(34.688rem, -2.813rem + 41.67vw, 47.188rem);
   margin-top: 64px;
-  height: 100%;
 
   & h3 {
     font-size: clamp(6.75rem, 0.5rem + 16.67vw, 13rem);
@@ -47,7 +49,7 @@
   z-index: 0;
   font-size: clamp(1.25rem, 0.5rem + 0.83vw, 1.5rem);
   max-width: 653px;
-  @media (max-width: 1380px) {
+  @media (max-width: 1300px) {
     display: none;
   }
 
@@ -70,7 +72,8 @@
   font-weight: 600;
 }
 
-.button {
+.button,
+.button_right {
   background-color: white;
   font-size: clamp(1.5rem, 1.67vw, 2rem);
   width: 100%;
@@ -83,10 +86,16 @@
     color: white;
   }
 }
+.button_right {
+  display: none;
+  @media (max-width: 1300px) {
+    display: block;
+  }
+}
 
 .price_right {
   @apply relative bg-transparent pt-[100px] mt-16;
-  @media (max-width: 1380px) {
+  @media (max-width: 1300px) {
     bottom: clamp(10.625rem, 6.25rem + 11.67vw, 15rem);
     padding: 0;
   }
