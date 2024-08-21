@@ -158,7 +158,7 @@
   border: 1px solid #ddd;
   padding: 10px;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 // .dropdown_content::before {
@@ -176,11 +176,11 @@
   margin-bottom: 150px;
 }
 .dropdown:not(.openHeader) {
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .dropdown.openHeader {
-  transition: 0.3s;
+  transition: 0.4s;
   margin-bottom: 500px;
 }
 
