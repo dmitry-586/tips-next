@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import styles from "../../styles/price.module.scss";
 import { price, price2, price3, priceList } from "./price.data";
-import Button from "../button/Button";
+import ButtonComponent from "../button/Button";
 import PriceList from "./priceList";
 import Circle from "../circle/circle";
 
@@ -44,7 +44,7 @@ export default function Price() {
               </li>
             ))}
           </ul>
-          <Button
+          <ButtonComponent
             children="Получить бесплатную структуру"
             className={styles.button}
           />
@@ -60,7 +60,7 @@ export default function Price() {
             key={item.id}
           />
         ))}
-        <Button
+        <ButtonComponent
           children="Получить бесплатную структуру"
           className={styles.button_right}
         />

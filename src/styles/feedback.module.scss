@@ -80,7 +80,7 @@
     }
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none; // Yeah, yeah everybody write about it
+      -webkit-appearance: none;
     }
 
     input[type="number"],
@@ -102,17 +102,27 @@
       width: 283px;
       line-height: 100%;
     }
-    .btn {
-      padding: 23px 121px;
-      background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
-      border-color: black;
-      font-size: 24px;
-      &:hover {
-        background: white;
-        color: black;
-      }
-    }
   }
+}
+.btn {
+  width: 428px;
+  height: 69px;
+  background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
+  border-color: black;
+  font-size: 24px;
+  border-radius: 40px;
+  transition: 0.3s;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+.active-btn-form {
+  background: linear-gradient(270deg, #990000 0%, #ffb800 100%);
+  color: white;
+  border: none;
+  scale: 1.07;
 }
 
 .tg {

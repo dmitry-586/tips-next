@@ -1,8 +1,8 @@
-import exp from "constants";
 import styles from "../../styles/info.module.scss";
-import Button from "../button/Button";
+import ButtonComponent from "../button/Button";
 import Circle from "../circle/circle";
 import { price, price2, price3 } from "../price/price.data";
+import Dropdown from "./drop.info";
 
 interface InfoProps {
   className?: string;
@@ -22,7 +22,7 @@ const Info: React.FC<InfoProps> = ({ className }) => {
           «недорогой лендинг» и «премиум-сайт» с нестандартными, сложными
           задачами
         </p>
-        <Button
+        <ButtonComponent
           children="Получить бесплатную структуру"
           className={styles.button}
         />
@@ -125,6 +125,12 @@ const Info: React.FC<InfoProps> = ({ className }) => {
             помогаем найти новых. Быстро вносим изменения и улучшения.
             Поддерживаем вас в аналитике и отвечаем на вопросы.
           </p>
+        </div>
+        <div>
+          <Dropdown>
+            <div>123</div>
+            <div>456</div>
+          </Dropdown>
         </div>
       </div>
     </div>

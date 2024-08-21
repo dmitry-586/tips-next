@@ -1,4 +1,4 @@
-import Button from "../button/Button";
+import ButtonComponent from "../button/Button";
 import styles from "../../styles/main.module.scss";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export default function MainPage() {
         <p className={styles.p}>
           Обсуждаем задачи, адаптируем бюджет, предлагаем наилучшее решение
         </p>
-        <Button
+        <ButtonComponent
           children="Получить бесплатную структуру"
           className={styles.button}
         />

@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <Info className="pt-16 px-10 rounded-t-[100px]" />
       <AboutTeam />
-      <div className="px-10">
+      <div className="px-10 bg-black">
         <Feedback />
         <Footer />
       </div>

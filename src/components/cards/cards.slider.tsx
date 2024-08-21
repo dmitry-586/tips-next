@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Button from "../button/Button";
 import styles from "../../styles/cards.module.scss";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";

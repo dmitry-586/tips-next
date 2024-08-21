@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutTeam() {
   return (
-    <div className="flex justify-between px-10 pt-32">
+    <div className="flex justify-between px-10 pt-32 bg-black">
       <div className="felx flex-col w-1/3">
         <h3 className="text-[87px] leading-none">Команда</h3>
         <p className="leading-none text-[24px] my-8">

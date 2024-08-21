@@ -1,7 +1,7 @@
 import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
-import Button from "../button/Button";
+import ButtonComponent from "../button/Button";
 import CardsButtons from "./cards.buttons";
 import CardsSlider from "./cards.slider";
 
@@ -12,13 +12,13 @@ export default function Cards() {
       <CardsButtons />
 
       <div className={styles.buttons_wrapper}>
-        <Button children="Лендинг" className={styles.button_lending} />
-        <Button
+        <ButtonComponent children="Лендинг" className={styles.button_lending} />
+        <ButtonComponent
           children="Многостраничный"
           className={styles.button_multipage}
         />
-        <Button children="Интернет-магазин" className={styles.button_shop} />
-        <Button children="Визитка" className={styles.button_card} />
+        <ButtonComponent children="Интернет-магазин" className={styles.button_shop} />
+        <ButtonComponent children="Визитка" className={styles.button_card} />
       </div>
       {/* карточки */}
       <CardsSlider />

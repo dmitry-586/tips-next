@@ -5,7 +5,7 @@ import BurgerMenu from "./burger.menu";
 import styles from "../../styles/header.module.scss";
 import localFont from "next/font/local";
 import Image from "next/image";
-import Button from "../button/Button";
+import ButtonComponent from "../button/Button";
 import cn from "clsx";
 import { menu } from "./menu.data";
 import { usePathname } from "next/navigation";
@@ -65,7 +65,7 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <Button
+          <ButtonComponent
             children="Связаться с нами"
             className={styles.header_button}
           />
