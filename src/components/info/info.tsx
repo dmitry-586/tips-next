@@ -14,7 +14,7 @@ const Info: React.FC<InfoProps> = ({ className }) => {
       <div className={styles.left}>
         <div className={styles.left_header}>
           <h2>Найдем решение</h2>
-          <h2 className={styles.h2}>для каждого</h2>
+          <h2 className={styles.h2}>для&nbsp;каждого</h2>
         </div>
         <p>
           <b>К нам обращаются заказчики с запросом:</b>
@@ -41,7 +41,7 @@ const Info: React.FC<InfoProps> = ({ className }) => {
         <div className={styles.block}>
           <div className={styles.block_header}>
             <div>01</div>
-            <p>Исследование и проектирование</p>
+            <p>Исследование и&nbsp;проектирование</p>
           </div>
           <p className={styles.block_description}>
             Мы связываем ваш бизнес с&nbsp;целевой аудиторией, анализируя данные
