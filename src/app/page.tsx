@@ -8,7 +8,7 @@ import Footer from "@/components/footer/footer";
 
 export default function Home() {
   return (
-    <div className="px-10 lg:px-[10px]">
+    <div className="px-10 lg:px-[10px] lg:overflow-hidden">
       <MainPage />
       <Cards />
       <Price />

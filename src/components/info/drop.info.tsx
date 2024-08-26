@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import styles from "../../styles/info.module.scss";
+import ButtonComponent from "../button/Button";
+import React from "react";
 
 interface DropdownProps {
   children: React.ReactNode;
@@ -14,17 +16,22 @@ const Dropdown: React.FC<DropdownProps> = ({ children }) => {
     setIsOpen(!isOpen);
   };
 
+  const contentRef = React.createRef<HTMLDivElement>();
+
   return (
     <div className={`${styles.dropdown} ${isOpen ? styles.openHeader : ""}`}>
-      <button className={styles.dropdown_toggle} onClick={handleToggle}>
+      <ButtonComponent
+        className={styles.dropdown_toggle}
+        onClick={handleToggle}
+      >
         Показать/скрыть список
-      </button>
+      </ButtonComponent>
       <div
         className={`${styles.dropdown_content} ${isOpen ? styles.open : ""}`}
         aria-hidden={!isOpen}
         style={{
           opacity: isOpen ? 1 : 0,
-          transition: "0.3s",
+          transition: "0.4s",
         }}
       >
         {children}
