@@ -61,7 +61,7 @@ export default function Feedback() {
             Заполните пожалуйста форму, это поможет нам точно понять в каком
             направлении нам двигаться
           </p>
-          <div className={styles.feedback_left_bottom}>
+          <div className={`${styles.feedback_left_bottom} lg:hidden`}>
             <p>Или свяжитесь с нами другим способом:</p>
             <div className={styles.feedback_left_bottom_info}>
               <Image
@@ -75,10 +75,12 @@ export default function Feedback() {
                 }}
               />
               <Link href="tel:+79968085818">+7 996 808 58 18</Link>
-              <Link href="mailto:info@webstudio-tips.ru">info@webstudio-tips.ru</Link>
+              <Link href="mailto:info@webstudio-tips.ru">
+                info@webstudio-tips.ru
+              </Link>
             </div>
           </div>
-          <div className={styles.feedback_left_buttons}>
+          <div className={`${styles.feedback_left_buttons} flex lg:hidden`}>
             <button className={styles.tg}>
               <Image
                 src="/images/feedback/tg.svg"
@@ -124,8 +126,8 @@ export default function Feedback() {
           className={styles.feedback_right}
           onSubmit={form.onSubmit(handleSubmit)}
         >
-          <div className="flex gap-8 mb-16">
-            <div className="flex flex-col w-1/2">
+          <div className="flex gap-8 mb-16 flex-wrap lg:mb-8">
+            <div className="flex flex-col w-1/2 lg:w-full">
               <p>Как Вас зовут</p>
               <TextInput
                 required
@@ -134,7 +136,7 @@ export default function Feedback() {
                 error={form.errors.name}
               />
             </div>
-            <div className="flex flex-col w-1/2">
+            <div className="flex flex-col w-1/2 lg:w-full">
               <p>Телефон/WhatsApp/Telegram</p>
               <TextInput
                 required
@@ -150,7 +152,7 @@ export default function Feedback() {
               {/* Кнопка "Сайт" */}
               <Button
                 children="Сайт"
-                className="w-[136px]"
+                className="w-[136px] sm:w-[77px] sm:order-1"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -158,7 +160,7 @@ export default function Feedback() {
               {/* Кнопка "Лендинг" */}
               <Button
                 children="Лендинг"
-                className="w-[193px]"
+                className="w-[193px] sm:w-[103px] sm:order-3"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -166,7 +168,7 @@ export default function Feedback() {
               {/* Кнопка "Интернет-магазин" */}
               <Button
                 children="Интернет-магазин"
-                className="w-[237px]"
+                className="w-[237px] sm:w-[176px] sm:order-2"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -174,7 +176,7 @@ export default function Feedback() {
               {/* Кнопка "Веб-приложение" */}
               <Button
                 children="Веб-приложение"
-                className="w-[237px]"
+                className="w-[237px] sm:w-[168px] sm:order-4"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -182,7 +184,7 @@ export default function Feedback() {
               {/* Кнопка "Другое" */}
               <Button
                 children="Другое"
-                className="w-[237px]"
+                className="w-[237px] sm:w-[93px] sm:order-5"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -206,6 +208,76 @@ export default function Feedback() {
             <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
           </Group>
         </form>
+        <div className="hidden lg:block">
+          <div className={styles.feedback_left_bottom}>
+            <p>Или свяжитесь с нами другим способом:</p>
+            <div className={styles.feedback_left_bottom_info}>
+              <div className="lg:w-5">
+                <Image
+                  width={40}
+                  height={40}
+                  src="/images/feedback/feedback1.svg"
+                  alt="icon"
+                  style={{
+                    width: "40px",
+                    height: "auto",
+                  }}
+                />
+              </div>
+              <Link href="tel:+79968085818">+7 996 808 58 18</Link>
+              <Link href="mailto:info@webstudio-tips.ru">
+                info@webstudio-tips.ru
+              </Link>
+            </div>
+          </div>
+          <div className={`${styles.feedback_left_buttons} flex`}>
+            <button className={styles.tg}>
+              <div className="lg:w-[25px]">
+                <Image
+                  src="/images/feedback/tg.svg"
+                  width={0}
+                  height={0}
+                  alt="tg"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                  }}
+                />
+              </div>
+              <p>Telegram</p>
+            </button>
+            <button className={styles.vk}>
+              <div className="lg:w-[25px]">
+                <Image
+                  src="/images/feedback/vk.svg"
+                  width={28}
+                  height={23}
+                  alt="vk"
+                  style={{
+                    width: "28px",
+                    height: "23px",
+                  }}
+                />
+              </div>
+              <p>Вконтакте</p>
+            </button>
+            <button className={styles.whatsApp}>
+              <div className="lg:w-[25px]">
+                <Image
+                  src="/images/feedback/whatsApp.svg"
+                  width={35}
+                  height={35}
+                  alt="whatsApp"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                  }}
+                />
+              </div>
+              <p>WhatsApp</p>
+            </button>
+          </div>
+        </div>
       </div>
     </MantineProvider>
   );

@@ -68,9 +68,6 @@
   background-color: transparent;
   width: clamp(49.063rem, -3.438rem + 58.33vw, 66.563rem);
   padding-left: 32px;
-  @media (max-width: 1439px) {
-    width: 600px;
-  }
   @media (max-width: 960px) {
     width: 100%;
     align-items: center;
@@ -247,6 +244,7 @@
   position: relative;
   overflow: visible;
   display: flex;
+  justify-content: space-between;
   height: 100%;
   background-color: black;
   @media (max-width: 960px) {

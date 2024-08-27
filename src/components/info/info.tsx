@@ -35,6 +35,7 @@ const Info: React.FC<InfoProps> = ({ className }) => {
         left="-238px"
         top="490px"
         zIndex={0}
+        className="lg:hidden"
       />
       <div className={styles.right}>
         <h3>Процесс работы</h3>
