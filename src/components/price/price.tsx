@@ -71,6 +71,7 @@ export default function Price() {
           blur={75}
           right="clamp(-10rem, -12.593rem + 11.21vw, -2.5rem)"
           bottom="-107px"
+          className="xl:hidden"
         />
       </div>
     </div>

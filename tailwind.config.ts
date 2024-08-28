@@ -21,6 +21,7 @@ const config: Config = {
       },
     },
     screens: {
+      ssm: { max: "450px" },
       sm: { max: "560px" },
       md: { max: "767px" },
       lg: { max: "960px" },

@@ -1,6 +1,7 @@
 .price_wrapper {
   @apply flex justify-between gap-10;
   height: 1188px;
+  width: 100%;
   @media (max-width: 1300px) {
     display: flex;
     flex-direction: column;
