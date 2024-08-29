@@ -151,44 +151,49 @@ export default function Feedback() {
             <div className={styles.buttons_wrapper}>
               {/* Кнопка "Сайт" */}
               <Button
-                children="Сайт"
                 className="w-[136px] sm:w-[77px] sm:order-1"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
-              />
+              >
+                Сайт
+              </Button>
               {/* Кнопка "Лендинг" */}
               <Button
-                children="Лендинг"
                 className="w-[193px] sm:w-[103px] sm:order-3"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
-              />
+              >
+                Лендинг
+              </Button>
               {/* Кнопка "Интернет-магазин" */}
               <Button
-                children="Интернет-магазин"
                 className="w-[237px] sm:w-[176px] sm:order-2"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
-              />
+              >
+                Интернет-магазин
+              </Button>
               {/* Кнопка "Веб-приложение" */}
               <Button
-                children="Веб-приложение"
                 className="w-[237px] sm:w-[168px] sm:order-4"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
-              />
+              >
+                Веб-приложение
+              </Button>
               {/* Кнопка "Другое" */}
               <Button
-                children="Другое"
                 className="w-[237px] sm:w-[93px] sm:order-5"
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
-              />
+              >
+                Другое
+              </Button>
             </div>
           </div>
           <div className={styles.example}>
@@ -199,12 +204,9 @@ export default function Feedback() {
             />
           </div>
           <Group className={styles.button}>
-            <Button
-              loading={isLoading}
-              type="submit"
-              children="Оставить заявку"
-              className={styles.btn}
-            />
+            <Button loading={isLoading} type="submit" className={styles.btn}>
+              Оставить заявку
+            </Button>
             <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
           </Group>
         </form>

@@ -42,10 +42,9 @@ export default function AboutHeader() {
             Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы
             могли быть уверены в том, что ваш проект находится в надежных руках
           </p>
-          <Button
-            children="Получить бесплатную структуру"
-            className={styles.about_left_bottom_button}
-          />
+          <Button className={styles.about_left_bottom_button}>
+            Получить бесплатную структуру
+          </Button>
         </div>
       </div>
       <p className={styles.about_right}>

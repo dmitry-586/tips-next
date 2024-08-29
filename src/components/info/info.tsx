@@ -22,10 +22,9 @@ const Info: React.FC<InfoProps> = ({ className }) => {
           «недорогой лендинг» и «премиум-сайт» с нестандартными, сложными
           задачами
         </p>
-        <ButtonComponent
-          children="Получить бесплатную структуру"
-          className={styles.button}
-        />
+        <ButtonComponent className={styles.button}>
+          Получить бесплатную структуру
+        </ButtonComponent>
       </div>
       <Circle
         width="796px"

@@ -27,22 +27,16 @@ export default function CardsButtons() {
       <div className={styles.btns_slider} ref={emblaRef}>
         <div className={styles.btns_slider_container}>
           <div className={styles.btns_slider_wrapper}>
-            <Button children="Лендинг" className={styles.button_slider} />
+            <Button className={styles.button_slider}>Лендинг</Button>
           </div>
           <div className={styles.btns_slider_wrapper}>
-            <Button
-              children="Многостраничный"
-              className={styles.button_slider}
-            />
+            <Button className={styles.button_slider}>Многостраничный</Button>
           </div>
           <div className={styles.btns_slider_wrapper}>
-            <Button
-              children="Интернет-магазин"
-              className={styles.button_slider}
-            />
+            <Button className={styles.button_slider}>Интернет-магазин</Button>
           </div>
           <div className={styles.btns_slider_wrapper}>
-            <Button children="Визитка" className={styles.button_slider} />
+            <Button className={styles.button_slider}>Визитка</Button>
           </div>
         </div>
       </div>

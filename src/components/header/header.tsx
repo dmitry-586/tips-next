@@ -65,10 +65,9 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <ButtonComponent
-            children="Связаться с нами"
-            className={styles.header_button}
-          />
+          <ButtonComponent className={styles.header_button}>
+            Связаться с нами
+          </ButtonComponent>
         </div>
         <BurgerMenu />
       </header>
