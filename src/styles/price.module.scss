@@ -1,6 +1,7 @@
 .price_wrapper {
   @apply flex justify-between gap-10;
   height: 1188px;
+  width: 100%;
   @media (max-width: 1300px) {
     display: flex;
     flex-direction: column;
@@ -80,6 +81,8 @@
   height: clamp(3.5rem, -2.875rem + 7.08vw, 5.625rem);
   color: black;
   margin-top: 64px;
+  position: relative;
+  z-index: 1;
   &:hover {
     background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;

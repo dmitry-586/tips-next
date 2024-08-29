@@ -4,17 +4,19 @@ import AboutTeam from "@/components/aboutTeam/aboutTeam";
 import Feedback from "@/components/feedback/feedback";
 import Footer from "@/components/footer/footer";
 import Info from "@/components/info/info";
+import styles from "../../styles/aboutHeader.module.scss"
+import stylesAboutInfo from "../../styles/aboutInfo.module.scss"
 
 export default function Home() {
   return (
     <div className="bg-white">
       <AboutHeader />
-      <div className="bg-white px-10 py-16">
+      <div className={stylesAboutInfo.info_wrapper}>
         <AboutInfo />
       </div>
-      <Info className="pt-16 px-10 rounded-t-[100px]" />
+      <Info className={styles.info_border} />
       <AboutTeam />
-      <div className="px-10 bg-black">
+      <div className="px-10 bg-black lg:px-[10px]">
         <Feedback />
         <Footer />
       </div>

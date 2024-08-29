@@ -1,16 +1,17 @@
 import Image from "next/image";
+import styles from "../../styles/aboutTeam.module.scss";
 
 export default function AboutTeam() {
   return (
-    <div className="flex justify-between px-10 pt-32 bg-black">
-      <div className="felx flex-col w-1/3">
-        <h3 className="text-[87px] leading-none">Команда</h3>
-        <p className="leading-none text-[24px] my-8">
+    <div className={styles.about_team_wrapper}>
+      <div className={styles.about_team}>
+        <h3>Команда</h3>
+        <p>
           Мы являемся поставщиком качественных, выгодных и продающих решений. В
           нашей команде есть опытные копирайтеры, дизайнеры, разработчики и
           маркетологи, SEO-специалисты.
         </p>
-        <p className="leading-none text-[24px]">
+        <p>
           Мы дорожим своей репутацией и обеспечиваем полную прозрачность на всех
           этапах работы, чтобы вы могли быть уверены в том, что ваш проект
           находится в надежных руках.

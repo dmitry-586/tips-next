@@ -1,5 +1,5 @@
 .footer {
-  padding-bottom: 64px;
+  padding-bottom: clamp(2rem, 1.308rem + 2.99vw, 4rem);
   &_top {
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
     &_right {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: clamp(0.25rem, -0.009rem + 1.12vw, 1rem);
       & button {
         display: flex;
         justify-content: center;
@@ -23,6 +23,13 @@
         border: 1px solid white;
         border-radius: 20px;
         transition: 0.3s;
+        @media (max-width: 1440px) {
+          width: 80px;
+          height: 50px;
+        }
+        @media (max-width: 800px) {
+          display: none;
+        }
         & > * {
           background-color: transparent;
         }
@@ -35,14 +42,25 @@
         }
       }
     }
+    &_number {
+      font-size: clamp(0.938rem, 0.57rem + 1.59vw, 2rem);
+    }
+    &_tel {
+      @media (max-width: 1440px) {
+        width: clamp(1rem, 0.697rem + 1.31vw, 1.875rem);
+      }
+    }
   }
   &_bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: clamp(2rem, 1.611rem + 1.68vw, 3.125rem);
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 64px;
     & p {
       color: #bfbfbf;
-      font-size: 20px;
+      font-size: clamp(0.938rem, 0.829rem + 0.47vw, 1.25rem);
       line-height: 100%;
     }
   }
@@ -54,4 +72,17 @@
 
 .btnWhatsApp:hover {
   background-color: #2ac41d;
+}
+
+.tips_wrapper {
+  @media (max-width: 1440px) {
+    width: clamp(6.938rem, 5.338rem + 6.92vw, 11.563rem);
+  }
+}
+
+.tips_info {
+  @apply text-base max-w-[182px] leading-4 md:text-[13px] md:max-w-[120px];
+  @media (max-width: 450px) {
+    display: none;
+  }
 }

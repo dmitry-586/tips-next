@@ -6,42 +6,48 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footer_top}>
         <div className={styles.footer_top_left}>
-          <Image
-            src="/images/tips.svg"
-            width="0"
-            height="0"
-            alt="tips"
-            loading="lazy"
-            style={{ width: "185px", height: "auto" }}
-          />
-          <p className="text-base w-2/5 leading-4">
-            студия разработки продающих сайтов
-          </p>
+          <div className={styles.tips_wrapper}>
+            <Image
+              src="/images/tips.svg"
+              width="0"
+              height="0"
+              alt="tips"
+              loading="lazy"
+              style={{ width: "185px", height: "auto" }}
+            />
+          </div>
+          <p className={styles.tips_info}>студия разработки продающих сайтов</p>
         </div>
         <div className={styles.footer_top_right}>
-          <Image src="/images/tel.svg" alt="tel" width={40} height={40} />
-          <a className="text-[32px]" href="tel:+79968085818">
+          <div className={styles.footer_top_tel}>
+            <Image src="/images/tel.svg" alt="tel" width={40} height={40} />
+          </div>
+          <a className={styles.footer_top_number} href="tel:+79968085818">
             +7 996 808 58 18
           </a>
           <button className={styles.btnTg}>
-            <Image
-              src="/images/feedback/tg.svg"
-              alt="tg"
-              width={28}
-              height={23}
-            />
+            <div className="xl:w-[23px]">
+              <Image
+                src="/images/feedback/tg.svg"
+                alt="tg"
+                width={28}
+                height={23}
+              />
+            </div>
           </button>
           <button className={styles.btnWhatsApp}>
-            <Image
-              src="/images/feedback/whatsApp.svg"
-              alt="whatsApp"
-              width={35}
-              height={35}
-              style={{
-                width: "35px",
-                height: "35px",
-              }}
-            />
+            <div className="xl:w-[27px]">
+              <Image
+                src="/images/feedback/whatsApp.svg"
+                alt="whatsApp"
+                width={35}
+                height={35}
+                style={{
+                  width: "35px",
+                  height: "35px",
+                }}
+              />
+            </div>
           </button>
         </div>
       </div>
