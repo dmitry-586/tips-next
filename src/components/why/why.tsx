@@ -18,7 +18,7 @@ export default function Why() {
       <h3 className={ActayWide.className}>WHY</h3>
       <div className={styles.cards_wrapper}>
         {why.map((item) => (
-          <WhyCard description={item.description} imageSrc={item.imageSrc} />
+          <WhyCard description={item.description} imageSrc={item.imageSrc} key={item.id}/>
         ))}
       </div>
     </div>

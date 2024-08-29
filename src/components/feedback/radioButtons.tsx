@@ -10,10 +10,15 @@ interface ButtonProps {
   onClick: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, isActive, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  isActive,
+  onClick,
+}) => {
   return (
     <button
-      className={`${className} ${isActive ? styles.active : ''}`}
+      className={`${className} ${isActive ? styles.active : ""}`}
       onClick={onClick}
     >
       {children}
@@ -31,35 +36,40 @@ export default function RadioButtons() {
   return (
     <div className={styles.buttons_wrapper}>
       <Button
-        children="Сайт"
         className="w-[136px]"
         isActive={activeButton === 0}
         onClick={() => handleButtonClick(0)}
-      />
+      >
+        Сайт
+      </Button>
       <Button
-        children="Лендинг"
         className="w-[193px]"
         isActive={activeButton === 1}
         onClick={() => handleButtonClick(1)}
-      />
+      >
+        Лендинг
+      </Button>
       <Button
-        children="Интернет-магазин"
         className="w-[237px]"
         isActive={activeButton === 2}
         onClick={() => handleButtonClick(2)}
-      />
+      >
+        Интернет-магазин
+      </Button>
       <Button
-        children="Веб-приложение"
         className="w-[237px]"
         isActive={activeButton === 3}
         onClick={() => handleButtonClick(3)}
-      />
+      >
+        Веб-приложение
+      </Button>
       <Button
-        children="Другое"
         className="w-[237px]"
         isActive={activeButton === 4}
         onClick={() => handleButtonClick(4)}
-      />
+      >
+        Другое
+      </Button>
     </div>
   );
 }

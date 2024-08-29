@@ -12,10 +12,9 @@ export default function MainPage() {
         <p className={styles.p}>
           Обсуждаем задачи, адаптируем бюджет, предлагаем наилучшее решение
         </p>
-        <ButtonComponent
-          children="Получить бесплатную структуру"
-          className={styles.button}
-        />
+        <ButtonComponent className={styles.button}>
+          Получить бесплатную структуру
+        </ButtonComponent>
       </div>
       {/* логотипы */}
       <div className="flex gap-[62px] justify-center mt-7 mb-16 overflow-x-auto w-full xxl:justify-start">
@@ -83,7 +82,6 @@ export default function MainPage() {
           style={{ width: "193px", height: "auto" }}
         />
       </div>
-      
     </>
   );
 }

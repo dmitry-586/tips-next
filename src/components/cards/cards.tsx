@@ -12,13 +12,18 @@ export default function Cards() {
       <CardsButtons />
 
       <div className={styles.buttons_wrapper}>
-        <ButtonComponent children="Лендинг" className={styles.button_lending} />
-        <ButtonComponent
-          children="Многостраничный"
-          className={styles.button_multipage}
-        />
-        <ButtonComponent children="Интернет-магазин" className={styles.button_shop} />
-        <ButtonComponent children="Визитка" className={styles.button_card} />
+        <ButtonComponent className={styles.button_lending}>
+          Лендинг
+        </ButtonComponent>
+        <ButtonComponent className={styles.button_multipage}>
+          Многостраничный
+        </ButtonComponent>
+        <ButtonComponent className={styles.button_shop}>
+          Интернет-магазин
+        </ButtonComponent>
+        <ButtonComponent className={styles.button_card}>
+          Визитка
+        </ButtonComponent>
       </div>
       {/* карточки */}
       <CardsSlider />

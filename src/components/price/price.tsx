@@ -44,10 +44,9 @@ export default function Price() {
               </li>
             ))}
           </ul>
-          <ButtonComponent
-            children="Получить бесплатную структуру"
-            className={styles.button}
-          />
+          <ButtonComponent className={styles.button}>
+            Получить бесплатную структуру
+          </ButtonComponent>
         </div>
       </div>
       {/* правый блок */}
@@ -60,10 +59,9 @@ export default function Price() {
             key={item.id}
           />
         ))}
-        <ButtonComponent
-          children="Получить бесплатную структуру"
-          className={styles.button_right}
-        />
+        <ButtonComponent className={styles.button_right}>
+          Получить бесплатную структуру
+        </ButtonComponent>
         <Circle
           width="clamp(10.25rem, 8.089rem + 9.35vw, 16.5rem)"
           height="clamp(12.5rem, 10.339rem + 9.35vw, 18.75rem)"
