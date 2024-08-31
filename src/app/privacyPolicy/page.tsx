@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <div>
       <h2 className="text-4xl text-center mb-8 sm:text-2xl">Политика конфиденциальности</h2>
-      <div className="px-10 text-base mb-8 leading-none sm:text-sm">
+      <div className="px-10 text-base mb-8 leading-none sm:text-sm sm:px-5">
         <p>
           Политика в&nbsp;отношении обработки персональных данных
           <br />
