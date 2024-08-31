@@ -1,5 +1,7 @@
 .footer {
   padding-bottom: clamp(2rem, 1.308rem + 2.99vw, 4rem);
+  position: relative;
+  z-index: 2;
   &_top {
     display: flex;
     justify-content: space-between;
@@ -58,11 +60,14 @@
     flex-wrap: wrap;
     row-gap: 8px;
     column-gap: 64px;
-    & p {
+    & p, .privacy_policy {
       color: #bfbfbf;
       font-size: clamp(0.938rem, 0.829rem + 0.47vw, 1.25rem);
       line-height: 100%;
     }
+  }
+  .privacy_policy {
+    border-bottom: 1px solid;
   }
 }
 

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { menu } from "./menu.data";
 import { usePathname } from "next/navigation";
 import cn from "clsx";
+import ButtonComponent from "../button/Button";
 
 export default function BurgerMenu() {
   const [menuActive, setMenuActive] = useState(false);
@@ -46,6 +47,9 @@ export default function BurgerMenu() {
             {item.name}
           </Link>
         ))}
+        <ButtonComponent className={styles.header_button}>
+          Связаться с нами
+        </ButtonComponent>
       </div>
     </>
   );

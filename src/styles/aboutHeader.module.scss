@@ -125,7 +125,7 @@
 }
 
 .info_border {
-  @apply pt-16 px-10;
+  padding-top: 64px !important;
   border-radius: clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem)
     clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem) 0 0;
   @media (max-width: 960px) {
