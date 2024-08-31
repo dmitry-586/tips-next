@@ -32,15 +32,17 @@ export default function Header() {
           className={styles.ru}
         />
         <div className={styles.header_left}>
-          <Image
-            src="/images/tips.svg"
-            width="0"
-            height="0"
-            alt="tips"
-            loading="lazy"
-            style={{ width: "185px", height: "auto" }}
-            className={styles.tips}
-          />
+          <Link href="/">
+            <Image
+              src="/images/tips.svg"
+              width="0"
+              height="0"
+              alt="tips"
+              loading="lazy"
+              style={{ width: "185px", height: "auto" }}
+              className={styles.tips}
+            />
+          </Link>
           <p className="text-base w-2/5 leading-4">
             студия разработки продающих сайтов
           </p>

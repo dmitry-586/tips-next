@@ -9,7 +9,7 @@
     height: clamp(56.25rem, 31.705rem + 52.36vw, 74.25rem);
   }
   @media (max-width: 750px) {
-    height: clamp(46.438rem, 36.883rem + 41.32vw, 56.25rem);
+    height: clamp(46.875rem, 38.964rem + 34.21vw, 55rem);
   }
 }
 
@@ -17,7 +17,7 @@
   position: relative;
   background-color: transparent;
   width: clamp(34.688rem, -2.813rem + 41.67vw, 47.188rem);
-  margin-top: 64px;
+  margin-top: 45px;
 
   & h3 {
     font-size: clamp(6.75rem, 0.5rem + 16.67vw, 13rem);
@@ -80,13 +80,18 @@
   width: 100%;
   height: clamp(3.5rem, -2.875rem + 7.08vw, 5.625rem);
   color: black;
-  margin-top: 64px;
+  margin-top: 45px;
   position: relative;
   z-index: 1;
+  padding: 0;
   &:hover {
     background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;
     color: white;
+  }
+  @media (max-width: 1440px) {
+    font-size: clamp(1rem, 0.827rem + 0.75vw, 1.5rem);
+    height: clamp(2.75rem, 2.491rem + 1.12vw, 3.5rem);
   }
 }
 .button_right {

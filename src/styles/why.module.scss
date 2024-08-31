@@ -2,14 +2,17 @@
   position: relative;
   height: 720px;
   background-color: transparent;
-  margin-top: 64px;
+  margin: 45px 0;
   @media (max-width: 1380px) {
-    height: clamp(53.125rem, 33.824rem + 44.12vw, 71.875rem);
+    height: clamp(54.375rem, 20.089rem + 57.14vw, 69.375rem);
+  }
+  @media (max-width: 960px) {
+    height: clamp(48.125rem, 31.298rem + 38.46vw, 54.375rem);
   }
   @media (max-width: 700px) {
-    height: clamp(43rem, 21.136rem + 94.55vw, 62.5rem);
+    height: clamp(37rem, 12.964rem + 103.94vw, 58.438rem);
   }
-  & h3 { 
+  & h3 {
     position: absolute;
     font-size: clamp(6.75rem, 0.5rem + 16.67vw, 13rem);
     color: rgba(255, 255, 255, 0.1);
@@ -114,7 +117,10 @@
 }
 
 .cards_wrapper {
-  @apply flex gap-[20px] bg-transparent justify-center;
+  display: flex;
+  gap: 20px;
+  background-color: transparent;
+  justify-content: center;
   @media (max-width: 1380px) {
     display: grid;
     grid-template-columns: repeat(
