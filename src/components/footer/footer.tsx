@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/footer.module.scss";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,14 +8,16 @@ export default function Footer() {
       <div className={styles.footer_top}>
         <div className={styles.footer_top_left}>
           <div className={styles.tips_wrapper}>
-            <Image
-              src="/images/tips.svg"
-              width="0"
-              height="0"
-              alt="tips"
-              loading="lazy"
-              style={{ width: "185px", height: "auto" }}
-            />
+            <Link href="/">
+              <Image
+                src="/images/tips.svg"
+                width="0"
+                height="0"
+                alt="tips"
+                loading="lazy"
+                style={{ width: "185px", height: "auto" }}
+              />
+            </Link>
           </div>
           <p className={styles.tips_info}>студия разработки продающих сайтов</p>
         </div>
@@ -55,7 +58,9 @@ export default function Footer() {
         <p>ИП Трушенков Егор Алексеевич</p>
         <p>ИНН: 583680182669</p>
         <p>ОГРНИП: 324580000027704</p>
-        <p className="border-b">Политика конфиденциальности</p>
+        <Link href="/privacyPolicy" className={styles.privacy_policy}>
+          Политика конфиденциальности
+        </Link>
       </div>
     </div>
   );
