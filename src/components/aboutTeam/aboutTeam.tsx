@@ -17,12 +17,14 @@ export default function AboutTeam() {
           находится в надежных руках.
         </p>
       </div>
-      <Image
-        src="/images/about/aboutTeam.webp"
-        alt="aboutTeam"
-        width={1071}
-        height={343}
-      />
+      <div className={styles.image}>
+        <Image
+          src="/images/about/aboutTeam.webp"
+          alt="aboutTeam"
+          width={1071}
+          height={343}
+        />
+      </div>
     </div>
   );
 }
