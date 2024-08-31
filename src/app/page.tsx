@@ -8,14 +8,20 @@ import Footer from "@/components/footer/footer";
 
 export default function Home() {
   return (
-    <div className="px-10 lg:px-[10px] lg:overflow-hidden">
-      <MainPage />
-      <Cards />
-      <Price />
-      <Why />
-      <Info />
-      <Feedback />
-      <Footer />
-    </div>
+    <>
+      <div className="px-10 lg:px-[10px] lg:overflow-hidden">
+        <MainPage />
+        <Cards />
+        <Price />
+        <Why />
+      </div>
+      <div className="px-10 lg:overflow-hidden lg:px-0">
+        <Info />
+      </div>
+      <div className="px-10 lg:px-[10px] lg:overflow-hidden">
+        <Feedback />
+        <Footer />
+      </div>
+    </>
   );
 }
