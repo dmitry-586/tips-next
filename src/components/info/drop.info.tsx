@@ -7,9 +7,11 @@ import React from "react";
 
 interface DropdownProps {
   children: React.ReactNode;
+  openHeader?: string;
+  className?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ children }) => {
+const Dropdown: React.FC<DropdownProps> = ({ children, openHeader, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -19,15 +21,15 @@ const Dropdown: React.FC<DropdownProps> = ({ children }) => {
   const contentRef = React.createRef<HTMLDivElement>();
 
   return (
-    <div className={`${styles.dropdown} ${isOpen ? styles.openHeader : ""}`}>
+    <div className={`${styles.dropdown} ${isOpen && openHeader}`}>
       <ButtonComponent
         className={styles.dropdown_toggle}
         onClick={handleToggle}
       >
-        Показать/скрыть список
+        {isOpen ? "Скрыть список" : "Показать список"}
       </ButtonComponent>
       <div
-        className={`${styles.dropdown_content} ${isOpen ? styles.open : ""}`}
+        className={`${styles.dropdown_content} ${className} ${isOpen ? styles.open : ""}`}
         aria-hidden={!isOpen}
         style={{
           opacity: isOpen ? 1 : 0,

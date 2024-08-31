@@ -11,7 +11,9 @@
     gap: 15px;
   }
   @media (max-width: 750px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -80,6 +82,8 @@
     bottom: 0;
     border-radius: 20px 20px 0 0;
     width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
     @media (max-width: 630px) {
       left: 50%;
       right: 50%;
@@ -89,21 +93,21 @@
 }
 
 .buttons_wrapper {
-  @apply flex justify-center;
+  display: flex;
+  justify-content: center;
   gap: clamp(1rem, -0.341rem + 1.95vw, 2rem);
   overflow: hidden;
   margin-bottom: clamp(2rem, -4rem + 6.67vw, 4rem);
   @media (max-width: 1100px) {
     display: grid;
-    grid-template-columns: repeat(
-      2,
-      clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem)
-    );
-    column-gap: clamp(1rem, -2.6rem + 9.6vw, 4rem);
-    row-gap: clamp(1rem, -0.2rem + 3.2vw, 2rem);
+    grid-template-columns: repeat(2, 250px);
   }
   @media (max-width: 600px) {
-    display: none;
+    grid-template-columns: repeat(4, 240px);
+    width: 100%;
+    overflow-x: scroll;
+    justify-content: start;
+    gap: 16px;
   }
 }
 
@@ -120,166 +124,47 @@
   bottom: 0;
 }
 
-.button {
-  &_lending,
-  &_multipage,
-  &_shop,
-  &_card {
-    z-index: 1;
-    font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
-    width: clamp(15.625rem, 8.125rem + 8.33vw, 18.125rem);
+.cards_button {
+  display: block;
+  z-index: 1;
+  font-size: clamp(1.125rem, 0.75rem + 0.42vw, 1.25rem);
+  padding: 0;
+  width: 290px;
+  height: 49px;
+  @media (max-width: 1440px) {
+    width: 250px;
+  }
+  @media (max-width: 700px) {
+    height: 38px;
+    padding: 0;
+    width: 240px;
+    font-size: 16px;
+  }
 
-    &:hover {
-      background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
-      border-color: black;
-    }
-  }
-}
-
-//slider for buttons
-
-.buttons_slider {
-  display: none;
-  margin-bottom: 32px;
-  position: relative;
-  background: transparent;
-  @media (max-width: 600px) {
-    display: block;
-  }
-  @media (max-width: 500px) {
-    margin-bottom: 70px;
-  }
-}
-
-.btns_slider {
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  width: 310px;
-  height: 60px;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-  background: transparent;
-  & > * {
-    background-color: inherit;
-  }
-  &_container {
-    display: flex;
-    width: 100%;
-  }
-  &_wrapper {
-    padding: 5px 10px;
-    flex: 0 0 100%;
-    background-color: inherit;
-  }
-}
-
-.button_slider {
-  position: relative;
-  font-size: 20px;
-  width: 100%;
-  border: 2px solid white;
   &:hover {
     background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;
-    scale: 1.06;
   }
 }
 
-.slider_controls {
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 0;
-  z-index: 1;
-  width: 450px;
-  justify-content: space-between;
-  margin-top: 5px;
-  & > * {
-    transition: 0.3s;
-    &:hover {
-      scale: 1.07;
-    }
-  }
-  @media (max-width: 500px) {
-    width: 200px;
-    top: auto;
-    bottom: -70px;
-  }
-}
-
-.button_prev {
-  color: white;
-}
-
-//slider for cards
-
-.cards_slider {
+.openHeader {
   position: relative;
-  display: none;
+  transition: 0.4s;
+  margin-bottom: 434px;
   @media (max-width: 750px) {
-    display: block;
+    margin-bottom: 964px;
+  }
+  @media (max-width: 630px) {
+    margin-bottom: 800px;
   }
 }
 
-.slider {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  width: 480px;
-  height: 480px;
+.dropdown {
   display: flex;
-  gap: 10px;
-  z-index: 10;
-  background: transparent;
-  padding: 10px 0;
-  @media (max-width: 630px) {
-    width: 370px;
-    height: 388px;
-  }
-  & > * {
-    background-color: inherit;
-  }
-  &_container {
-    display: flex;
-    width: 100%;
-  }
-  &_wrapper {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 100%;
-    background-color: inherit;
-  }
-}
-
-.slider_cards_controls {
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  z-index: 1;
-  width: 600px;
-  justify-content: space-between;
-  margin-top: 5px;
-  @media (max-width: 630px) {
-    width: 500px;
-  }
-  @media (max-width: 520px) {
-    top: auto;
-    width: 200px;
-    bottom: -100px;
-  }
-  & > * {
-    background-color: transparent;
-    transition: 0.3s;
-    &:hover {
-      scale: 1.07;
-    }
+  gap: 15px;
+  justify-content: center;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -36,7 +36,7 @@ export default function CardsButtons() {
             <Button className={styles.button_slider}>Интернет-магазин</Button>
           </div>
           <div className={styles.btns_slider_wrapper}>
-            <Button className={styles.button_slider}>Визитка</Button>
+            <Button className={styles.button_slider}>Визитка  </Button>
           </div>
         </div>
       </div>

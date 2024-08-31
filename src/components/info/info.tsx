@@ -129,7 +129,7 @@ const Info: React.FC<InfoProps> = ({ className }) => {
             </p>
           </div>
         </div>
-        <Dropdown>
+        <Dropdown openHeader={styles.openHeader}>
           <div className={styles.block}>
             <div className={styles.block_header}>
               <div>01</div>

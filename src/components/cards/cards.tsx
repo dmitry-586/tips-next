@@ -2,31 +2,27 @@ import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
 import ButtonComponent from "../button/Button";
-import CardsButtons from "./cards.buttons";
-import CardsSlider from "./cards.slider";
+import Dropdown from "../info/drop.info";
 
 export default function Cards() {
   return (
-    <div className="relative pb-16" id="portfolio">
+    <div className="relative" id="portfolio">
       {/* кнопочки */}
-      <CardsButtons />
-
       <div className={styles.buttons_wrapper}>
-        <ButtonComponent className={styles.button_lending}>
+        <ButtonComponent className={styles.cards_button}>
           Лендинг
         </ButtonComponent>
-        <ButtonComponent className={styles.button_multipage}>
+        <ButtonComponent className={styles.cards_button}>
           Многостраничный
         </ButtonComponent>
-        <ButtonComponent className={styles.button_shop}>
+        <ButtonComponent className={styles.cards_button}>
           Интернет-магазин
         </ButtonComponent>
-        <ButtonComponent className={styles.button_card}>
+        <ButtonComponent className={styles.cards_button}>
           Визитка
         </ButtonComponent>
       </div>
       {/* карточки */}
-      <CardsSlider />
       <div className={styles.cards_wrapper}>
         <Card
           title="Интернет-магазин"
@@ -64,6 +60,26 @@ export default function Cards() {
           padding="px-[40px]"
         />
       </div>
+      <Dropdown openHeader={styles.openHeader} className={styles.dropdown}>
+        <Card
+          className="bg-gradient-card3"
+          title="Многостраничный сайт"
+          info="Разработка сайта для пригона авто"
+          imageSrc="/images/cards/card3.webp"
+          width={544}
+          height={335}
+          padding="px-[40px]"
+        />
+        <Card
+          className="bg-gradient-card4"
+          title="Многостраничный сайт"
+          info="Сайт итальянской траттории"
+          imageSrc="/images/cards/card4.webp"
+          width={538}
+          height={333}
+          padding="px-[40px]"
+        />
+      </Dropdown>
       {/* кругляши */}
       <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0 lg:hidden">
         <Circle
