@@ -34,6 +34,7 @@ export default function CardsSlider() {
               width={554}
               height={337}
               padding="px-[30px]"
+              href="https://nkstore.pro/"
             />
           </div>
           <div className={styles.slider_wrapper}>
@@ -45,6 +46,7 @@ export default function CardsSlider() {
               width={553}
               height={335}
               padding="px-[40px]"
+              href="https://obraz-strah.ru/"
             />
           </div>
           <div className={styles.slider_wrapper}>
@@ -56,6 +58,7 @@ export default function CardsSlider() {
               width={544}
               height={335}
               padding="px-[40px]"
+              href="https://автониндзя.рф"
             />
           </div>
           <div className={styles.slider_wrapper}>
@@ -67,6 +70,7 @@ export default function CardsSlider() {
               width={538}
               height={333}
               padding="px-[40px]"
+              href="https://il-gusto58.ru/"
             />
           </div>
         </div>
