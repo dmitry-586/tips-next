@@ -60,7 +60,12 @@ export default function Cards() {
           padding="px-[40px]"
         />
       </div>
-      <Dropdown openHeader={styles.openHeader} className={styles.dropdown}>
+      <Dropdown
+        openHeader={styles.openHeader}
+        className={styles.dropdown}
+        first="Показать еще"
+        second="Скрыть"
+      >
         <Card
           className="bg-gradient-card3"
           title="Многостраничный сайт"

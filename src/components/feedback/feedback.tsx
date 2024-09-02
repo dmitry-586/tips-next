@@ -110,12 +110,12 @@ export default function Feedback() {
             <button className={styles.whatsApp}>
               <Image
                 src="/images/feedback/whatsApp.svg"
-                width={35}
+                width={36}
                 height={35}
                 alt="whatsApp"
                 style={{
-                  width: "35px",
-                  height: "35px",
+                  width: "auto",
+                  height: "auto",
                 }}
               />
               <p>WhatsApp</p>
@@ -257,7 +257,7 @@ export default function Feedback() {
                   alt="vk"
                   style={{
                     width: "28px",
-                    height: "23px",
+                    height: "auto",
                   }}
                 />
               </div>
@@ -267,12 +267,12 @@ export default function Feedback() {
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/whatsApp.svg"
-                  width={35}
+                  width={36}
                   height={35}
                   alt="whatsApp"
                   style={{
-                    width: "35px",
-                    height: "35px",
+                    width: "36px",
+                    height: "auto",
                   }}
                 />
               </div>

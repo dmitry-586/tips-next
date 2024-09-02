@@ -1,5 +1,10 @@
 .about {
-  @apply bg-black pb-16 px-10 flex justify-between gap-14;
+  background-color: black;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
+  padding-inline: 40px;
   border-radius: 0 0 clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem)
     clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem);
   @media (max-width: 1400px) {
@@ -21,7 +26,9 @@
     }
   }
   &_left_top {
-    @apply flex gap-16 items-center;
+    display: flex;
+    gap: 64px;
+    align-items: center;
     @media (max-width: 960px) {
       flex-direction: column-reverse;
       gap: 16px;
@@ -57,7 +64,9 @@
     }
   }
   &_left_bottom {
-    @apply flex justify-between items-center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: clamp(1.25rem, -2.5rem + 4.17vw, 2.5rem);
     gap: 32px;
     @media (max-width: 1400px) {
@@ -88,7 +97,13 @@
       }
     }
     &_button {
-      @apply bg-white text-black hover:bg-my-gradient2 hover:border-black hover:text-white;
+      background-color: white;
+      color: black;
+      &:hover {
+        background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+        border-color: black;
+        color: white;
+      }
       height: clamp(3.438rem, -2.938rem + 7.08vw, 5.563rem);
       font-size: clamp(1.5rem, 1.67vw, 2rem);
       @media (max-width: 1400px) {
@@ -108,7 +123,8 @@
     }
   }
   &_right {
-    @apply leading-none max-w-[500px];
+    line-height: 100%;
+    max-width: 500px;
     font-size: clamp(1.5rem, 1.67vw, 2rem);
     margin-top: clamp(2rem, 0.125rem + 2.08vw, 2.625rem);
     @media (max-width: 1400px) {
@@ -125,6 +141,7 @@
 }
 
 .info_border {
+  padding: 0 40px;
   padding-top: 64px !important;
   border-radius: clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem)
     clamp(1.875rem, 0.831rem + 4.52vw, 6.25rem) 0 0;

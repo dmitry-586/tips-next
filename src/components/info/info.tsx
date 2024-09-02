@@ -129,7 +129,11 @@ const Info: React.FC<InfoProps> = ({ className }) => {
             </p>
           </div>
         </div>
-        <Dropdown openHeader={styles.openHeader}>
+        <Dropdown
+          openHeader={styles.openHeader}
+          first="Показать список"
+          second="Скрыть список"
+        >
           <div className={styles.block}>
             <div className={styles.block_header}>
               <div>01</div>

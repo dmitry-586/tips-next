@@ -43,11 +43,11 @@ export default function Footer() {
               <Image
                 src="/images/feedback/whatsApp.svg"
                 alt="whatsApp"
-                width={35}
+                width={36}
                 height={35}
                 style={{
-                  width: "35px",
-                  height: "35px",
+                  width: "auto",
+                  height: "auto",
                 }}
               />
             </div>

@@ -2,7 +2,7 @@
   position: relative;
   height: 720px;
   background-color: transparent;
-  margin: 45px 0;
+  margin: 64px 0;
   @media (max-width: 1380px) {
     height: clamp(54.375rem, 20.089rem + 57.14vw, 69.375rem);
   }
@@ -11,6 +11,7 @@
   }
   @media (max-width: 700px) {
     height: clamp(37rem, 12.964rem + 103.94vw, 58.438rem);
+    margin-top: 80px;
   }
   & h3 {
     position: absolute;

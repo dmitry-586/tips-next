@@ -4,8 +4,8 @@ import AboutTeam from "@/components/aboutTeam/aboutTeam";
 import Feedback from "@/components/feedback/feedback";
 import Footer from "@/components/footer/footer";
 import Info from "@/components/info/info";
-import styles from "../../styles/aboutHeader.module.scss"
-import stylesAboutInfo from "../../styles/aboutInfo.module.scss"
+import styles from "../../styles/aboutHeader.module.scss";
+import stylesAboutInfo from "../../styles/aboutInfo.module.scss";
 
 export default function Home() {
   return (

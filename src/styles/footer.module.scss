@@ -2,6 +2,10 @@
   padding-bottom: clamp(2rem, 1.308rem + 2.99vw, 4rem);
   position: relative;
   z-index: 2;
+  margin-top: 64px;
+  @media (max-width: 960px) {
+    margin-top: 45px;
+  }
   &_top {
     display: flex;
     justify-content: space-between;
