@@ -26,10 +26,12 @@ export default function Feedback() {
     },
   });
 
+  const [activeButton, setActiveButton] = useState("Другое");
   // Фукнция смены значения radio в сообщении
   const handleOnClickRadio = (e: any) => {
     const valuebtn = e.target.textContent;
     form.setFieldValue("radio", `${valuebtn}`);
+    setActiveButton(e.target.textContent);
   };
 
   const [isLoading, setLoading] = useState(false);
@@ -167,7 +169,9 @@ export default function Feedback() {
             <div className={styles.buttons_wrapper}>
               {/* Кнопка "Сайт" */}
               <Button
-                className="w-[136px] sm:w-[77px] sm:order-1"
+                className={`w-[136px] sm:w-[77px] sm:order-1 ${
+                  activeButton === "Сайт" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -176,7 +180,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Лендинг" */}
               <Button
-                className="w-[193px] sm:w-[103px] sm:order-3"
+                className={`w-[193px] sm:w-[103px] sm:order-3 ${
+                  activeButton === "Лендинг" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -185,7 +191,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Интернет-магазин" */}
               <Button
-                className="w-[237px] sm:w-[176px] sm:order-2"
+                className={`w-[237px] sm:w-[176px] sm:order-2 ${
+                  activeButton === "Интернет-магазин" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -194,7 +202,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Веб-приложение" */}
               <Button
-                className="w-[237px] sm:w-[168px] sm:order-4"
+                className={`w-[237px] sm:w-[168px] sm:order-4 ${
+                  activeButton === "Веб-приложение" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -203,7 +213,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Другое" */}
               <Button
-                className="w-[237px] sm:w-[93px] sm:order-5"
+                className={`w-[237px] sm:w-[93px] sm:order-5 ${
+                  activeButton === "Другое" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -219,12 +231,12 @@ export default function Feedback() {
               placeholder="Укажите ссылку (необязательно)"
             />
           </div>
-          <Group className={styles.button}>
+          <div className={styles.button}>
             <Button loading={isLoading} type="submit" className={styles.btn}>
               Оставить заявку
             </Button>
             <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
-          </Group>
+          </div>
         </form>
         <div className="hidden lg:block">
           <div className={styles.feedback_left_bottom}>
