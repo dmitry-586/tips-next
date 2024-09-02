@@ -15,7 +15,7 @@ export default function Feedback() {
     initialValues: {
       name: "",
       phone: "",
-      radio: "",
+      radio: "Другое",
       text: "",
     },
     validate: {
