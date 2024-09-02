@@ -67,9 +67,11 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <ButtonComponent className={styles.header_button}>
-            Связаться с нами
-          </ButtonComponent>
+          <Link href={"#feedback"}>
+            <ButtonComponent className={styles.header_button}>
+              Связаться с нами
+            </ButtonComponent>
+          </Link>
         </div>
         <BurgerMenu />
       </header>

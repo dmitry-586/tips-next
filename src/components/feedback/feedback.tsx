@@ -26,10 +26,12 @@ export default function Feedback() {
     },
   });
 
+  const [activeButton, setActiveButton] = useState("Другое");
   // Фукнция смены значения radio в сообщении
   const handleOnClickRadio = (e: any) => {
     const valuebtn = e.target.textContent;
     form.setFieldValue("radio", `${valuebtn}`);
+    setActiveButton(e.target.textContent);
   };
 
   const [isLoading, setLoading] = useState(false);
@@ -48,6 +50,16 @@ export default function Feedback() {
       form.setFieldError("text", "Заявка успешно отправлена");
     }
   };
+  //WhatsApp
+  const phoneNumber = "+79968085818";
+  function handleWhatsAppButtonClick() {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  }
+  //Telegram
+  const username = "https://t.me/webstudiotips";
+  function handleTelegramButtonClick() {
+    window.location.href = `${username}`;
+  }
   // Верстка
   return (
     // Оболчка мантина
@@ -80,8 +92,11 @@ export default function Feedback() {
               </Link>
             </div>
           </div>
-          <div className={`${styles.feedback_left_buttons} flex lg:hidden`}>
-            <button className={styles.tg}>
+          <div
+            className={`${styles.feedback_left_buttons} flex lg:hidden`}
+            onClick={handleTelegramButtonClick}
+          >
+            <button className={styles.tg} onClick={handleTelegramButtonClick}>
               <Image
                 src="/images/feedback/tg.svg"
                 width={0}
@@ -94,7 +109,7 @@ export default function Feedback() {
               />
               <p>Telegram</p>
             </button>
-            <button className={styles.vk}>
+            {/* <button className={styles.vk}>
               <Image
                 src="/images/feedback/vk.svg"
                 width={28}
@@ -106,8 +121,11 @@ export default function Feedback() {
                 }}
               />
               <p>Вконтакте</p>
-            </button>
-            <button className={styles.whatsApp}>
+            </button> */}
+            <button
+              className={styles.whatsApp}
+              onClick={handleWhatsAppButtonClick}
+            >
               <Image
                 src="/images/feedback/whatsApp.svg"
                 width={36}
@@ -151,7 +169,9 @@ export default function Feedback() {
             <div className={styles.buttons_wrapper}>
               {/* Кнопка "Сайт" */}
               <Button
-                className="w-[136px] sm:w-[77px] sm:order-1"
+                className={`w-[136px] sm:w-[77px] sm:order-1 ${
+                  activeButton === "Сайт" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -160,7 +180,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Лендинг" */}
               <Button
-                className="w-[193px] sm:w-[103px] sm:order-3"
+                className={`w-[193px] sm:w-[103px] sm:order-3 ${
+                  activeButton === "Лендинг" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -169,7 +191,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Интернет-магазин" */}
               <Button
-                className="w-[237px] sm:w-[176px] sm:order-2"
+                className={`w-[237px] sm:w-[176px] sm:order-2 ${
+                  activeButton === "Интернет-магазин" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -178,7 +202,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Веб-приложение" */}
               <Button
-                className="w-[237px] sm:w-[168px] sm:order-4"
+                className={`w-[237px] sm:w-[168px] sm:order-4 ${
+                  activeButton === "Веб-приложение" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -187,7 +213,9 @@ export default function Feedback() {
               </Button>
               {/* Кнопка "Другое" */}
               <Button
-                className="w-[237px] sm:w-[93px] sm:order-5"
+                className={`w-[237px] sm:w-[93px] sm:order-5 ${
+                  activeButton === "Другое" ? styles.active : ""
+                }`}
                 onClick={(e) => {
                   handleOnClickRadio(e);
                 }}
@@ -203,12 +231,12 @@ export default function Feedback() {
               placeholder="Укажите ссылку (необязательно)"
             />
           </div>
-          <Group className={styles.button}>
+          <div className={styles.button}>
             <Button loading={isLoading} type="submit" className={styles.btn}>
               Оставить заявку
             </Button>
             <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
-          </Group>
+          </div>
         </form>
         <div className="hidden lg:block">
           <div className={styles.feedback_left_bottom}>
@@ -233,7 +261,7 @@ export default function Feedback() {
             </div>
           </div>
           <div className={`${styles.feedback_left_buttons} flex`}>
-            <button className={styles.tg}>
+            <button className={styles.tg} onClick={handleTelegramButtonClick}>
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/tg.svg"
@@ -248,7 +276,7 @@ export default function Feedback() {
               </div>
               <p>Telegram</p>
             </button>
-            <button className={styles.vk}>
+            {/* <button className={styles.vk}>
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/vk.svg"
@@ -262,8 +290,11 @@ export default function Feedback() {
                 />
               </div>
               <p>Вконтакте</p>
-            </button>
-            <button className={styles.whatsApp}>
+            </button> */}
+            <button
+              className={styles.whatsApp}
+              onClick={handleWhatsAppButtonClick}
+            >
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/whatsApp.svg"

@@ -23,6 +23,7 @@ const config: Config = {
     screens: {
       ssm: { max: "450px" },
       sm: { max: "560px" },
+      smd: { max: "600px" },
       md: { max: "767px" },
       lg: { max: "960px" },
       xl: { max: "1440px" },

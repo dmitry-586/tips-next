@@ -1,6 +1,7 @@
 import Button from "../button/Button";
 import Image from "next/image";
 import styles from "../../styles/aboutHeader.module.scss";
+import Link from "next/link";
 
 export default function AboutHeader() {
   return (
@@ -42,9 +43,11 @@ export default function AboutHeader() {
             Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы
             могли быть уверены в том, что ваш проект находится в надежных руках
           </p>
-          <Button className={styles.about_left_bottom_button}>
-            Получить бесплатную структуру
-          </Button>
+          <Link href={"#feedback"} className="smd:w-full smd:px-[10px]">
+            <Button className={styles.about_left_bottom_button}>
+              Получить бесплатную структуру
+            </Button>
+          </Link>
         </div>
       </div>
       <p className={styles.about_right}>
