@@ -3,6 +3,10 @@ import styles from "../../styles/footer.module.scss";
 import Link from "next/link";
 
 export default function Footer() {
+  //WhatsApp
+  const phoneNumber = "+79968085818";
+  //Telegram
+  const username = "https://t.me/webstudiotips";
   return (
     <div className={styles.footer}>
       <div className={styles.footer_top}>
@@ -28,30 +32,34 @@ export default function Footer() {
           <a className={styles.footer_top_number} href="tel:+79968085818">
             +7 996 808 58 18
           </a>
-          <button className={styles.btnTg}>
-            <div className="xl:w-[23px]">
-              <Image
-                src="/images/feedback/tg.svg"
-                alt="tg"
-                width={28}
-                height={23}
-              />
-            </div>
-          </button>
-          <button className={styles.btnWhatsApp}>
-            <div className="xl:w-[27px]">
-              <Image
-                src="/images/feedback/whatsApp.svg"
-                alt="whatsApp"
-                width={36}
-                height={35}
-                style={{
-                  width: "auto",
-                  height: "auto",
-                }}
-              />
-            </div>
-          </button>
+          <Link href={`${username}`}>
+            <button className={styles.btnTg}>
+              <div className="xl:w-[23px]">
+                <Image
+                  src="/images/feedback/tg.svg"
+                  alt="tg"
+                  width={28}
+                  height={23}
+                />
+              </div>
+            </button>
+          </Link>
+          <Link href={`https://wa.me/${phoneNumber}`}>
+            <button className={styles.btnWhatsApp}>
+              <div className="xl:w-[27px]">
+                <Image
+                  src="/images/feedback/whatsApp.svg"
+                  alt="whatsApp"
+                  width={36}
+                  height={35}
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                  }}
+                />
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
       <div className={styles.footer_bottom}>

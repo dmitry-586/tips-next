@@ -1,6 +1,7 @@
 import ButtonComponent from "../button/Button";
 import styles from "../../styles/main.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MainPage() {
   return (
@@ -12,9 +13,11 @@ export default function MainPage() {
         <p className={styles.p}>
           Обсуждаем задачи, адаптируем бюджет, предлагаем наилучшее решение
         </p>
-        <ButtonComponent className={styles.button}>
-          Получить бесплатную структуру
-        </ButtonComponent>
+        <Link href={"#feedback"}>
+          <ButtonComponent className={styles.button}>
+            Получить бесплатную структуру
+          </ButtonComponent>
+        </Link>
       </div>
       {/* логотипы */}
       <div className="flex gap-[62px] justify-center mt-7 mb-16 overflow-x-auto w-full xxl:justify-start lg:mb-[90px]">

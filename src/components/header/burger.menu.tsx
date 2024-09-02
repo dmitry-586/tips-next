@@ -47,9 +47,16 @@ export default function BurgerMenu() {
             {item.name}
           </Link>
         ))}
-        <ButtonComponent className={styles.header_button}>
-          Связаться с нами
-        </ButtonComponent>
+        <Link
+          href={"#feedback"}
+          onClick={() => {
+            setMenuActive(!menuActive);
+          }}
+        >
+          <ButtonComponent className={styles.header_button}>
+            Связаться с нами
+          </ButtonComponent>
+        </Link>
       </div>
     </>
   );

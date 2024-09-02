@@ -31,6 +31,7 @@ export default function Cards() {
           width={554}
           height={337}
           padding="px-[30px]"
+          href="https://nkstore.pro/"
         />
         <Card
           className="bg-gradient-card2"
@@ -40,6 +41,7 @@ export default function Cards() {
           width={553}
           height={335}
           padding="px-[40px]"
+          href="https://obraz-strah.ru/"
         />
         <Card
           className="bg-gradient-card3"
@@ -49,6 +51,7 @@ export default function Cards() {
           width={544}
           height={335}
           padding="px-[40px]"
+          href="https://автониндзя.рф"
         />
         <Card
           className="bg-gradient-card4"
@@ -58,33 +61,39 @@ export default function Cards() {
           width={538}
           height={333}
           padding="px-[40px]"
+          href="https://il-gusto58.ru/"
+        />
+        <Card
+          className="bg-gradient-card3"
+          title="Многостраничный сайт"
+          info="Разработка сайта для пригона авто"
+          imageSrc="/images/cards/card3.webp"
+          width={544}
+          height={335}
+          padding="px-[40px]"
+          href="https://автониндзя.рф"
+        />
+        <Card
+          className="bg-gradient-card4"
+          title="Многостраничный сайт"
+          info="Сайт итальянской траттории"
+          imageSrc="/images/cards/card4.webp"
+          width={538}
+          height={333}
+          padding="px-[40px]"
+          href="https://il-gusto58.ru/"
         />
       </div>
-      <Dropdown
+
+      {/* <Dropdown
         openHeader={styles.openHeader}
         className={styles.dropdown}
         first="Показать еще"
         second="Скрыть"
       >
-        <Card
-          className="bg-gradient-card3"
-          title="Многостраничный сайт"
-          info="Разработка сайта для пригона авто"
-          imageSrc="/images/cards/card3.webp"
-          width={544}
-          height={335}
-          padding="px-[40px]"
-        />
-        <Card
-          className="bg-gradient-card4"
-          title="Многостраничный сайт"
-          info="Сайт итальянской траттории"
-          imageSrc="/images/cards/card4.webp"
-          width={538}
-          height={333}
-          padding="px-[40px]"
-        />
-      </Dropdown>
+        <div></div>
+      </Dropdown> */}
+
       {/* кругляши */}
       <div className="absolute w-full h-[1500px] overflow-hidden right-[-40px] top-0 lg:hidden">
         <Circle

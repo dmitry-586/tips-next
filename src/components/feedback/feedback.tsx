@@ -48,6 +48,16 @@ export default function Feedback() {
       form.setFieldError("text", "Заявка успешно отправлена");
     }
   };
+  //WhatsApp
+  const phoneNumber = "+79968085818";
+  function handleWhatsAppButtonClick() {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  }
+  //Telegram
+  const username = "https://t.me/webstudiotips";
+  function handleTelegramButtonClick() {
+    window.location.href = `${username}`;
+  }
   // Верстка
   return (
     // Оболчка мантина
@@ -80,8 +90,11 @@ export default function Feedback() {
               </Link>
             </div>
           </div>
-          <div className={`${styles.feedback_left_buttons} flex lg:hidden`}>
-            <button className={styles.tg}>
+          <div
+            className={`${styles.feedback_left_buttons} flex lg:hidden`}
+            onClick={handleTelegramButtonClick}
+          >
+            <button className={styles.tg} onClick={handleTelegramButtonClick}>
               <Image
                 src="/images/feedback/tg.svg"
                 width={0}
@@ -94,7 +107,7 @@ export default function Feedback() {
               />
               <p>Telegram</p>
             </button>
-            <button className={styles.vk}>
+            {/* <button className={styles.vk}>
               <Image
                 src="/images/feedback/vk.svg"
                 width={28}
@@ -106,8 +119,11 @@ export default function Feedback() {
                 }}
               />
               <p>Вконтакте</p>
-            </button>
-            <button className={styles.whatsApp}>
+            </button> */}
+            <button
+              className={styles.whatsApp}
+              onClick={handleWhatsAppButtonClick}
+            >
               <Image
                 src="/images/feedback/whatsApp.svg"
                 width={36}
@@ -233,7 +249,7 @@ export default function Feedback() {
             </div>
           </div>
           <div className={`${styles.feedback_left_buttons} flex`}>
-            <button className={styles.tg}>
+            <button className={styles.tg} onClick={handleTelegramButtonClick}>
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/tg.svg"
@@ -248,7 +264,7 @@ export default function Feedback() {
               </div>
               <p>Telegram</p>
             </button>
-            <button className={styles.vk}>
+            {/* <button className={styles.vk}>
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/vk.svg"
@@ -262,8 +278,11 @@ export default function Feedback() {
                 />
               </div>
               <p>Вконтакте</p>
-            </button>
-            <button className={styles.whatsApp}>
+            </button> */}
+            <button
+              className={styles.whatsApp}
+              onClick={handleWhatsAppButtonClick}
+            >
               <div className="lg:w-[25px]">
                 <Image
                   src="/images/feedback/whatsApp.svg"

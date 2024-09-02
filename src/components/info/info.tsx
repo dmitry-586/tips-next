@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../styles/info.module.scss";
 import ButtonComponent from "../button/Button";
 import Circle from "../circle/circle";
@@ -22,9 +23,11 @@ const Info: React.FC<InfoProps> = ({ className }) => {
           «недорогой лендинг» и «премиум-сайт» с нестандартными, сложными
           задачами
         </p>
-        <ButtonComponent className={styles.button}>
-          Получить бесплатную структуру
-        </ButtonComponent>
+        <Link href={"#feedback"}>
+          <ButtonComponent className={styles.button}>
+            Получить бесплатную структуру
+          </ButtonComponent>
+        </Link>
       </div>
       <Circle
         width="796px"
