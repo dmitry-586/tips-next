@@ -9,9 +9,11 @@ interface DropdownProps {
   children: React.ReactNode;
   openHeader?: string;
   className?: string;
+  first?: string;
+  second?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ children, openHeader, className }) => {
+const Dropdown: React.FC<DropdownProps> = ({ children, openHeader, className, first, second }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -26,7 +28,7 @@ const Dropdown: React.FC<DropdownProps> = ({ children, openHeader, className }) 
         className={styles.dropdown_toggle}
         onClick={handleToggle}
       >
-        {isOpen ? "Скрыть список" : "Показать список"}
+        {isOpen ? second : first}
       </ButtonComponent>
       <div
         className={`${styles.dropdown_content} ${className} ${isOpen ? styles.open : ""}`}

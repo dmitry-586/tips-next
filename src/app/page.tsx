@@ -15,7 +15,7 @@ export default function Home() {
         <Price />
         <Why />
       </div>
-      <div className="px-10 lg:overflow-hidden lg:px-0">
+      <div className="px-10 lg:overflow-hidden lg:px-0 lg:mt-[45px]">
         <Info />
       </div>
       <div className="px-10 lg:px-[10px] lg:overflow-hidden">

@@ -15,7 +15,7 @@ export default function AboutHeader() {
               alt="AboutLine"
               style={{
                 height: "auto",
-                width: "auto",
+                width: "936px",
               }}
             />
           </div>
