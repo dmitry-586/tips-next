@@ -17,7 +17,7 @@ export default function MainPage() {
         </ButtonComponent>
       </div>
       {/* логотипы */}
-      <div className="flex gap-[62px] justify-center mt-7 mb-16 overflow-x-auto w-full xxl:justify-start lg:mb-[45px]">
+      <div className="flex gap-[62px] justify-center mt-7 mb-16 overflow-x-auto w-full xxl:justify-start lg:mb-[90px]">
         <Image
           src="/images/logos/logo1.svg"
           alt="logo1"
