@@ -90,7 +90,13 @@
 }
 
 .tips_info {
-  @apply text-base max-w-[182px] leading-4 md:text-[13px] md:max-w-[120px];
+  font-size: 16px;
+  max-width: 182px;
+  line-height: 100%;
+  @media (max-width: 767px) {
+    font-size: 13px;
+    max-width: 120px;
+  }
   @media (max-width: 450px) {
     display: none;
   }

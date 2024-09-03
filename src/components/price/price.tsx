@@ -4,6 +4,7 @@ import { price, price2, price3, priceList } from "./price.data";
 import ButtonComponent from "../button/Button";
 import PriceList from "./priceList";
 import Circle from "../circle/circle";
+import Link from "next/link";
 
 const ActayWide = localFont({
   src: "../../../public/fonts/ActayWide-Bold.otf",
@@ -44,9 +45,11 @@ export default function Price() {
               </li>
             ))}
           </ul>
-          <ButtonComponent className={styles.button}>
-            Получить бесплатную структуру
-          </ButtonComponent>
+          <Link href={"#feedback"}>
+            <ButtonComponent className={styles.button}>
+              Получить бесплатную структуру
+            </ButtonComponent>
+          </Link>
         </div>
       </div>
       {/* правый блок */}
@@ -59,9 +62,11 @@ export default function Price() {
             key={item.id}
           />
         ))}
-        <ButtonComponent className={styles.button_right}>
-          Получить бесплатную структуру
-        </ButtonComponent>
+        <Link href={"#feedback"}>
+          <ButtonComponent className={styles.button_right}>
+            Получить бесплатную структуру
+          </ButtonComponent>
+        </Link>
         <Circle
           width="clamp(10.25rem, 8.089rem + 9.35vw, 16.5rem)"
           height="clamp(12.5rem, 10.339rem + 9.35vw, 18.75rem)"
