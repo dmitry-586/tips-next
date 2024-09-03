@@ -64,24 +64,24 @@ export default function Cards() {
           href="https://il-gusto58.ru/"
         />
         <Card
-          className="bg-gradient-card3"
-          title="Многостраничный сайт"
-          info="Разработка сайта для пригона авто"
-          imageSrc="/images/cards/card3.webp"
-          width={544}
-          height={335}
+          className="bg-gradient-card5"
+          title="Интернет-магазин"
+          info="Сайт дизайнерской одежды"
+          imageSrc="/images/cards/card5.png"
+          width={531}
+          height={332}
           padding="px-[40px]"
-          href="https://автониндзя.рф"
+          href="https://illiadi.com/"
         />
         <Card
-          className="bg-gradient-card4"
+          className="bg-gradient-card6"
           title="Многостраничный сайт"
           info="Сайт итальянской траттории"
-          imageSrc="/images/cards/card4.webp"
-          width={538}
+          imageSrc="/images/cards/card6.png"
+          width={526}
           height={333}
           padding="px-[40px]"
-          href="https://il-gusto58.ru/"
+          href="https://evencoarse.com/"
         />
       </div>
 
