@@ -4,6 +4,7 @@ import "./globals.scss";
 import Header from "@/components/header/header";
 import Head from "next/head";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcherButton";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const HelveticaNeueCyr = localFont({
@@ -64,6 +65,7 @@ export default function RootLayout({
           <Header />
           {/* <LanguageSwitcher languages={metadata.languages} /> */}
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
