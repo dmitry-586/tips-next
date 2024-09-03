@@ -4,8 +4,8 @@ import "./globals.scss";
 import Header from "@/components/header/header";
 import Head from "next/head";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcherButton";
-import { Analytics } from "@vercel/analytics/react"
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const HelveticaNeueCyr = localFont({
   src: "../../public/fonts/HelveticaNeueCyr-Roman.woff",
@@ -63,9 +63,9 @@ export default function RootLayout({
       <body className={HelveticaNeueCyr.className}>
         <div className="w-full">
           <Header />
-          {/* <LanguageSwitcher languages={metadata.languages} /> */}
           {children}
           <Analytics />
+          <SpeedInsights />
         </div>
       </body>
     </html>
