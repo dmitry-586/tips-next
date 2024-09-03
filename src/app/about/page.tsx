@@ -6,20 +6,23 @@ import Footer from "@/components/footer/footer";
 import Info from "@/components/info/info";
 import styles from "../../styles/aboutHeader.module.scss";
 import stylesAboutInfo from "../../styles/aboutInfo.module.scss";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="bg-white">
-      <AboutHeader />
-      <div className={stylesAboutInfo.info_wrapper}>
-        <AboutInfo />
+    <>
+      <div className="bg-white">
+        <AboutHeader />
+        <div className={stylesAboutInfo.info_wrapper}>
+          <AboutInfo />
+        </div>
+        <Info className={styles.info_border} />
+        <AboutTeam />
+        <div className="px-10 bg-black lg:px-[10px]">
+          <Feedback />
+          <Footer />
+        </div>
       </div>
-      <Info className={styles.info_border} />
-      <AboutTeam />
-      <div className="px-10 bg-black lg:px-[10px]">
-        <Feedback />
-        <Footer />
-      </div>
-    </div>
+    </>
   );
 }

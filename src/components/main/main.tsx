@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function MainPage() {
   return (
     <>
-      <div className={styles.main_wrapper}>
+      <div className={styles.main_wrapper} id="main">
         <h1 className={styles.h1}>
           Найдем выгодное и продающее решение для каждого
         </h1>

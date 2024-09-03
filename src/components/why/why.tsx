@@ -10,7 +10,7 @@ const ActayWide = localFont({
 
 export default function Why() {
   return (
-    <div className={styles.why}>
+    <div className={styles.why} id="why">
       <div className="flex bg-transparent">
         <h2 className={styles.h2}>Почему&nbsp;</h2>
         <h2 className={styles.h2_we}>мы?</h2>

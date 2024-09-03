@@ -18,6 +18,8 @@ const config: Config = {
         "gradient-card2": "linear-gradient(180deg, #FF0000 0%, #260000 56%)",
         "gradient-card3": "linear-gradient(180deg, #A855EC 0%, #5F3086 100%)",
         "gradient-card4": "linear-gradient(180deg, #009246 0%, #003017 100%)",
+        "gradient-card5": "linear-gradient(180deg, #CFCFCF 0%, #6A6A6A 100%)",
+        "gradient-card6": "linear-gradient(180deg, #A82B41 0%, #42111A 100%)",
       },
     },
     screens: {

@@ -5,11 +5,11 @@ import Why from "@/components/why/why";
 import Info from "@/components/info/info";
 import Feedback from "@/components/feedback/feedback";
 import Footer from "@/components/footer/footer";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
-    
       <div className="px-10 lg:px-[10px] lg:overflow-hidden">
         <MainPage />
         <Cards />
