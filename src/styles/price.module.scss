@@ -104,7 +104,10 @@
 }
 
 .price_right {
-  @apply relative bg-transparent pt-[100px] mt-16;
+  position: relative;
+  background-color: transparent;
+  padding-top: 100px;
+  margin-top: 64px;
   @media (max-width: 1300px) {
     bottom: clamp(10.625rem, 6.25rem + 11.67vw, 15rem);
     padding: 0;
