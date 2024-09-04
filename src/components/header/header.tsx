@@ -47,14 +47,6 @@ export default function Header() {
             студия разработки продающих сайтов
           </p>
         </div>
-        <div>
-          <Link href="/" locale="ru">
-            ru
-          </Link>
-          <Link href="/" locale="en">
-            en
-          </Link>
-        </div>
         <div className={styles.header_right}>
           <nav className={styles.nav}>
             {menu.map((item) => (
