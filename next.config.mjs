@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // head: [
-  //   {
-  //     rel: "preload",
-  //     as: "style",
-  //     href: "/_next/static/css/app/layout.css",
-  //   },
-  // ],
-};
+const nextConfig = {};
 
 export default nextConfig;
