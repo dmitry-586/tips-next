@@ -11,16 +11,7 @@ const HelveticaNeueCyr = localFont({
   src: "../../public/fonts/HelveticaNeueCyr-Roman.woff",
 });
 
-interface CustomMetadata extends Metadata {
-  languages: {
-    lang: string;
-    title: string;
-    description: string;
-    keywords: string[];
-  }[];
-}
-
-export const metadata: CustomMetadata = {
+export const metadata: Metadata = {
   title: "Webstudio-TIPS",
   description: "webstudio TIPS",
   keywords: ["веб-разработка", "сайты"],
@@ -37,20 +28,6 @@ export const metadata: CustomMetadata = {
       },
     ],
   },
-  languages: [
-    {
-      lang: "ru",
-      title: "Webstudio-TIPS",
-      description: "webstudio TIPS",
-      keywords: ["веб-разработка", "сайты"],
-    },
-    {
-      lang: "en",
-      title: "Webstudio TIPS",
-      description: "Web development tips",
-      keywords: ["web development", "websites"],
-    },
-  ],
 };
 
 export default function RootLayout({
