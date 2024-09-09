@@ -2,8 +2,12 @@ import Button from "../button/Button";
 import Image from "next/image";
 import styles from "../../styles/aboutHeader.module.scss";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function AboutHeader() {
+  const t = useTranslations("AboutHeader");
+  const tb = useTranslations("Button");
+
   return (
     <div className={styles.about}>
       <div className={styles.about_left}>
@@ -32,28 +36,19 @@ export default function AboutHeader() {
               }}
             />
           </div>
-          <h2>О&nbsp;студии</h2>
+          <h2>{t("title")}</h2>
         </div>
         <div className={styles.about_left_bottom}>
-          <p>
-            Наша команда опытных специалистов работает над созданием продающих и
-            функциональных веб-решений для различных клиентов
-          </p>
-          <p className={styles.left_p}>
-            Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы
-            могли быть уверены в том, что ваш проект находится в надежных руках
-          </p>
+          <p>{t("description1")}</p>
+          <p className={styles.left_p}>{t("description2")}</p>
           <Link href={"#feedback"} className="smd:w-full smd:px-[10px]">
             <Button className={styles.about_left_bottom_button}>
-              Получить бесплатную структуру
+              {tb("button2")}
             </Button>
           </Link>
         </div>
       </div>
-      <p className={styles.about_right}>
-        Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы могли
-        быть уверены в том, что ваш проект находится в надежных руках
-      </p>
+      <p className={styles.about_right}>{t("description3")}</p>
     </div>
   );
 }

@@ -1,27 +1,35 @@
 import localFont from "next/font/local";
 import styles from "../../styles/price.module.scss";
-import { price, price2, price3, priceList } from "./price.data";
 import ButtonComponent from "../button/Button";
 import PriceList from "./priceList";
 import Circle from "../circle/circle";
 import Link from "next/link";
+import PriceProvider from "./price.data";
+import { useTranslations } from "next-intl";
 
 const ActayWide = localFont({
   src: "../../../public/fonts/ActayWide-Bold.otf",
 });
 
 export default function Price() {
+  const price = PriceProvider().price;
+  const price2 = PriceProvider().price2;
+  const price3 = PriceProvider().price3;
+  const priceList = PriceProvider().priceList;
+  const t = useTranslations("Price");
+  const tb = useTranslations("Button");
+
   return (
     <div className={styles.price_wrapper}>
       {/* левый блок */}
       <div className={styles.price}>
-        <h3 className={styles.h3}>Стоимость</h3>
+        <h3 className={styles.h3}>{t("header")}</h3>
         {/* буквы на фоне, ОТ НИХ ЗАВИСИТ ШИРИНА БЛОКА, Т.К. ВСЕ ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ pos:absolute */}
         <h3 className={ActayWide.className}>PRICE</h3>
         {/* описание */}
         <div className={styles.info}>
-          <p>В зависимости от целей и сложности проекта</p>
-          <p className={styles.p}>HTML/CSS + JS, NextJS или АСПРО:</p>
+          <p>{t("headerInfo1")}</p>
+          <p className={styles.p}>{t("headerInfo2")}</p>
           <ul>
             {price.map((item) => (
               <li className={styles.li} key={item.id}>
@@ -47,7 +55,7 @@ export default function Price() {
           </ul>
           <Link href={"#feedback"}>
             <ButtonComponent className={styles.button}>
-              Получить бесплатную структуру
+              {tb("button2")}
             </ButtonComponent>
           </Link>
         </div>
@@ -64,7 +72,7 @@ export default function Price() {
         ))}
         <Link href={"#feedback"}>
           <ButtonComponent className={styles.button_right}>
-            Получить бесплатную структуру
+            {tb("button2")}
           </ButtonComponent>
         </Link>
         <Circle

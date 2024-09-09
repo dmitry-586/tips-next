@@ -7,6 +7,7 @@ import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { sendMessage } from "@/api/telegram";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Feedback() {
   // Инициализация формы и её значений
@@ -61,20 +62,21 @@ export default function Feedback() {
     window.location.href = `${username}`;
   }
   // Верстка
+  const t = useTranslations("Feedback");
+  const tp = useTranslations("Price");
+  const tb = useTranslations("Button");
+
   return (
     // Оболчка мантина
     <MantineProvider>
       <div className={styles.feedback} id="feedback">
         <div className={styles.feedback_left}>
-          <h2 className={styles.feedback_left_top}>
-            Бесплатная структура для&nbsp;Вашего сайта
-          </h2>
+          <h2 className={styles.feedback_left_top}>{t("title")}</h2>
           <p className={styles.feedback_left_description}>
-            Заполните пожалуйста форму, это поможет нам точно понять в каком
-            направлении нам двигаться
+            {t("description1")}
           </p>
           <div className={`${styles.feedback_left_bottom} lg:hidden`}>
-            <p>Или свяжитесь с нами другим способом:</p>
+            <p>{t("description2")}</p>
             <div className={styles.feedback_left_bottom_info}>
               <Image
                 width={40}
@@ -92,10 +94,7 @@ export default function Feedback() {
               </Link>
             </div>
           </div>
-          <div
-            className={`${styles.feedback_left_buttons} flex lg:hidden`}
-            onClick={handleTelegramButtonClick}
-          >
+          <div className={`${styles.feedback_left_buttons} flex lg:hidden`}>
             <button className={styles.tg} onClick={handleTelegramButtonClick}>
               <Image
                 src="/images/feedback/tg.svg"
@@ -146,16 +145,16 @@ export default function Feedback() {
         >
           <div className="flex gap-8 mb-16 flex-wrap lg:mb-8">
             <div className="flex flex-col w-1/2 lg:w-full">
-              <p>Как Вас зовут</p>
+              <p>{t("feedbackDescription1")}</p>
               <TextInput
                 required
                 {...form.getInputProps("name")}
-                placeholder="Имя"
+                placeholder={t("feedbackPlaceholder1")}
                 error={form.errors.name}
               />
             </div>
             <div className="flex flex-col w-1/2 lg:w-full">
-              <p>Телефон/WhatsApp/Telegram</p>
+              <p>{t("feedbackDescription2")}</p>
               <TextInput
                 required
                 {...form.getInputProps("phone")}
@@ -165,7 +164,7 @@ export default function Feedback() {
             </div>
           </div>
           <div className={styles.feedback_right_buttons}>
-            <p className="mb-4">Меня интересует</p>
+            <p className="mb-4">{t("feedbackDescription3")}</p>
             <div className={styles.buttons_wrapper}>
               {/* Кнопка "Сайт" */}
               <Button
@@ -176,7 +175,7 @@ export default function Feedback() {
                   handleOnClickRadio(e);
                 }}
               >
-                Сайт
+                {t("feedbackButton3")}
               </Button>
               {/* Кнопка "Лендинг" */}
               <Button
@@ -187,7 +186,7 @@ export default function Feedback() {
                   handleOnClickRadio(e);
                 }}
               >
-                Лендинг
+                {tp("title17")}
               </Button>
               {/* Кнопка "Интернет-магазин" */}
               <Button
@@ -198,7 +197,7 @@ export default function Feedback() {
                   handleOnClickRadio(e);
                 }}
               >
-                Интернет-магазин
+                {tp("title18")}
               </Button>
               {/* Кнопка "Веб-приложение" */}
               <Button
@@ -209,7 +208,7 @@ export default function Feedback() {
                   handleOnClickRadio(e);
                 }}
               >
-                Веб-приложение
+                {t("feedbackButton1")}
               </Button>
               {/* Кнопка "Другое" */}
               <Button
@@ -220,27 +219,27 @@ export default function Feedback() {
                   handleOnClickRadio(e);
                 }}
               >
-                Другое
+                {t("feedbackButton2")}
               </Button>
             </div>
           </div>
           <div className={styles.example}>
-            <p>Уже есть проект, на который ориентируетесь/ нравится?</p>
+            <p>{t("feedbackDescription4")}</p>
             <TextInput
               {...form.getInputProps("text")}
-              placeholder="Укажите ссылку (необязательно)"
+              placeholder={t("feedbackPlaceholder2")}
             />
           </div>
           <div className={styles.button}>
             <Button loading={isLoading} type="submit" className={styles.btn}>
-              Оставить заявку
+              {tb("button")}
             </Button>
-            <p>Нажав на кнопку, соглашаюсь на обработку персональных данных</p>
+            <p>{t("privacyPolicy")}</p>
           </div>
         </form>
         <div className="hidden lg:block">
           <div className={styles.feedback_left_bottom}>
-            <p>Или свяжитесь с нами другим способом:</p>
+            <p>{t("description2")}</p>
             <div className={styles.feedback_left_bottom_info}>
               <div className="lg:w-5">
                 <Image

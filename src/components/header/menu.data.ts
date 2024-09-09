@@ -1,24 +1,33 @@
-import IMenuItem from "./menu.interface";
+import { useTranslations } from "next-intl";
 
-export const menu: IMenuItem[] = [
-  {
-    name: "Главная",
-    link: "/",
-    id: 1,
-  },
-  {
-    name: "Портфолио",
-    link: "/#portfolio",
-    id: 2,
-  },
-  {
-    name: "О студии",
-    link: "/about",
-    id: 3,
-  },
-  {
-    name: "Контакты",
-    link: "#feedback",
-    id: 4,
-  },
-];
+const MenuProvider = () => {
+  const t = useTranslations("NavMenu");
+
+  const getMenu = () => {
+    return [
+      {
+        name: t("home"),
+        link: "/",
+        id: 1,
+      },
+      {
+        name: t("portfolio"),
+        link: "/#portfolio",
+        id: 2,
+      },
+      {
+        name: t("aboutStudio"),
+        link: "/about",
+        id: 3,
+      },
+      {
+        name: t("contacts"),
+        link: "/#feedback",
+        id: 4,
+      },
+    ];
+  };
+
+  return getMenu();
+};
+export default MenuProvider;

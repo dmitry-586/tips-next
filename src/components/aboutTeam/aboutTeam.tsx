@@ -1,21 +1,16 @@
 import Image from "next/image";
 import styles from "../../styles/aboutTeam.module.scss";
+import { useTranslations } from "next-intl";
 
 export default function AboutTeam() {
+  const t = useTranslations("AboutTeam");
+
   return (
     <div className={styles.about_team_wrapper}>
       <div className={styles.about_team}>
-        <h3>Команда</h3>
-        <p>
-          Мы являемся поставщиком качественных, выгодных и продающих решений. В
-          нашей команде есть опытные копирайтеры, дизайнеры, разработчики и
-          маркетологи, SEO-специалисты.
-        </p>
-        <p>
-          Мы дорожим своей репутацией и обеспечиваем полную прозрачность на всех
-          этапах работы, чтобы вы могли быть уверены в том, что ваш проект
-          находится в надежных руках.
-        </p>
+        <h3>{t("title")}</h3>
+        <p>{t("description1")}</p>
+        <p>{t("description2")}</p>
       </div>
       <div className={styles.image}>
         <Image
