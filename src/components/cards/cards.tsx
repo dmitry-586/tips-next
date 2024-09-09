@@ -1,32 +1,44 @@
+"use client";
+
 import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
 import ButtonComponent from "../button/Button";
 import Dropdown from "../info/drop.info";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function Cards() {
+  const t = useTranslations("Cards");
+
+  const [filter, setFilter] = useState("");
+
+  const handleButtonClick = (filterValue: string) => {
+    setFilter(filterValue);
+  };
+
   return (
     <div className="relative" id="portfolio">
       {/* кнопочки */}
       <div className={styles.buttons_wrapper}>
         <ButtonComponent className={styles.cards_button}>
-          Лендинг
+          {t("button1")}
         </ButtonComponent>
         <ButtonComponent className={styles.cards_button}>
-          Многостраничный
+          {t("button2")}
         </ButtonComponent>
         <ButtonComponent className={styles.cards_button}>
-          Интернет-магазин
+          {t("button3")}
         </ButtonComponent>
         <ButtonComponent className={styles.cards_button}>
-          Визитка
+          {t("button4")}
         </ButtonComponent>
       </div>
       {/* карточки */}
       <div className={styles.cards_wrapper}>
         <Card
-          title="Интернет-магазин"
-          info="Cайт для магазина брендовой одежды"
+          title={t("title1")}
+          info={t("info1")}
           imageSrc="/images/cards/card1.webp"
           width={554}
           height={337}
@@ -35,8 +47,8 @@ export default function Cards() {
         />
         <Card
           className="bg-gradient-card2"
-          title="Многостраничный сайт"
-          info="Сайт для компании хоррор-квестов"
+          title={t("title2")}
+          info={t("info2")}
           imageSrc="/images/cards/card2.webp"
           width={553}
           height={335}
@@ -45,8 +57,8 @@ export default function Cards() {
         />
         <Card
           className="bg-gradient-card3"
-          title="Многостраничный сайт"
-          info="Разработка сайта для пригона авто"
+          title={t("title2")}
+          info={t("info3")}
           imageSrc="/images/cards/card3.webp"
           width={544}
           height={335}
@@ -55,8 +67,8 @@ export default function Cards() {
         />
         <Card
           className="bg-gradient-card4"
-          title="Многостраничный сайт"
-          info="Сайт итальянской траттории"
+          title={t("title2")}
+          info={t("info4")}
           imageSrc="/images/cards/card4.webp"
           width={538}
           height={333}
@@ -65,8 +77,8 @@ export default function Cards() {
         />
         <Card
           className="bg-gradient-card5"
-          title="Интернет-магазин"
-          info="Сайт дизайнерской одежды"
+          title={t("title1")}
+          info={t("info5")}
           imageSrc="/images/cards/card5.png"
           width={531}
           height={332}
@@ -75,8 +87,8 @@ export default function Cards() {
         />
         <Card
           className="bg-gradient-card6"
-          title="Многостраничный сайт"
-          info="Сайт итальянской траттории"
+          title={t("title2")}
+          info={t("info6")}
           imageSrc="/images/cards/card6.png"
           width={526}
           height={333}

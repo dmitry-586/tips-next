@@ -1,12 +1,16 @@
 import Image from "next/image";
 import styles from "../../styles/footer.module.scss";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
   //WhatsApp
   const phoneNumber = "+79968085818";
   //Telegram
   const username = "https://t.me/webstudiotips";
+
+  const t = useTranslations("Footer");
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer_top}>
@@ -23,7 +27,7 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className={styles.tips_info}>студия разработки продающих сайтов</p>
+          <p className={styles.tips_info}>{t("description")}</p>
         </div>
         <div className={styles.footer_top_right}>
           <div className={styles.footer_top_tel}>
@@ -67,7 +71,7 @@ export default function Footer() {
         <p>ИНН: 583680182669</p>
         <p>ОГРНИП: 324580000027704</p>
         <Link href="/privacyPolicy" className={styles.privacy_policy}>
-          Политика конфиденциальности
+          {t("privacyPolicy")}
         </Link>
       </div>
     </div>

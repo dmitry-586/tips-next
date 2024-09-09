@@ -1,24 +1,33 @@
-import IWhyItem from "./why.interface";
+import { useTranslations } from "next-intl";
 
-export const why: IWhyItem[] = [
-  {
-    description: "У нас оплата за работу, а\u00A0не за часы",
-    imageSrc: "/images/why/whyImage1.webp",
-    id: 1,
-  },
-  {
-    description: "Бесплатные правки в течение 1 месяца после работы",
-    imageSrc: "/images/why/whyImage2.webp",
-    id: 2,
-  },
-  {
-    description: "Помогаем и днем и ночью 24/7",
-    imageSrc: "/images/why/whyImage3.webp",
-    id: 3,
-  },
-  {
-    description: "Подбираем выгодное решение для вас",
-    imageSrc: "/images/why/whyImage4.webp",
-    id: 4,
-  },
-];
+const WhyProvider = () => {
+  const t = useTranslations("Why");
+
+  const getWhy = () => {
+    return [
+      {
+        description: t("description1"),
+        imageSrc: "/images/why/whyImage1.webp",
+        id: 1,
+      },
+      {
+        description: t("description2"),
+        imageSrc: "/images/why/whyImage2.webp",
+        id: 2,
+      },
+      {
+        description: t("description3"),
+        imageSrc: "/images/why/whyImage3.webp",
+        id: 3,
+      },
+      {
+        description: t("description4"),
+        imageSrc: "/images/why/whyImage4.webp",
+        id: 4,
+      },
+    ];
+  };
+
+  return getWhy();
+};
+export default WhyProvider;

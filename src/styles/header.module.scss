@@ -4,13 +4,16 @@
   align-items: center;
   margin-bottom: 32px;
   padding: 40px 40px 0 40px;
+  background-color: black;
+  width: 100%;
+  z-index: 100;
   &_left {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 16px;
     & a {
-      line-height: 16px;
+      line-height: 100%;
       font-size: 40px;
     }
   }
@@ -36,14 +39,16 @@
     background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
     border-color: black;
     cursor: pointer;
+    padding: 0;
   }
 }
 
 .ru {
   display: none;
 }
-
-@media (max-width: 1440px) {
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 @media (max-width: 1250px) {
@@ -63,7 +68,10 @@
 @media (max-width: 960px) {
   .header {
     justify-content: space-between;
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px 20px 10px;
+    position: fixed;
+    top: 0;
+    margin: 0;
     &_left {
       & p {
         display: none;

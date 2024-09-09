@@ -1,105 +1,108 @@
-import IPriceItem from "./price.interface";
-import IPriceListItem from "./priceList.interface";
+import { useTranslations } from "next-intl";
 
-export const price: IPriceItem[] = [
-  {
-    title:
-      "Для проектов большого размера с множеством однотипных страниц ( каталог, блог, новостной сайт)",
-    id: 1,
-  },
-  {
-    title: "Нужна сложная работа с базой данных",
-    id: 2,
-  },
-  {
-    title: "Самое мощное SEO",
-    id: 3,
-  },
-  {
-    title: "Нужен производительный сайт",
-    id: 4,
-  },
-  {
-    title: "Есть нестандартные задачи для сайта",
-    id: 5,
-  },
-  {
-    title: "Если вы хотите Веб-приложение",
-    id: 6,
-  },
-];
+const PriceProvider = () => {
+  const t = useTranslations("Price");
 
-export const price2: IPriceItem[] = [
-  {
-    title:
-      "Для проектов среднего размера с однотипными страницами (например, с каталогом или блогом)",
-    id: 1,
-  },
-  {
-    title: "Если есть определённые требования по CMS",
-    id: 2,
-  },
-  {
-    title: "Нужен личный кабинет",
-    id: 3,
-  },
-  {
-    title:
-      "Требуется настроить допродажи к товарам, реализовать покупки «3 в 1»",
-    id: 4,
-  },
-  {
-    title: "Другие сложные и нестандартные задачи",
-    id: 5,
-  },
-];
+  const getPrice = {
+    price: [
+      {
+        title: t("title1"),
+        id: 1,
+      },
+      {
+        title: t("title2"),
+        id: 2,
+      },
+      {
+        title: t("title3"),
+        id: 3,
+      },
+      {
+        title: t("title4"),
+        id: 4,
+      },
+      {
+        title: t("title5"),
+        id: 5,
+      },
+      {
+        title: t("title6"),
+        id: 6,
+      },
+    ],
 
-export const price3: IPriceItem[] = [
-  {
-    title: "Для быстрого запуска небольших сайтов, магазинов и лендингов",
-    id: 1,
-  },
-  {
-    title: "Для экспресс–запуска (за 3-7 дней)",
-    id: 2,
-  },
-  {
-    title: "Идеально, когда нужен тест отрасли",
-    id: 3,
-  },
-  {
-    title: "Подойдет, если небольшой бюджет",
-    id: 4,
-  },
-];
+    price2: [
+      {
+        title: t("title7"),
+        id: 1,
+      },
+      {
+        title: t("title8"),
+        id: 2,
+      },
+      {
+        title: t("title9"),
+        id: 3,
+      },
+      {
+        title: t("title10"),
+        id: 4,
+      },
+      {
+        title: t("title11"),
+        id: 5,
+      },
+    ],
 
-export const priceList: IPriceListItem[] = [
-  {
-    title: "Промо-страница",
-    price: "15.000",
-    description:
-      "Это сайт, который состоит из 1-3 блоков. Делается такая страница для отдельного продукта или услуги",
-    id: 1,
-  },
-  {
-    title: "Лендинг",
-    price: "50.000",
-    description:
-      "Страница для сбора лидов или призыва пользователя к целевому действию. Например,\u00A0записаться на вебинар, консультацию или приобрести товар",
-    id: 2,
-  },
-  {
-    title: "Интернет-магазин",
-    price: "70.000",
-    description:
-      "Сайт для продажи товаров с платежной системой, корзиной, доставкой и информированием продавца о заказе",
-    id: 3,
-  },
-  {
-    title: "Корпоративный сайт",
-    price: "80.000",
-    description:
-      "Сайт с более сложной структурой: несколькими страницами, которые объединяет меню или ссылки на страницах",
-    id: 4,
-  },
-];
+    price3: [
+      {
+        title: t("title12"),
+        id: 1,
+      },
+      {
+        title: t("title13"),
+        id: 2,
+      },
+      {
+        title: t("title14"),
+        id: 3,
+      },
+      {
+        title: t("title15"),
+        id: 4,
+      },
+    ],
+
+    priceList: [
+      {
+        title: t("title16"),
+        price: t("price1"),
+        description: t("description1"),
+        id: 1,
+      },
+      {
+        title: t("title17"),
+        price: t("price2"),
+        description: t("description2"),
+        id: 2,
+      },
+      {
+        title: t("title18"),
+        price: t("price3"),
+        description: t("description3"),
+        id: 3,
+      },
+      {
+        title: t("title19"),
+        price: t("price4"),
+        description: t("description4"),
+        id: 4,
+      },
+    ],
+  };
+
+  return getPrice;
+};
+
+export default PriceProvider;
+

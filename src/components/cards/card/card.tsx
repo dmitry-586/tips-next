@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   href,
 }) => {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <div
         className={cn(
           styles.card,

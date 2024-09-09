@@ -3,18 +3,15 @@
 import styles from "../../styles/burger-menu.module.scss";
 import { useState } from "react";
 import Link from "next/link";
-import { menu } from "./menu.data";
-import { usePathname } from "next/navigation";
-import cn from "clsx";
 import ButtonComponent from "../button/Button";
+import { useTranslations } from "next-intl";
+import Navigation from "../navigation/nav.menu";
 
 export default function BurgerMenu() {
   const [menuActive, setMenuActive] = useState(false);
-  const pathname = usePathname();
-
   const burgerTrue: string = [styles.burger_menu, styles.open].join(" ");
   const burgerFalse: string = [styles.burger_menu].join(" ");
-
+  const t = useTranslations("Button");
   return (
     <>
       <button
@@ -30,23 +27,7 @@ export default function BurgerMenu() {
         <span />
       </button>
       <div className={menuActive ? burgerTrue : burgerFalse}>
-        {menu.map((item) => (
-          <Link
-            href={item.link}
-            key={item.id}
-            className={cn(
-              "cursor-pointer bg-black text-[#AFAFAF] hover:border-orange-700 hover:text-white",
-              pathname === item.link
-                ? "text-white border-b-2 border-orange-700"
-                : "text-[#AFAFAF]"
-            )}
-            onClick={() => {
-              setMenuActive(!menuActive);
-            }}
-          >
-            {item.name}
-          </Link>
-        ))}
+        <Navigation menuActive={menuActive} setMenuActive={setMenuActive} />
         <Link
           href={"#feedback"}
           onClick={() => {
@@ -54,7 +35,7 @@ export default function BurgerMenu() {
           }}
         >
           <ButtonComponent className={styles.header_button}>
-            Связаться с нами
+            {t("button")}
           </ButtonComponent>
         </Link>
       </div>
