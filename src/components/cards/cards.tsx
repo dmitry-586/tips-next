@@ -1,21 +1,18 @@
-"use client";
-
 import Card from "../cards/card/card";
 import Circle from "../circle/circle";
 import styles from "../../styles/cards.module.scss";
 import ButtonComponent from "../button/Button";
 import Dropdown from "../info/drop.info";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 export default function Cards() {
   const t = useTranslations("Cards");
 
-  const [filter, setFilter] = useState("");
+  // const [filter, setFilter] = useState("");
 
-  const handleButtonClick = (filterValue: string) => {
-    setFilter(filterValue);
-  };
+  // const handleButtonClick = (filterValue: string) => {
+  //   setFilter(filterValue);
+  // };
 
   return (
     <div className="relative" id="portfolio">
