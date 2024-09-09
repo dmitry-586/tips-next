@@ -19,7 +19,7 @@
   &_left {
     display: flex;
     flex-direction: column;
-    width: clamp(40.625rem, -25rem + 72.92vw, 62.5rem);
+    // width: clamp(40.625rem, -25rem + 72.92vw, 62.5rem);
     @media (max-width: 1400px) {
       width: 90%;
     }
