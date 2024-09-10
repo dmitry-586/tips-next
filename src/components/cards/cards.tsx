@@ -61,6 +61,7 @@ export default function Cards() {
     { text: t("button2"), id: 2 },
     { text: t("button3"), id: 3 },
     { text: t("button4"), id: 4 },
+    { text: t("button5"), id: 5 }
   ];
 
   return (
