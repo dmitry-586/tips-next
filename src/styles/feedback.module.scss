@@ -66,6 +66,10 @@
         @media (max-width: 960px) {
           gap: 16px;
           margin-top: 16px;
+          flex-wrap: wrap;
+        }
+        @media (max-width: 370px) {
+          justify-content: center;
         }
       }
     }
@@ -77,6 +81,9 @@
       @media (max-width: 960px) {
         margin-top: 16px;
         gap: 16px;
+      }
+      @media (max-width: 370px) {
+        justify-content: center;
       }
       & button {
         display: flex;
