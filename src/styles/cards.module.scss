@@ -170,3 +170,10 @@
     align-items: center;
   }
 }
+
+.activeButton {
+  border-color: black !important;
+  background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+  scale: 1.02;
+}
+
