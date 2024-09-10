@@ -19,12 +19,12 @@ export default function Feedback() {
       radio: "Другое",
       text: "",
     },
-    validate: {
-      phone: (value) =>
-        /^\+7|8\d{3}\d{3}\d{2}\d{2}$/.test(value)
-          ? null
-          : "Неправильный номер телефона",
-    },
+    // validate: {
+    //   phone: (value) =>
+    //     /^\+7|8\d{3}\d{3}\d{2}\d{2}$/.test(value)
+    //       ? null
+    //       : "Неправильный номер телефона",
+    // },
   });
 
   const [activeButton, setActiveButton] = useState("Другое");

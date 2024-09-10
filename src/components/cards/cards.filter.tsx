@@ -10,10 +10,13 @@ const CardsFilter: React.FC<ICardsFilter> = ({ buttons, cards }) => {
   const t = useTranslations("Cards");
 
   const [filter, setFilter] = useState("");
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState("Все");
 
   const handleButtonClick = (filterValue: string) => {
-    if (filter === filterValue) {
+    if (filterValue === "Все") {
+      setFilter("");
+      setActiveButton("Все");
+    } else if (filter === filterValue) {
       setFilter("");
       setActiveButton("");
     } else {
