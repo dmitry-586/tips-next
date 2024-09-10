@@ -110,6 +110,7 @@
     overflow-x: scroll;
     justify-content: start;
     gap: 16px;
+    padding: 10px;
   }
 }
 
@@ -133,6 +134,10 @@
   padding: 0;
   width: 290px;
   height: 49px;
+  &:hover {
+    background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
+    border-color: black;
+  }
   @media (max-width: 1440px) {
     width: 250px;
   }
@@ -141,11 +146,10 @@
     padding: 0;
     width: 240px;
     font-size: 16px;
-  }
-
-  &:hover {
-    background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
-    border-color: black;
+    &:hover {
+      background: inherit;
+      border-color: white;
+    }
   }
 }
 
@@ -173,7 +177,6 @@
 
 .activeButton {
   border-color: black !important;
-  background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%);
-  scale: 1.02;
+  background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%) !important;
+  scale: 1;
 }
-
