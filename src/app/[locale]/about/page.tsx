@@ -8,7 +8,7 @@ import styles from "../../../styles/aboutHeader.module.scss";
 import stylesAboutInfo from "../../../styles/aboutInfo.module.scss";
 import { Metadata } from "next";
 
-export const metadataRu: Metadata = {
+export const metadata: Metadata = {
   title: "О веб-студии TIPS - команда профессионалов",
   description:
     "Узнайте больше о веб-студии TIPS. Мы команда опытных специалистов, которые создают эффективные сайты и помогают бизнесу расти в интернете. Наша миссия - делать интернет-проекты, которыми будут гордиться клиенты.",
@@ -49,47 +49,47 @@ export const metadataRu: Metadata = {
     ],
   },
 };
-export const metadataEn: Metadata = {
-  title: "About TIPS Web Design Agency - A Team of Professionals",
-  description:
-    "Find out more about TIPS Web Studio. We are a team of experienced professionals who create effective websites and help businesses grow online. Our mission is to make internet projects that customers will be proud of.",
-  keywords: [
-    "About our web design agency",
-    "Meet our marketing-driven web development team",
-    "Professional web designers for business success",
-    "Our mission: creating websites that sell",
-    "Experienced web developers focused on conversions",
-    "Innovative web solutions for modern businesses",
-    "Dedicated team of digital marketing experts",
-    "How we build high-converting websites",
-    "Our approach to effective web design and marketing",
-    "Why choose us for your web development needs",
-    "Our success stories in web design and marketing",
-    "Passionate about creating user-friendly websites",
-    "Committed to delivering results-driven web solutions",
-    "Our expertise in e-commerce and lead generation",
-    "Building brands through strategic web design",
-    "Our vision for impactful online presence",
-    "Collaborative approach to web development",
-    "Enhancing user experience for better engagement",
-    "Our values: creativity, innovation, and results",
-    "Testimonials from satisfied clients",
-  ],
-  metadataBase: new URL("https://webstudio-tips.ru"),
-  openGraph: {
-    title: "About TIPS web studio - a team of professionals",
-    description:
-      "Find out more about TIPS Web Studio. We are a team of experienced professionals who create effective websites and help businesses grow online. Our mission is to make internet projects that customers will be proud of.",
-    url: "https://webstudio-tips.ru",
-    images: [
-      {
-        url: "/favicon.ico",
-        width: 256,
-        height: 256,
-      },
-    ],
-  },
-};
+// export const metadataEn: Metadata = {
+//   title: "About TIPS Web Design Agency - A Team of Professionals",
+//   description:
+//     "Find out more about TIPS Web Studio. We are a team of experienced professionals who create effective websites and help businesses grow online. Our mission is to make internet projects that customers will be proud of.",
+//   keywords: [
+//     "About our web design agency",
+//     "Meet our marketing-driven web development team",
+//     "Professional web designers for business success",
+//     "Our mission: creating websites that sell",
+//     "Experienced web developers focused on conversions",
+//     "Innovative web solutions for modern businesses",
+//     "Dedicated team of digital marketing experts",
+//     "How we build high-converting websites",
+//     "Our approach to effective web design and marketing",
+//     "Why choose us for your web development needs",
+//     "Our success stories in web design and marketing",
+//     "Passionate about creating user-friendly websites",
+//     "Committed to delivering results-driven web solutions",
+//     "Our expertise in e-commerce and lead generation",
+//     "Building brands through strategic web design",
+//     "Our vision for impactful online presence",
+//     "Collaborative approach to web development",
+//     "Enhancing user experience for better engagement",
+//     "Our values: creativity, innovation, and results",
+//     "Testimonials from satisfied clients",
+//   ],
+//   metadataBase: new URL("https://webstudio-tips.ru"),
+//   openGraph: {
+//     title: "About TIPS web studio - a team of professionals",
+//     description:
+//       "Find out more about TIPS Web Studio. We are a team of experienced professionals who create effective websites and help businesses grow online. Our mission is to make internet projects that customers will be proud of.",
+//     url: "https://webstudio-tips.ru",
+//     images: [
+//       {
+//         url: "/favicon.ico",
+//         width: 256,
+//         height: 256,
+//       },
+//     ],
+//   },
+// };
 
 export default function Home() {
   return (
