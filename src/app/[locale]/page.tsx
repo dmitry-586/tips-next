@@ -5,7 +5,6 @@ import Why from "@/components/why/why";
 import Info from "@/components/info/info";
 import Feedback from "@/components/feedback/feedback";
 import Footer from "@/components/footer/footer";
-import { useTranslations } from "next-intl";
 
 export default function Home() {
   

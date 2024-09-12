@@ -22,7 +22,6 @@
 .card {
   position: relative;
   width: clamp(27.5rem, -2.5rem + 33.33vw, 37.5rem);
-  height: clamp(27.813rem, -0.5rem + 31.46vw, 37.25rem);
   border-radius: 20px;
   padding: 20px;
   transition: 0.3s;
@@ -37,7 +36,7 @@
   }
   @media (max-width: 960px) {
     width: 355px;
-    height: 368px;
+    height: 370px;
     padding: 20px 10px;
   }
   @media (max-width: 750px) {
@@ -46,7 +45,6 @@
   }
   @media (max-width: 630px) {
     width: 355px;
-    height: 368px;
   }
 
   &_title {
@@ -58,7 +56,7 @@
     border-radius: 20px;
     background-color: white;
     color: black;
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       font-size: clamp(1.25rem, 0.75rem + 0.83vw, 1.5rem);
     }
     @media (max-width: 960px) {
@@ -71,7 +69,7 @@
     font-size: clamp(2.5rem, -0.875rem + 3.75vw, 3.625rem);
     line-height: 100%;
     margin-top: clamp(1.875rem, 2.08vw, 2.5rem);
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       font-size: clamp(2.5rem, 0.25rem + 3.75vw, 3.625rem);
     }
     @media (max-width: 960px) {
@@ -91,6 +89,26 @@
       right: 50%;
       transform: translate(-50%);
     }
+  }
+}
+
+.cardRu {
+  height: clamp(27.813rem, -0.5rem + 31.46vw, 37.25rem);
+  @media (max-width: 1439px) {
+    height: clamp(29.375rem, 10.625rem + 31.25vw, 38.75rem);
+  }
+  @media (max-width: 630px) {
+    height: 370px;
+  }
+}
+
+.cardEn {
+  height: clamp(29.375rem, 1.25rem + 31.25vw, 38.75rem);
+  @media (max-width: 1439px) {
+    height: clamp(29.375rem, 10.625rem + 31.25vw, 38.75rem);
+  }
+  @media (max-width: 630px) {
+    height: 380px;
   }
 }
 
@@ -177,6 +195,10 @@
 
 .activeButton {
   border-color: black !important;
-  background: linear-gradient(270.02deg, #ff9900 0.02%, #ee5600 99.98%) !important;
+  background: linear-gradient(
+    270.02deg,
+    #ff9900 0.02%,
+    #ee5600 99.98%
+  ) !important;
   scale: 1;
 }

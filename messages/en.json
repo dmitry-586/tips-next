@@ -1,157 +1,155 @@
 {
   "Header": {
-    "description": "веб-студия разработки продающих сайтов"
+    "description": "Web development studio for selling websites"
   },
   "Button": {
-    "button": "Связаться с нами",
-    "button2": "Получить бесплатную структуру"
+    "button": "Contact us",
+    "button2": "Get a free structure"
   },
   "NavMenu": {
-    "home": "Главная",
-    "portfolio": "Портфолио",
-    "aboutStudio": "О студии",
-    "contacts": "Контакты"
+    "home": "Main",
+    "portfolio": "Portfolio",
+    "aboutStudio": "About studio",
+    "contacts": "Contacts"
   },
   "Main": {
-    "title": "Найдем выгодное и продающее решение для каждого",
-    "description": "Обсуждаем задачи, адаптируем бюджет, предлагаем наилучшее решение",
-    "button": "Получить бесплатную структуру"
+    "title": "We will find a profitable and selling solution for everyone",
+    "description": "Discuss the challenges, customize the budget, offer the best solution",
+    "button": "Get a free structure"
   },
   "Cards": {
-    "title1": "Интернет-магазин",
-    "title2": "Многостраничный сайт",
-    "info1": "Cайт для магазина брендовой одежды",
-    "info2": "Сайт для компании хоррор-квестов",
-    "info3": "Разработка сайта для пригона авто",
-    "info4": "Сайт итальянской траттории",
-    "info5": "Сайт дизайнерской одежды",
-    "info6": "Сайт для SMM-агенства",
-    "button1": "Лендинг",
-    "button2": "Многостраничный",
-    "button3": "Интернет-магазин",
-    "button4": "Визитка",
-    "button5": "Все"
+    "title1": "Online store",
+    "title2": "Multi-page website",
+    "info1": "Website for brand clothing store",
+    "info2": "Website for a company of horror quests",
+    "info3": "Website development for car fetching",
+    "info4": "Italian trattoria website",
+    "info5": "Designer Clothing Website",
+    "info6": "Website for SMM-agency",
+    "button1": "Landing",
+    "button2": "Multi-page",
+    "button3": "Online store",
+    "button4": "Business card",
+    "button5": "All"
   },
   "Price": {
-    "header": "Стоимость",
-    "headerInfo1": "В зависимости от целей и сложности проекта",
-    "headerInfo2": "HTML/CSS + JS, NextJS или АСПРО:",
-
-    "title1": "Для проектов большого размера с множеством однотипных страниц ( каталог, блог, новостной сайт)",
-    "title2": "Нужна сложная работа с базой данных",
-    "title3": "Самое мощное SEO",
-    "title4": "Нужен производительный сайт",
-    "title5": "Есть нестандартные задачи для сайта",
-    "title6": "Если вы хотите Веб-приложение",
-
-    "title7": "Для проектов среднего размера с однотипными страницами (например, с каталогом или блогом)",
-    "title8": "Если есть определённые требования по CMS",
-    "title9": "Нужен личный кабинет",
-    "title10": "Требуется настроить допродажи к товарам, реализовать покупки «3 в 1»",
-    "title11": "Другие сложные и нестандартные задачи",
-
-    "title12": "Для быстрого запуска небольших сайтов, магазинов и лендингов",
-    "title13": "Для экспресс–запуска (за 3-7 дней)",
-    "title14": "Идеально, когда нужен тест отрасли",
-    "title15": "Подойдет, если небольшой бюджет",
-
-    "title16": "Промо-страница",
-    "price1": "15.000",
-    "description1": "Это сайт, который состоит из 1-3 блоков. Делается такая страница для отдельного продукта или услуги",
-
-    "title17": "Лендинг",
-    "price2": "50.000",
-    "description2": "Страница для сбора лидов или призыва пользователя к целевому действию. Например,\u00A0записаться на вебинар, консультацию или приобрести товар",
-
-    "title18": "Интернет-магазин",
-    "price3": "70.000",
-    "description3": "Сайт для продажи товаров с платежной системой, корзиной, доставкой и информированием продавца о заказе",
-
-    "title19": "Корпоративный сайт",
-    "price4": "80.000",
-    "description4": "Сайт с более сложной структурой: несколькими страницами, которые объединяет меню или ссылки на страницах"
+    "header": "Price",
+    "headerInfo1": "Depending on the objectives and complexity of the project",
+    "headerInfo2": "HTML/CSS + JS, NextJS or ASPRO:",
+    
+    "title1": "For large-sized projects with many pages of the same type (catalog, blog, news site)",
+    "title2": "Need complex database work",
+    "title3": "The Most Powerful SEO",
+    "title4": "Need a productive website",
+    "title5": "There are non-standard tasks for the site",
+    "title6": "If you want a web application",
+    
+    "title7": "For medium-sized projects with similar pages (e.g., catalog or blog)",
+    "title8": "If there are specific requirements for CMS",
+    "title9": "Need a personal account",
+    "title10": "Need to set up additional sales to goods, implement purchases '3 in 1'",
+    "title11": "Other complex and non-standard tasks",
+    
+    "title12": "For quick launch of small sites, stores, and landings",
+    "title13": "For express launch (within 3-7 days)",
+    "title14": "Ideal when you need a test of the industry",
+    "title15": "Suitable if you have a small budget",
+    
+    "title16": "Promo page",
+    "price1": "15,000",
+    "description1": "This is a site that consists of 1-3 blocks. Such a page is created for a separate product or service",
+    
+    "title17": "Landing",
+    "price2": "50,000",
+    "description2": "A page for collecting leads or calling the user to a target action. For example, sign up for a webinar, consultation, or purchase a product",
+    
+    "title18": "Online store",
+    "price3": "70,000",
+    "description3": "A site for selling products with a payment system, cart, delivery, and informing the seller about the order",
+    
+    "title19": "Corporate site",
+    "price4": "80,000",
+    "description4": "A site with a more complex structure: several pages united by a menu or links on pages"
   },
-
   "Why": {
-    "title1": "Почему",
-    "title2": "мы?",
-
-    "description1": "У нас оплата за работу, а\u00A0не за часы",
-    "description2": "Бесплатные правки в течение 1 месяца после работы",
-    "description3": "Помогаем и днем и ночью 24/7",
-    "description4": "Подбираем выгодное решение для вас"
+    "title1": "Why",
+    "title2": "us?",
+    
+    "description1": "We have payment for work, not for hours",
+    "description2": "Free corrections within 1 month after work",
+    "description3": "We help 24/7",
+    "description4": "We select a beneficial solution for you"
   },
-
   "Info": {
-    "headerLeft1": "Найдем решение",
-    "headerLeft2": "для\u00A0каждого",
-    "descriptionLeft1": "К нам обращаются заказчики с запросом:",
-    "descriptionLeft2": "«недорогой лендинг» и «премиум-сайт» с нестандартными, сложными задачами",
+    "headerLeft1": "Find a solution",
+    "headerLeft2": "for each",
+    "descriptionLeft1": "Customers come to us with a request:",
+    "descriptionLeft2": "«cheap landing» and «premium site» with non-standard, complex tasks",
+    
+    "headerRight": "Work process",
+    
+    "headerRight1": "Research and design",
+    "descriptionRight1": "We connect your business with the target audience, analyzing data and competitors, creating optimal solutions and project structure.",
+    
+    "headerRight2": "Design",
+    "descriptionRight2": "We create a design for the future site, based on positioning and corporate style. If materials are missing, we offer our vision without increasing the budget.",
+    
+    "headerRight3": "Development",
 
-    "headerRight": "Процесс работы",
-
-    "headerRight1": "Исследование и\u00A0проектирование",
-    "descriptionRight1": "Мы связываем ваш бизнес с\u00A0целевой аудиторией, анализируя данные и конкурентов, создавая оптимальные решения и\u00A0структуру проекта.",
-
-    "headerRight2": "Дизайн",
-    "descriptionRight2": "Создаём дизайн будущего сайта, опираясь на позиционирование и\u00A0фирменный стиль компании. Если материалы отсутствуют – предложим свое видение без\u00A0увеличения бюджета.",
-
-    "headerRight3": "Разработка",
-
-    "headerRight4": "Запуск",
-    "descriptionRight3": "Перед запуском мы проводим окончательную отладку сайта, настраиваем метрики и аналитику для отслеживания действий пользователей.",
-    "descriptionRight4": "Подготовим видео-инструкцию по использованию сайта или обучим Вашего специалиста.",
-    "descriptionRight5": "После запуска – поддерживаем с Вами связь и обсуждаем дальнейшие планы развития проекта.",
-
-    "headerRight5": "Развитие",
-    "descriptionRight6": "Сотрудничаем с вашими маркетологами и рекламными агентами, либо помогаем найти новых. Быстро вносим изменения и улучшения. Поддерживаем вас в аналитике и отвечаем на вопросы."
+    "headerRight4": "Launch",
+    "descriptionRight3": "Before launching, we conduct a final debugging of the site, set up metrics and analytics to track user actions.",
+    "descriptionRight4": "We will prepare a video instruction on how to use the site or train your specialist.",
+    "descriptionRight5": "After launch, we maintain contact with you and discuss further project development plans.",
+  
+    "headerRight5": "Development",
+    "descriptionRight6": "We collaborate with your marketers and advertising agents, or help find new ones. We quickly make changes and improvements. We support you in analytics and answer your questions."
   },
 
   "Feedback": {
-    "title": "Бесплатная структура для\u00A0Вашего сайта",
-
-    "description1": "Заполните пожалуйста форму, это поможет нам точно понять в каком направлении нам двигаться",
-    "description2": "Или свяжитесь с нами другим способом:",
-
-    "feedbackDescription1": "Как Вас зовут",
-    "feedbackDescription2": "Телефон/WhatsApp/Telegram",
-    "feedbackDescription3": "Меня интересует",
-    "feedbackDescription4": "Уже есть проект, на который ориентируетесь/ нравится?",
-
-    "feedbackButton1": "Веб-приложение",
-    "feedbackButton2": "Другое",
-    "feedbackButton3": "Сайт",
-
-    "feedbackPlaceholder1": "Имя",
-    "feedbackPlaceholder2": "Укажите ссылку (необязательно)",
-
-    "privacyPolicy": "Нажав на кнопку, соглашаюсь на обработку персональных данных"
+    "title": "Free structure for your site",
+  
+    "description1": "Please fill out the form, this will help us understand exactly which direction to move in",
+    "description2": "Or contact us in another way:",
+  
+    "feedbackDescription1": "What is your name",
+    "feedbackDescription2": "Phone/WhatsApp/Telegram",
+    "feedbackDescription3": "I am interested in",
+    "feedbackDescription4": "Do you already have a project you're oriented towards/like?",
+  
+    "feedbackButton1": "Web application",
+    "feedbackButton2": "Other",
+    "feedbackButton3": "Site",
+  
+    "feedbackPlaceholder1": "Name",
+    "feedbackPlaceholder2": "Enter a link (optional)",
+  
+    "privacyPolicy": "By clicking the button, I agree to the processing of personal data"
   },
 
   "Footer": {
-    "description": "студия разработки продающих сайтов",
-    "privacyPolicy": "Политика конфиденциальности"
+    "description": "web development studio",
+    "privacyPolicy": "Privacy Policy"
   },
-
+  
   "AboutHeader": {
-    "title": "О\u00A0студии",
-    "description1": "Наша команда опытных специалистов работает над созданием продающих и функциональных веб-решений для различных клиентов",
-    "description2": "Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы могли быть уверены в том, что ваш проект находится в надежных руках",
-    "description3": "Обеспечиваем полную прозрачность на всех этапах работы, чтобы вы могли быть уверены в том, что ваш проект находится в надежных руках"
+    "title": "About the studio",
+    "description1": "Our team of experienced specialists works on creating selling and functional web solutions for various clients",
+    "description2": "We ensure full transparency at all stages of work, so you can be confident that your project is in good hands",
+    "description3": "We ensure full transparency at all stages of work, so you can be confident that your project is in good hands"
   },
-
+  
   "AboutInfo": {
-    "title1": "Подход",
-    "title2": "Решения",
-    "title3": "Гибкость",
-    "description1": "Мы тщательно изучаем потребности каждого клиента и создаем уникальные решения, которые отвечают его конкретным задачам и целям",
-    "description2": "Мы не боимся экспериментировать и предлагать нестандартные решения, чтобы помочь вам выделиться на рынке и достичь своих целей",
-    "description3": "Мы готовы быстро реагировать на изменения на рынке и адаптироваться к новым требованиям, чтобы обеспечить успешное развитие вашего проекта"
+    "title1": "Approach",
+    "title2": "Solutions",
+    "title3": "Flexibility",
+    "description1": "We thoroughly study the needs of each client and create unique solutions that meet their specific tasks and goals",
+    "description2": "We are not afraid to experiment and offer non-standard solutions to help you stand out in the market and achieve your goals",
+    "description3": "We are ready to quickly respond to market changes and adapt to new requirements to ensure the successful development of your project"
   },
-
+  
   "AboutTeam": {
-    "title": "Команда",
-    "description1": "Мы являемся поставщиком качественных, выгодных и продающих решений. В нашей команде есть опытные копирайтеры, дизайнеры, разработчики и маркетологи, SEO-специалисты.",
-    "description2": "Мы дорожим своей репутацией и обеспечиваем полную прозрачность на всех этапах работы, чтобы вы могли быть уверены в том, что ваш проект находится в надежных руках."
+    "title": "Team",
+    "description1": "We are a provider of high-quality, profitable, and selling solutions. Our team includes experienced copywriters, designers, developers, and marketers, SEO specialists.",
+    "description2": "We value our reputation and ensure full transparency at all stages of work, so you can be confident that your project is in good hands."
   }
 }

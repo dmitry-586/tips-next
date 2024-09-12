@@ -29,6 +29,7 @@ const config: Config = {
       smd: { max: "600px" },
       md: { max: "767px" },
       lg: { max: "960px" },
+      slg: {max: "1250px"},
       xl: { max: "1440px" },
       xxl: { max: "1880px" },
     },

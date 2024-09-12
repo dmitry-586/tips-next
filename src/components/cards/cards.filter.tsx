@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React, { useState } from "react";
 import ButtonComponent from "../button/Button";
 import styles from "../../styles/cards.module.scss";
@@ -9,8 +9,11 @@ import Card from "./card/card";
 const CardsFilter: React.FC<ICardsFilter> = ({ buttons, cards }) => {
   const t = useTranslations("Cards");
 
+  const localActive = useLocale();
   const [filter, setFilter] = useState("");
-  const [activeButton, setActiveButton] = useState("Все");
+  const [activeButton, setActiveButton] = useState(
+    `${localActive === "ru" ? "Все" : "All"}`
+  );
 
   const handleButtonClick = (filterValue: string) => {
     if (filterValue === "Все") {
@@ -19,6 +22,9 @@ const CardsFilter: React.FC<ICardsFilter> = ({ buttons, cards }) => {
     } else if (filter === filterValue) {
       setFilter("");
       setActiveButton("");
+    } else if (filterValue === "All") {
+      setFilter("");
+      setActiveButton("All");
     } else {
       setFilter(filterValue);
       setActiveButton(filterValue);
