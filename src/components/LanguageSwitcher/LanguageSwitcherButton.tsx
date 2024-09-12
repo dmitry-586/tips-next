@@ -26,17 +26,19 @@ export default function LanguageSwitcher() {
     });
   };
   return (
-    <Image
-      src="/images/ru.svg"
-      width={0}
-      height={0}
-      alt="ru"
-      style={{
-        width: "17px",
-        height: "27px",
-      }}
-      className={`${styles.ru} ${isPending ? styles.disabled : ""}`}
-      onClick={handleImageClick}
-    />
+    <div className="h-[49px] order-1 slg:order-none lg:h-[28px]">
+      <Image
+        src={localActive === "ru" ? "/images/ru.svg" : "/images/en.svg"}
+        width={0}
+        height={0}
+        alt={localActive}
+        style={{
+          width: "auto",
+          height: "100%",
+        }}
+        className={`${styles.ru} ${isPending ? styles.disabled : ""}`}
+        onClick={handleImageClick}
+      />
+    </div>
   );
 }

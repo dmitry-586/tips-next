@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../../../styles/cards.module.scss";
 import cn from "clsx";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 interface CardProps {
   className?: string;
@@ -24,11 +25,14 @@ const Card: React.FC<CardProps> = ({
   padding,
   href,
 }) => {
+  const localActive = useLocale();
+
   return (
     <Link href={href} target="_blank">
       <div
         className={cn(
           styles.card,
+          localActive === "ru" ? styles.cardRu : styles.cardEn,
           className == undefined ? "bg-my-gradient" : className
         )}
       >

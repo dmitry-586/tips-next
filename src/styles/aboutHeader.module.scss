@@ -58,6 +58,7 @@
     }
     & h2 {
       font-size: clamp(4rem, -0.313rem + 4.79vw, 5.438rem);
+      line-height: 100%;
       @media (max-width: 960px) {
         font-size: clamp(2.375rem, 1.356rem + 4.41vw, 4rem);
       }
