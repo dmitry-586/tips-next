@@ -8,7 +8,6 @@
   border-radius: 20px;
   width: clamp(34.688rem, -1.5rem + 40.21vw, 46.75rem);
   max-width: 100%;
-  height: clamp(34.375rem, 9.625rem + 27.5vw, 42.625rem);
   z-index: 1;
   box-sizing: border-box;
   @media (max-width: 1439px) {
@@ -69,7 +68,18 @@
     }
   }
 }
-
+.leftRu {
+  height: clamp(34.375rem, 9.625rem + 27.5vw, 42.625rem);
+  @media (max-width: 1440px) {
+    height: 100%;
+  }
+}
+.leftEn {
+  height: clamp(33.125rem, 20rem + 14.58vw, 37.5rem);
+  @media (max-width: 1440px) {
+    height: 100%;
+  }
+}
 .right {
   position: relative;
   display: flex;
@@ -311,7 +321,7 @@
   position: relative;
   transition: 0.4s;
   margin-bottom: 1250px;
-  
+
   @media (max-width: 575px) {
     margin-bottom: 1290px;
   }

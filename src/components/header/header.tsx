@@ -30,7 +30,7 @@ export default function Header() {
               className={styles.tips}
             />
           </Link>
-          <p className="text-base w-2/5 leading-4">{t("description")}</p>
+          <p className="text-base leading-4">{t("description")}</p>
         </div>
         <div className={styles.header_right}>
           <nav className={styles.nav}>
