@@ -12,9 +12,13 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    width: 390px;
     & a {
       line-height: 100%;
       font-size: 40px;
+    }
+    @media (max-width:960px) {
+      width: auto;
     }
   }
   &_right {
@@ -86,6 +90,7 @@
   }
   .ru {
     display: block;
+    margin: 0;
   }
   .tips {
     width: 111px;

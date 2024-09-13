@@ -3,7 +3,7 @@ import styles from "../../styles/info.module.scss";
 import ButtonComponent from "../button/Button";
 import Circle from "../circle/circle";
 import Dropdown from "./drop.info";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import BlockInfo from "./block";
 
 interface InfoProps {
@@ -11,12 +11,13 @@ interface InfoProps {
 }
 
 const Info: React.FC<InfoProps> = ({ className }) => {
+  const localActive = useLocale();
   const t = useTranslations("Info");
   const tb = useTranslations("Button");
 
   return (
     <div className={`${styles.mainInfo} ${className}`}>
-      <div className={styles.left}>
+      <div className={`${styles.left} ${localActive === "ru" ? styles.leftRu : styles.leftEn}`}>
         <div className={styles.left_header}>
           <h2>{t("headerLeft1")}</h2>
           <h2 className={styles.h2}>{t("headerLeft2")}</h2>
@@ -49,8 +50,8 @@ const Info: React.FC<InfoProps> = ({ className }) => {
         </div>
         <Dropdown
           openHeader={styles.openHeader}
-          first="Показать список"
-          second="Скрыть список"
+          first={tb("button3")}
+          second={tb("button4")}
         >
           <BlockInfo />
         </Dropdown>

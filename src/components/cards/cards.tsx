@@ -57,11 +57,11 @@ export default function Cards() {
     },
   ];
   const buttons = [
-    { text: t("button1"), id: 1 },
+    { text: t("button5"), id: 1 },
     { text: t("button2"), id: 2 },
     { text: t("button3"), id: 3 },
     { text: t("button4"), id: 4 },
-    { text: t("button5"), id: 5 }
+    { text: t("button1"), id: 5 }
   ];
 
   return (

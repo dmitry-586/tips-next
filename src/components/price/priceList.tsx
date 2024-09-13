@@ -20,7 +20,7 @@ const PriceList: React.FC<PriceProps> = ({
     <div className={styles.priceList}>
       <div className={styles.priceList_header}>
         <h3 className={ActayWide.className}>{title}</h3>
-        <div className={styles.priceList_header_price}>от {price}₽</div>
+        <div className={styles.priceList_header_price}>{price}</div>
       </div>
       <span className={styles.priceList_span}/>
       <p className={styles.priceList_header_description}>{description}</p>
