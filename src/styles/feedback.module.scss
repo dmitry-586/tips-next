@@ -229,7 +229,9 @@
   }
   &:hover {
     background: white;
-    color: black;
+    span {
+      color: black !important;
+    }
   }
 }
 
