@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://webstudio-tips.ru",
     images: [
       {
-        url: "/images/cards/logo.png",
+        url: "/images/logo.png",
         width: 256,
         height: 256,
       },
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
 //     url: "https://webstudio-tips.ru",
 //     images: [
 //       {
-//         url: "/images/cards/logo.png",
+//         url: "images/logo.png",
 //         width: 256,
 //         height: 256,
 //       },

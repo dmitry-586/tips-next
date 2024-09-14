@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: "https://webstudio-tips.ru",
     images: [
       {
-        url: "/images/cards/logo.png",
+        url: "/images/logo.png",
         width: 256,
         height: 256,
       },
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
 //     url: "https://webstudio-tips.ru",
 //     images: [
 //       {
-//         url: "/images/cards/logo.png",
+//         url: "/images/logo.png",
 //         width: 256,
 //         height: 256,
 //       },
@@ -132,7 +132,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <meta property="og:image" content="/images/cards/logo.png" />
+      <meta property="og:image" content="/images/logo.png" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="256" />
       <meta property="og:image:height" content="256" />
