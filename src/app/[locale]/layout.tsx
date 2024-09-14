@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: "https://webstudio-tips.ru",
     images: [
       {
-        url: "../favicon.ico",
+        url: "favicon.ico",
         width: 256,
         height: 256,
       },
