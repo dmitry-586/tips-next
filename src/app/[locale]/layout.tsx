@@ -132,6 +132,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <meta property="og:image" content="/images/cards/logo.png" />
       <body className={HelveticaNeueCyr.className}>
         <NextIntlClientProvider messages={messages}>
           <div className="w-full lg:pt-[70px]">
