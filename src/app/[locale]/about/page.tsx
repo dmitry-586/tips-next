@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://webstudio-tips.ru",
     images: [
       {
-        url: "../favicon.ico",
+        url: "/images/cards/logo.png",
         width: 256,
         height: 256,
       },
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
 //     url: "https://webstudio-tips.ru",
 //     images: [
 //       {
-//         url: "/favicon.ico",
+//         url: "/images/cards/logo.png",
 //         width: 256,
 //         height: 256,
 //       },
