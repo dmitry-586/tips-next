@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/logo.png",
-        width: 256,
-        height: 256,
+        width: 128,
+        height: 128,
       },
     ],
   },
@@ -134,8 +134,8 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <meta property="og:image" content="/images/logo.png" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="256" />
-      <meta property="og:image:height" content="256" />
+      <meta property="og:image:width" content="128" />
+      <meta property="og:image:height" content="128" />
       <body className={HelveticaNeueCyr.className}>
         <NextIntlClientProvider messages={messages}>
           <div className="w-full lg:pt-[70px]">
