@@ -32,7 +32,7 @@ export default function Cards() {
       className: "bg-gradient-card3",
     },
     {
-      title: t("title2"),
+      title: t("title1"),
       info: t("info4"),
       id: 4,
       imageSrc: "/images/cards/card4.webp",
