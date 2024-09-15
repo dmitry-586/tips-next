@@ -95,6 +95,14 @@ export default function Cards() {
       href: "https://sofiyagigi.tilda.ws/",
       className: "bg-gradient-card11",
     },
+    {
+      title: t("title4"),
+      info: t("info12"),
+      id: 12 ,
+      imageSrc: "/images/cards/card12.png",
+      href: "https://видеонаблюдение-пенза.рф/transport",
+      className: "bg-gradient-card12",
+    },
   ];
   const buttons = [
     { text: t("button5"), id: 1 },
