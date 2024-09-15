@@ -6,6 +6,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "./globals.scss";
+import Script from "next/script";
+import { Suspense } from "react";
+import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
 
 const HelveticaNeueCyr = localFont({
   src: "../../../public/fonts/HelveticaNeueCyr-Roman.woff",
@@ -133,11 +136,31 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <meta name="yandex-verification" content="26a74fdfb0140f6a" />
+      <meta name="google-site-verification" content="WfrphM5PtNrpsti-a-uVn63yM7Ia222zeeQokFXo97M" />
       <meta property="og:image" content="/images/logo.png" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="128" />
       <meta property="og:image:height" content="128" />
       <body className={HelveticaNeueCyr.className}>
+      <Script id="metrika-counter" strategy="afterInteractive">
+          {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(98342954, "init", {
+                  defer: true,
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true
+            });`
+          }
+        </Script>
+        <Suspense fallback={<></>}>
+          <YandexMetrika />
+        </Suspense>
         <NextIntlClientProvider messages={messages}>
           <div className="w-full lg:pt-[70px]">
             <Header />
