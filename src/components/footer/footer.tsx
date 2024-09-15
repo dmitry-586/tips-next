@@ -70,7 +70,7 @@ export default function Footer() {
         <p>ИП Трушенков Егор Алексеевич</p>
         <p>ИНН: 583680182669</p>
         <p>ОГРНИП: 324580000027704</p>
-        <Link href="/privacyPolicy" className={styles.privacy_policy}>
+        <Link href="/privacy" className={styles.privacy_policy}>
           {t("privacyPolicy")}
         </Link>
       </div>
