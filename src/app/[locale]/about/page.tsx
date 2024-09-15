@@ -40,13 +40,6 @@ export const metadata: Metadata = {
     description:
       "Узнайте больше о веб-студии TIPS. Мы команда опытных специалистов, которые создают эффективные сайты и помогают бизнесу расти в интернете. Наша миссия - делать интернет-проекты, которыми будут гордиться клиенты.",
     url: "https://webstudio-tips.ru",
-    images: [
-      {
-        url: "/images/logo.png",
-        width: 128,
-        height: 128,
-      },
-    ],
   },
 };
 // export const metadataEn: Metadata = {
