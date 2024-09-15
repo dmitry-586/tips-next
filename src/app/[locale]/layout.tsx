@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+'use sercer'
+
 import localFont from "next/font/local";
 import Header from "@/components/header/header";
 import { Analytics } from "@vercel/analytics/react";
@@ -19,17 +20,19 @@ interface LocaleLayoutProps {
   params: { locale: string };
 }
 
-interface GenerateMetadataParams {
+export interface GenerateMetadataParams {
   params: { locale: string };
 }
 
-export async function generateMetadata() {
-  const t = await useTranslations("Metadata");
+export async function generateMetadata({
+  params: { locale },
+}: GenerateMetadataParams) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
     title: t("title1"),
     description: t("description1"),
-    keywords1: t("keywords1"),
+    keywords: t("keywords1"),
     metadataBase: new URL("https://webstudio-tips.ru"),
     openGraph: {
       title: t("titleOpenGraph1"),
