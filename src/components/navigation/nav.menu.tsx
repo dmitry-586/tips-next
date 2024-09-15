@@ -15,6 +15,7 @@ const Navigation = ({ menuActive = false, setMenuActive = () => {} }: Props) => 
     <>
       {menu.map((item) => (
         <Link
+          target={item.target}
           href={item.link}
           key={item.id}
           className={cn(
