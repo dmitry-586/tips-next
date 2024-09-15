@@ -132,6 +132,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <meta name="yandex-verification" content="26a74fdfb0140f6a" />
       <meta property="og:image" content="/images/logo.png" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="128" />
