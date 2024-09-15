@@ -140,7 +140,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
-      url: "https://webstudio-tips.ru",
+      url: `https://webstudio-tips.ru/${locale}`,
       images: [
         {
           url: "/images/logo.png",
