@@ -22,16 +22,22 @@
   "Cards": {
     "title1": "Online store",
     "title2": "Multi-page website",
+    "title3": "Landing",
     "info1": "Website for brand clothing store",
     "info2": "Website for a company of horror quests",
     "info3": "Website development for car fetching",
     "info4": "Italian trattoria website",
     "info5": "Designer Clothing Website",
     "info6": "Website for SMM-agency",
+    "info7": "Website for a confectionery",
+    "info8": "Development of a website for car tuning",
+    "info9": "Course on earning on marketplaces",
+    "info10": "Repair of apartments, houses, and offices",
+    "info11": "Course on working with the subconscious",
     "button1": "Landing",
     "button2": "Multi-page",
     "button3": "Online store",
-    "button4": "Business card",
+    "button4": "Promo page",
     "button5": "All"
   },
   "Price": {
