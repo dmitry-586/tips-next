@@ -13,7 +13,6 @@ export default function Header() {
   const t = useTranslations("Header");
   const tb = useTranslations("Button");
 
-
   return (
     <>
       <header className={styles.header}>
