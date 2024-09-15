@@ -138,7 +138,7 @@ export async function generateMetadata({
     keywords1: t("keywords1"),
     metadataBase: new URL("https://webstudio-tips.ru"),
     openGraph: {
-      title: t("title1"),
+      title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
       url: "https://webstudio-tips.ru",
       images: [
