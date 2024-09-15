@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import Header from "@/components/header/header";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import "./globals.scss";
 import Script from "next/script";
@@ -24,7 +24,7 @@ interface GenerateMetadataParams {
 }
 
 export async function generateMetadata() {
-  const t = await getTranslations("Metadata");
+  const t = await useTranslations("Metadata");
 
   return {
     title: t("title1"),
