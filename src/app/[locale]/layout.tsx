@@ -23,10 +23,8 @@ interface GenerateMetadataParams {
   params: { locale: string };
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: GenerateMetadataParams) {
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+export async function generateMetadata() {
+  const t = await getTranslations("Metadata");
 
   return {
     title: t("title1"),
