@@ -37,7 +37,7 @@ export async function generateMetadata() {
       url: `https://webstudio-tips.ru/${locale}`,
       images: [
         {
-          url: "/images/logo.png",
+          url: `https://webstudio-tips.ru/${locale}/OpenGraph.webp`,
           width: 128,
           height: 128,
         },
@@ -54,7 +54,6 @@ export default async function LocaleLayout({
   const metadata = await generateMetadata();
   const activeLocale = await getLocale();
 
-
   return (
     <html lang={locale}>
       <meta name="yandex-verification" content="26a74fdfb0140f6a" />
@@ -64,9 +63,9 @@ export default async function LocaleLayout({
       />
       <meta
         property="og:image"
-        content={`${metadata.metadataBase.origin}/${activeLocale}/images/logo.png`}
+        content={`https://webstudio-tips.ru/${locale}/OpenGraph.webp`}
       />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:type" content="OpenGraph/webp" />
       <meta property="og:image:width" content="128" />
       <meta property="og:image:height" content="128" />
       <body className={HelveticaNeueCyr.className}>
