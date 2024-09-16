@@ -1,10 +1,8 @@
-'use sercer'
-
 import localFont from "next/font/local";
 import Header from "@/components/header/header";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import "./globals.scss";
 import Script from "next/script";
@@ -37,7 +35,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
-      url: "https://webstudio-tips.ru",
+      url: `https://webstudio-tips.ru/${locale}`,
       images: [
         {
           url: "/images/logo.png",
