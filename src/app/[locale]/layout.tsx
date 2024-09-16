@@ -37,7 +37,7 @@ export async function generateMetadata() {
       url: `https://webstudio-tips.ru/${locale}`,
       images: [
         {
-          url: "/OpenGraph.webp",
+          url: "/images/logos/logo.png",
           width: 400,
           height: 400,
           alt: "opengraph",
@@ -52,8 +52,6 @@ export default async function LocaleLayout({
   params: { locale },
 }: Readonly<LocaleLayoutProps>) {
   const messages = await getMessages();
-  const metadata = await generateMetadata();
-  const activeLocale = await getLocale();
 
   return (
     <html lang={locale}>
