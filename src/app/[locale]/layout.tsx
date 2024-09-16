@@ -37,7 +37,7 @@ export async function generateMetadata() {
       url: `https://webstudio-tips.ru/${locale}`,
       images: [
         {
-          url: "/images/logo.png",
+          url: "../../../public/images/logo.png",
           width: 128,
           height: 128,
         },
@@ -59,8 +59,8 @@ export default async function LocaleLayout({
         name="google-site-verification"
         content="WfrphM5PtNrpsti-a-uVn63yM7Ia222zeeQokFXo97M"
       />
-      <meta property="og:image" content="/images/logo.png" />
-      <meta property="og:image:type" content="/images/logo.png" />
+      <meta property="og:image" content="../../../public/images/logo.png" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="128" />
       <meta property="og:image:height" content="128" />
       <body className={HelveticaNeueCyr.className}>
