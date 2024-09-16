@@ -23,9 +23,9 @@ export async function generateMetadata() {
       url: `https://webstudio-tips.ru/${locale}/about`,
       images: [
         {
-          url: "/images/logo.png",
-          width: 128,
-          height: 128,
+          url: "/images/log.webp",
+          width: 1200,
+          height: 630,
         },
       ],
     },
