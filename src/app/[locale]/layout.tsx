@@ -2,8 +2,8 @@ import localFont from "next/font/local";
 import Header from "@/components/header/header";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider, useLocale } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "./globals.scss";
 import Script from "next/script";
 import { Suspense } from "react";
@@ -22,10 +22,9 @@ export interface GenerateMetadataParams {
   params: { locale: string };
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: GenerateMetadataParams) {
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+export async function generateMetadata() {
+  const locale = await getLocale();
+  const t = await getTranslations("Metadata");
 
   return {
     title: t("title1"),
