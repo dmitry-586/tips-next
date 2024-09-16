@@ -38,8 +38,8 @@ export async function generateMetadata() {
       images: [
         {
           url: "/images/logos/logo.png",
-          width: 400,
-          height: 400,
+          width: 256,
+          height: 256,
           alt: "opengraph",
         },
       ],
@@ -60,10 +60,7 @@ export default async function LocaleLayout({
         name="google-site-verification"
         content="WfrphM5PtNrpsti-a-uVn63yM7Ia222zeeQokFXo97M"
       />
-      {/* <meta property="og:image" content="/opengraph-image.png" />
-      <meta property="og:image:type" content="opengraph-image/png" />
-      <meta property="og:image:width" content="128" />
-      <meta property="og:image:height" content="128" /> */}
+      <meta property="og:type" content="website" />
       <body className={HelveticaNeueCyr.className}>
         <Script id="metrika-counter" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
