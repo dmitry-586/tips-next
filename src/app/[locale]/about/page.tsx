@@ -6,13 +6,11 @@ import Footer from "@/components/footer/footer";
 import Info from "@/components/info/info";
 import styles from "../../../styles/aboutHeader.module.scss";
 import stylesAboutInfo from "../../../styles/aboutInfo.module.scss";
-import { GenerateMetadataParams } from "../layout";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
-export async function generateMetadata({
-  params: { locale },
-}: GenerateMetadataParams) {
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+export async function generateMetadata() {
+  const locale = await getLocale();
+  const t = await getTranslations("Metadata");
 
   return {
     title: t("title2"),
