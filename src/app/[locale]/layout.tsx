@@ -35,13 +35,13 @@ export async function generateMetadata() {
       title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
       url: `https://webstudio-tips.ru/${locale}`,
-      images: [
-        {
-          url: `https://webstudio-tips.ru/${locale}/OpenGraph.webp`,
-          width: 128,
-          height: 128,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: `https://webstudio-tips.ru/${locale}/OpenGraph.webp`,
+      //     width: 128,
+      //     height: 128,
+      //   },
+      // ],
     },
   };
 }
@@ -61,13 +61,10 @@ export default async function LocaleLayout({
         name="google-site-verification"
         content="WfrphM5PtNrpsti-a-uVn63yM7Ia222zeeQokFXo97M"
       />
-      <meta
-        property="og:image"
-        content={`https://webstudio-tips.ru/${locale}/OpenGraph.webp`}
-      />
-      <meta property="og:image:type" content="OpenGraph/webp" />
-      <meta property="og:image:width" content="128" />
-      <meta property="og:image:height" content="128" />
+      <meta property="og:image" content="generated" />
+      <meta property="og:image:type" content="generated" />
+      <meta property="og:image:width" content="generated" />
+      <meta property="og:image:height" content="generated" />
       <body className={HelveticaNeueCyr.className}>
         <Script id="metrika-counter" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
