@@ -35,13 +35,13 @@ export async function generateMetadata() {
       title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
       url: `https://webstudio-tips.ru/${locale}`,
-      images: [
-        {
-          url: "/opengraph-image.png",
-          width: 128,
-          height: 128,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: "/opengraph-image.png",
+      //     width: 128,
+      //     height: 128,
+      //   },
+      // ],
     },
   };
 }
