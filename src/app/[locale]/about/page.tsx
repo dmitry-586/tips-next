@@ -16,7 +16,7 @@ export async function generateMetadata() {
     title: t("title2"),
     description: t("description2"),
     keywords: t("keywords2"),
-    metadataBase: new URL("https://webstudio-tips.ru"),
+    metadataBase: new URL(`https://webstudio-tips.ru/${locale}/about`),
     openGraph: {
       title: t("titleOpenGraph2"),
       description: t("descriptionOpenGraph2"),
