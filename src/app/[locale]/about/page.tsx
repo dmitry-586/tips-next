@@ -20,7 +20,7 @@ export async function generateMetadata() {
     openGraph: {
       title: t("titleOpenGraph2"),
       description: t("descriptionOpenGraph2"),
-      // url: `https://webstudio-tips.ru/${locale}/about`,
+      url: `https://webstudio-tips.ru/${locale}/about`,
       images: [
         {
           url: "https://www.google.com/imgres?q=1200%20x%20630%20px&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fbackground-social-media-proportions-web-260nw-1035322186.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fru%2Fsearch%2F1200x630&docid=sXfxOgO_qCHq0M&tbnid=9Vwmy2VjegHN9M&vet=12ahUKEwi5mJ7onsiIAxXlGxAIHRleIvYQM3oECBgQAA..i&w=495&h=280&hcb=2&ved=2ahUKEwi5mJ7onsiIAxXlGxAIHRleIvYQM3oECBgQAA",
