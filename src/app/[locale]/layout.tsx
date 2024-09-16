@@ -52,6 +52,8 @@ export default async function LocaleLayout({
 }: Readonly<LocaleLayoutProps>) {
   const messages = await getMessages();
   const metadata = await generateMetadata();
+  const activeLocale = await getLocale();
+
 
   return (
     <html lang={locale}>
@@ -62,7 +64,7 @@ export default async function LocaleLayout({
       />
       <meta
         property="og:image"
-        content={`${metadata.metadataBase.origin}/images/logo.png`}
+        content={`${metadata.metadataBase.origin}/${activeLocale}/images/logo.png`}
       />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="128" />
