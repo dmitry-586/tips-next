@@ -23,7 +23,7 @@ export async function generateMetadata() {
       url: `https://webstudio-tips.ru/${locale}/about`,
       images: [
         {
-          url: "/images/logos/logo.png",
+          url: "../images/logos/logo.png",
           width: 128,
           height: 128,
           alt: "opengraph",
