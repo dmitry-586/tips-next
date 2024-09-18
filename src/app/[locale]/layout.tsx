@@ -23,18 +23,18 @@ export interface GenerateMetadataParams {
 }
 
 export async function generateMetadata() {
-  const locale = await getLocale();
+  // const locale = await getLocale();
   const t = await getTranslations("Metadata");
 
   return {
     title: t("title1"),
     description: t("description1"),
     keywords: t("keywords1"),
-    metadataBase: new URL(`https://webstudio-tips.ru/${locale}`),
+    metadataBase: new URL("https://webstudio-tips.ru"),
     openGraph: {
       title: t("titleOpenGraph1"),
       description: t("descriptionOpenGraph1"),
-      url: `https://webstudio-tips.ru`,
+      url: "https://webstudio-tips.ru",
       images: [
         {
           url: "/images/logos/logo.png",

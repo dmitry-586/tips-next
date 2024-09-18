@@ -9,18 +9,18 @@ import stylesAboutInfo from "../../../styles/aboutInfo.module.scss";
 import { getLocale, getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
-  const locale = await getLocale();
+  // const locale = await getLocale();
   const t = await getTranslations("Metadata");
 
   return {
     title: t("title2"),
     description: t("description2"),
     keywords: t("keywords2"),
-    metadataBase: new URL(`https://webstudio-tips.ru/${locale}/about`),
+    metadataBase: new URL("https://webstudio-tips.ru/about"),
     openGraph: {
       title: t("titleOpenGraph2"),
       description: t("descriptionOpenGraph2"),
-      url: `https://webstudio-tips.ru/about`,
+      url: "https://webstudio-tips.ru/about",
       images: [
         {
           url: "../images/logos/logo.png",
